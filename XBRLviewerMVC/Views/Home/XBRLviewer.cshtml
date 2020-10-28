@@ -6,61 +6,132 @@
 
 <head>
     <script>
-        $(function () {
+        $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip()
         })
     </script>
 </head>
 
-<!-- Navn á virki sum sendir inn roknskapin -->
-@{
-    XBRLviewerMVC.Models.FactModel nameOfSubmittingEnterprise = new XBRLviewerMVC.Models.FactModel();
-    nameOfSubmittingEnterprise = Model.FirstOrDefault(x => x.Id == "NameOfSubmittingEnterprise");
-    <h4 class="text-left p-1" data-toggle="tooltip">@nameOfSubmittingEnterprise.Value</h4>
-}
+<div class="accordion" id="accordionExample">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Síða 1 - Roknskaparupplýsingar
+                </button>
+            </h2>
+        </div>
 
-<!-- Felagið sum leggur rokaskapin fram, navn -->
-@{
-    XBRLviewerMVC.Models.FactModel nameOfReportingEntity = new XBRLviewerMVC.Models.FactModel();
-    nameOfReportingEntity = Model.FirstOrDefault(x => x.Id == "NameOfReportingEntity");
-    <h1 class="text-center p-1">@nameOfReportingEntity.Value</h1>
-}
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+                <!-- Navn á virki sum sendir inn roknskapin -->
+                @{
+                    XBRLviewerMVC.Models.FactModel nameOfSubmittingEnterprise = new XBRLviewerMVC.Models.FactModel();
+                    nameOfSubmittingEnterprise = Model.FirstOrDefault(x => x.Id == "NameOfSubmittingEnterprise");
+                    <h4 class="text-left p-1" data-toggle="tooltip" title="Navn á virki sum sendir inn roknskapin">@nameOfSubmittingEnterprise.Value</h4>
+                }
 
-<!-- Bústaður hjá felagnum sum leggur roknskapin fram, gøtunavn -->
-<!-- Bústaður hjá felagnum sum leggur roknskapin fram, gøtunummar og hædd -->
-@{
-    XBRLviewerMVC.Models.FactModel addressOfReportingEntityStreetName = new XBRLviewerMVC.Models.FactModel();
-    XBRLviewerMVC.Models.FactModel addressOfReportingEntityStreetBuildingIdentifier = new XBRLviewerMVC.Models.FactModel();
-    addressOfReportingEntityStreetName = Model.FirstOrDefault(x => x.Id == "AddressOfReportingEntityStreetName");
-    addressOfReportingEntityStreetBuildingIdentifier = Model.FirstOrDefault(x => x.Id == "AddressOfReportingEntityStreetBuildingIdentifier");
-    <h2 class="text-center p-1">@addressOfReportingEntityStreetName.Value @addressOfReportingEntityStreetBuildingIdentifier.Value</h2>
-}
+                <!-- Felagið sum leggur rokaskapin fram, navn -->
+                @{
+                    XBRLviewerMVC.Models.FactModel nameOfReportingEntity = new XBRLviewerMVC.Models.FactModel();
+                    nameOfReportingEntity = Model.FirstOrDefault(x => x.Id == "NameOfReportingEntity");
+                    <h1 class="text-center p-1" data-toggle="tooltip" title="Felagið sum leggur rokaskapin fram, navn">@nameOfReportingEntity.Value</h1>
+                }
 
-<!-- Bústaður hjá fyritøkuni sum letur roknskapin inn, postnummar og býur -->
-@{
-    XBRLviewerMVC.Models.FactModel addressOfSubmittingEnterprisePostcodeAndTown = new XBRLviewerMVC.Models.FactModel();
-    addressOfSubmittingEnterprisePostcodeAndTown = Model.FirstOrDefault(x => x.Id == "AddressOfSubmittingEnterprisePostcodeAndTown");
-    <h2 class="text-center p-1">@addressOfSubmittingEnterprisePostcodeAndTown.Value</h2>
-}
+                <!-- Bústaður hjá felagnum sum leggur roknskapin fram, gøtunavn -->
+                <!-- Bústaður hjá felagnum sum leggur roknskapin fram, gøtunummar og hædd -->
+                @{
+                    XBRLviewerMVC.Models.FactModel addressOfReportingEntityStreetName = new XBRLviewerMVC.Models.FactModel();
+                    XBRLviewerMVC.Models.FactModel addressOfReportingEntityStreetBuildingIdentifier = new XBRLviewerMVC.Models.FactModel();
+                    addressOfReportingEntityStreetName = Model.FirstOrDefault(x => x.Id == "AddressOfReportingEntityStreetName");
+                    addressOfReportingEntityStreetBuildingIdentifier = Model.FirstOrDefault(x => x.Id == "AddressOfReportingEntityStreetBuildingIdentifier");
+                    <h2 class="text-center p-1" data-toggle="tooltip" title="Bústaður hjá felagnum sum leggur roknskapin fram, gøtunavn og Bústaður hjá felagnum sum leggur roknskapin fram, gøtunummar og hædd">@addressOfReportingEntityStreetName.Value @addressOfReportingEntityStreetBuildingIdentifier.Value</h2>
+                }
 
-<!-- Felag sum leggur roknskapin fram, skrásetingarnummar/ v-tal -->
-@{
-    XBRLviewerMVC.Models.FactModel identificationNumberCvrOfReportingEntity = new XBRLviewerMVC.Models.FactModel();
-    identificationNumberCvrOfReportingEntity = Model.FirstOrDefault(x => x.Id == "IdentificationNumberCvrOfReportingEntity");
-    <h4 class="text-center p-1">Skrás.nr. @identificationNumberCvrOfReportingEntity.Value</h4>
-}
+                <!-- Bústaður hjá fyritøkuni sum letur roknskapin inn, postnummar og býur -->
+                @{
+                    XBRLviewerMVC.Models.FactModel addressOfSubmittingEnterprisePostcodeAndTown = new XBRLviewerMVC.Models.FactModel();
+                    addressOfSubmittingEnterprisePostcodeAndTown = Model.FirstOrDefault(x => x.Id == "AddressOfSubmittingEnterprisePostcodeAndTown");
+                    <h2 class="text-center p-1" data-toggle="tooltip" title="Bústaður hjá fyritøkuni sum letur roknskapin inn, postnummar og býur">@addressOfSubmittingEnterprisePostcodeAndTown.Value</h2>
+                }
 
-<!-- Dagfesting fyri nær leiðslan góðkendi ársfrásagnina -->
-@{
-    XBRLviewerMVC.Models.FactModel dateOfApprovalOfReport = new XBRLviewerMVC.Models.FactModel();
-    dateOfApprovalOfReport = Model.FirstOrDefault(x => x.Id == "DateOfApprovalOfReport");
-    <h4 class="text-center p-1">Góðkend: @dateOfApprovalOfReport.Value</h4>
-}
+                <!-- Felag sum leggur roknskapin fram, skrásetingarnummar/ v-tal -->
+                @{
+                    XBRLviewerMVC.Models.FactModel identificationNumberCvrOfReportingEntity = new XBRLviewerMVC.Models.FactModel();
+                    identificationNumberCvrOfReportingEntity = Model.FirstOrDefault(x => x.Id == "IdentificationNumberCvrOfReportingEntity");
+                    <h4 class="text-center p-1" data-toggle="tooltip" title="Felag sum leggur roknskapin fram, skrásetingarnummar/ v-tal">Skrás.nr. @identificationNumberCvrOfReportingEntity.Value</h4>
+                }
 
-<!-- Navn og orðstýrara ella vara orðstýrara á aðalfundinum -->
-@{
-    XBRLviewerMVC.Models.FactModel nameAndSurnameOfChairmanOfGeneralMeeting = new XBRLviewerMVC.Models.FactModel();
-    nameAndSurnameOfChairmanOfGeneralMeeting = Model.FirstOrDefault(x => x.Id == "NameAndSurnameOfChairmanOfGeneralMeeting");
-    <h4 class="text-center p-1">Góðkend: @nameAndSurnameOfChairmanOfGeneralMeeting.Value</h4>
-}
+                <!-- Dagfesting fyri nær leiðslan góðkendi ársfrásagnina -->
+                @{
+                    XBRLviewerMVC.Models.FactModel dateOfApprovalOfReport = new XBRLviewerMVC.Models.FactModel();
+                    dateOfApprovalOfReport = Model.FirstOrDefault(x => x.Id == "DateOfApprovalOfReport");
+                    <h4 class="text-center p-1" data-toggle="tooltip" title="Dagfesting fyri nær leiðslan góðkendi ársfrásagnina">Góðkend: @dateOfApprovalOfReport.Value</h4>
+                }
 
+                <!-- Navn og orðstýrara ella vara orðstýrara á aðalfundinum -->
+                @{
+                    XBRLviewerMVC.Models.FactModel nameAndSurnameOfChairmanOfGeneralMeeting = new XBRLviewerMVC.Models.FactModel();
+                    nameAndSurnameOfChairmanOfGeneralMeeting = Model.FirstOrDefault(x => x.Id == "NameAndSurnameOfChairmanOfGeneralMeeting");
+                    <h4 class="text-center p-1" data-toggle="tooltip" title="Navn og orðstýrara ella vara orðstýrara á aðalfundinum">Fundarstjóri: @nameAndSurnameOfChairmanOfGeneralMeeting.Value</h4>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Síða 2 - Leiðsluátekning
+                </button>
+            </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+                <!-- Identification of approved annual report -->
+                @{
+                    XBRLviewerMVC.Models.FactModel identificationOfApprovedAnnualReport = new XBRLviewerMVC.Models.FactModel();
+                    identificationOfApprovedAnnualReport = Model.FirstOrDefault(x => x.Id == "IdentificationOfApprovedAnnualReport");
+                    <p class="text-left p-1" data-toggle="tooltip" title="Identification of approved annual report">@identificationOfApprovedAnnualReport.Value</p>
+                }
+
+                <!-- Confirmation that annual report is presented in accordance with requirements provided for by legislation, any standards and requirements provided by articles of association or by agreement -->
+                @{
+                    XBRLviewerMVC.Models.FactModel confirmationThatAnnualReportIsPresentedInAccordanceWithRequirementsProvidedForByLegislationAnyStandardsAndRequirementsProvidedByArticlesOfAssociationOrByAgreement = new XBRLviewerMVC.Models.FactModel();
+                    confirmationThatAnnualReportIsPresentedInAccordanceWithRequirementsProvidedForByLegislationAnyStandardsAndRequirementsProvidedByArticlesOfAssociationOrByAgreement = Model.FirstOrDefault(x => x.Id == "ConfirmationThatAnnualReportIsPresentedInAccordanceWithRequirementsProvidedForByLegislationAnyStandardsAndRequirementsProvidedByArticlesOfAssociationOrByAgreement");
+                    <p class="text-left p-1" data-toggle="tooltip" title="Confirmation that annual report is presented in accordance with requirements provided for by legislation, any standards and requirements provided by articles of association or by agreement">@confirmationThatAnnualReportIsPresentedInAccordanceWithRequirementsProvidedForByLegislationAnyStandardsAndRequirementsProvidedByArticlesOfAssociationOrByAgreement.Value</p>
+                }
+
+                <!-- Confirmation that financial statements gives true and fair view of assets, liabilities, equity, financial position and results -->
+                @{
+                    XBRLviewerMVC.Models.FactModel confirmationThatFinancialStatementGivesTrueAndFairViewOfAssetsLiabilitiesEquityFinancialPositionAndResults = new XBRLviewerMVC.Models.FactModel();
+                    confirmationThatFinancialStatementGivesTrueAndFairViewOfAssetsLiabilitiesEquityFinancialPositionAndResults = Model.FirstOrDefault(x => x.Id == "ConfirmationThatFinancialStatementGivesTrueAndFairViewOfAssetsLiabilitiesEquityFinancialPositionAndResults");
+                    <p class="text-left p-1" data-toggle="tooltip" title="Confirmation that financial statements gives true and fair view of assets, liabilities, equity, financial position and results">@confirmationThatFinancialStatementGivesTrueAndFairViewOfAssetsLiabilitiesEquityFinancialPositionAndResults.Value</p>
+                }
+
+                <!-- Management's statement about management's review -->
+                @{
+                    XBRLviewerMVC.Models.FactModel managementsStatementAboutManagementsReview = new XBRLviewerMVC.Models.FactModel();
+                    managementsStatementAboutManagementsReview = Model.FirstOrDefault(x => x.Id == "ManagementsStatementAboutManagementsReview");
+                    <p class="text-left p-1" data-toggle="tooltip" title="Confirmation that financial statements gives true and fair view of assets, liabilities, equity, financial position and results">@managementsStatementAboutManagementsReview.Value</p>
+                }
+
+
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Síða 3 - Grannskoðaraátekning
+                </button>
+            </h2>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+                Síða 3 - Innihald
+            </div>
+        </div>
+    </div>
+</div>

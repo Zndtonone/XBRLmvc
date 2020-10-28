@@ -9,7 +9,7 @@ namespace XBRLservices
     {
         public JSONServices() { }
 
-        // RTH - Read JSON file from wwwroot - Something added for git
+        // RTH - Read JSON file from wwwroot
         public static string Read(string fileName, string location)
         {
             string root = "wwwroot";
