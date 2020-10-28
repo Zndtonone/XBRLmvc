@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XBRLviewerMVC", "XBRLviewerMVC\XBRLviewerMVC.csproj", "{B32CB078-07F3-4FB3-B8FC-75133845242F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Gepsio", "1. Gepsio", "{E8E3A759-A3BF-4095-8E4B-C37833E8A50C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JeffFerguson.Gepsio", "..\XBRLviewer\JeffFerguson.Gepsio\JeffFerguson.Gepsio.csproj", "{D76D6372-B4FC-4619-990D-EF74A485DD03}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Presentation Layer", "3. Presentation Layer", "{D7EAEBFC-AD9D-4A37-832B-99B6F5DDB046}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RTHtestConsole", "..\XBRLviewer\TestConsoleApp\RTHtestConsole.csproj", "{B16298E7-38E6-4945-A40A-25E152F8FB73}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Service", "2. Service", "{FB08E29F-C031-4058-BD4C-0FE328741B7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XBRLservices", "XBRLservices\XBRLservices.csproj", "{95C5B715-BF27-4C37-B041-F43AF75608E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B32CB078-07F3-4FB3-B8FC-75133845242F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B32CB078-07F3-4FB3-B8FC-75133845242F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B32CB078-07F3-4FB3-B8FC-75133845242F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B32CB078-07F3-4FB3-B8FC-75133845242F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D76D6372-B4FC-4619-990D-EF74A485DD03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D76D6372-B4FC-4619-990D-EF74A485DD03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D76D6372-B4FC-4619-990D-EF74A485DD03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D76D6372-B4FC-4619-990D-EF74A485DD03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B16298E7-38E6-4945-A40A-25E152F8FB73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B16298E7-38E6-4945-A40A-25E152F8FB73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B16298E7-38E6-4945-A40A-25E152F8FB73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B16298E7-38E6-4945-A40A-25E152F8FB73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95C5B715-BF27-4C37-B041-F43AF75608E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95C5B715-BF27-4C37-B041-F43AF75608E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95C5B715-BF27-4C37-B041-F43AF75608E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95C5B715-BF27-4C37-B041-F43AF75608E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B32CB078-07F3-4FB3-B8FC-75133845242F} = {D7EAEBFC-AD9D-4A37-832B-99B6F5DDB046}
+		{D76D6372-B4FC-4619-990D-EF74A485DD03} = {E8E3A759-A3BF-4095-8E4B-C37833E8A50C}
+		{B16298E7-38E6-4945-A40A-25E152F8FB73} = {D7EAEBFC-AD9D-4A37-832B-99B6F5DDB046}
+		{95C5B715-BF27-4C37-B041-F43AF75608E4} = {FB08E29F-C031-4058-BD4C-0FE328741B7C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF4209C4-34BC-4AD8-8201-0D4EFE0F458E}
+	EndGlobalSection
+EndGlobal

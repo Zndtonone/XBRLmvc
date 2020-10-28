@@ -1,0 +1,927 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="bootstrap" Version="4.5.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\XBRLviewer\JeffFerguson.Gepsio\JeffFerguson.Gepsio.csproj" />
+    <ProjectReference Include="..\XBRLservices\XBRLservices.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="20191101\2065_1_2019.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\2874_1_2019.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\ALL.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\DCCAFOALLentry.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\entryFODanishGAAPBalanceSheetAccountByCurrentAndLongTermFormIncomeStatementByFunctionIncludingManagementsReviewStatisticsAndTax20171001.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\entryFODanishGAAPBalanceSheetAccountByCurrentAndLongTermFormIncomeStatementByNatureIncludingManagementsReviewStatisticsAndTax20171001.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\entryFODanishGAAPBalanceSheetAccountFormIncomeStatementByFunctionIncludingManagementsReviewStatisticsAndTax20171001.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\entryFODanishGAAPBalanceSheetAccountFormIncomeStatementByNatureIncludingManagementsReviewStatisticsAndTax20171001.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\FO-entry-IncomeStatementByFunction.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\FO-entry-IncomeStatementByNature.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\FO-entry-StatisticalOfficeInformation.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\FO-entry-TaxIncomeStatement.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\FOALLentry.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\arr\1NNarr_def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\arr\1NNarr_pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\arr\arr-lab-ar.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\arr\arr-lab-da.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\arr\arr-lab-de.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\arr\arr-lab-en.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\arr\arr-lab-es.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\arr\arr-lab-fr.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\arr\arr-lab-hi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\arr\arr-lab-pt.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\arr\arr-lab-ru.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\arr\arr-lab-zh.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\arr\arr.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\arr\arr_gla-da.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\arr\arr_gla-en.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\arr\arr_ref.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\cmn-lab-ar.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\cmn-lab-da.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\cmn-lab-de.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\cmn-lab-en.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\cmn-lab-es.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\cmn-lab-fr.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\cmn-lab-hi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\cmn-lab-pt.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\cmn-lab-ru.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\cmn-lab-zh.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\cmn.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\cmn_def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\cmn_gla-da.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\cmn_gla-en.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\cmn_ref.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\dst\001dst_def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\dst\001dst_pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\dst\dst-lab-da.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\dst\dst-lab-en.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\dst\dst-label-de.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\dst\dst-label-fr.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\dst\dst-ref.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\dst\dst.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\dst\dst_gla-da.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\dst\dst_gla-en.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\entryAll.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\entryDanishGAAPBalanceSheetAccountByCurrentAndLongTermFormIncomeStatementByFunctionIncludingManagementsReviewStatisticsAndTax20171001.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\entryDanishGAAPBalanceSheetAccountByCurrentAndLongTermFormIncomeStatementByNatureIncludingManagementsReviewStatisticsAndTax20171001.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\entryDanishGAAPBalanceSheetAccountFormIncomeStatementByFunctionIncludingManagementsReviewStatisticsAndTax20171001.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\entryDanishGAAPBalanceSheetAccountFormIncomeStatementByNatureIncludingManagementsReviewStatisticsAndTax20171001.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\400bsa_def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\400bsa_pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\402bsc_def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\402bsc_pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\500isf_def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\500isf_pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\501isn_def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\501isn_pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\502pdr_def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\502pdr_pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\600cfs_def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\600cfs_pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\700scl_def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\700scl_pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\701scs_def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\701scs_pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\8NNdsc_def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\8NNdsc_pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\9NNdim_def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\fsa-lab-ar.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\fsa-lab-da.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\fsa-lab-de.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\fsa-lab-en.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\fsa-lab-es.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\fsa-lab-fr.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\fsa-lab-hi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\fsa-lab-pt.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\fsa-lab-ru.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\fsa-lab-zh.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\fsa.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\fsa_gla-da.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\fsa_gla-en.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\fsa\fsa_ref.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\gsd\000gsd_def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\gsd\000gsd_frm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\gsd\000gsd_pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\gsd\gsd-lab-ar.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\gsd\gsd-lab-da.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\gsd\gsd-lab-de.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\gsd\gsd-lab-en.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\gsd\gsd-lab-es.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\gsd\gsd-lab-fr.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\gsd\gsd-lab-hi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\gsd\gsd-lab-pt.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\gsd\gsd-lab-ru.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\gsd\gsd-lab-zh.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\gsd\gsd-ref.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\gsd\gsd.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\gsd\gsd_gla-da.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\gsd\gsd_gla-en.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\mrv\200mrv_def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\mrv\200mrv_pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\mrv\mrv-lab-ar.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\mrv\mrv-lab-da.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\mrv\mrv-lab-de.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\mrv\mrv-lab-en.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\mrv\mrv-lab-es.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\mrv\mrv-lab-fr.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\mrv\mrv-lab-hi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\mrv\mrv-lab-pt.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\mrv\mrv-lab-ru.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\mrv\mrv-lab-zh.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\mrv\mrv.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\mrv\mrv_gla-da.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\mrv\mrv_gla-en.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\mrv\mrv_ref.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\sob\300sob_def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\sob\300sob_pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\sob\sob-lab-ar.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\sob\sob-lab-da.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\sob\sob-lab-de.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\sob\sob-lab-en.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\sob\sob-lab-es.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\sob\sob-lab-fr.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\sob\sob-lab-hi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\sob\sob-lab-pt.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\sob\sob-lab-ru.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\sob\sob-lab-zh.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\sob\sob.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\sob\sob_gla-da.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\sob\sob_gla-en.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\sob\sob_ref.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\tax\002tax_def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\tax\002tax_pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\tax\tax-lab-da.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\tax\tax-lab-en.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\tax\tax-label.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\tax\tax.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\tax\tax_gla-da.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\tax\tax_gla-en.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\tax\tax_ref.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\20171001\tch.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\boolean-filter.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\concept-filter.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\consistency-assertion.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\dimension-filter.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\entity-filter.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\existence-assertion.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\formula.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\general-filter.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\generic-label.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\generic-link.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\generic-message.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\generic-reference.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\match-filter.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\META-INF\catalog.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\META-INF\taxonomyPackage.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRL20171001\nonNumeric-2009-12-16.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\numeric-2009-12-16.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\period-filter.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\ref-2006-02-27.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\relative-filter.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\segment-scenario-filter.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\tuple-filter.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\unit-filter.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\validation-message.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\validation.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\value-assertion.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\value-filter.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRL20171001\variable.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-cro-def\000gsd-fo-cro-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-cro-def\1NNarr-fo-cro-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-cro-def\300sob-fo-cro-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-cro-def\8NNdsc-fo-cro-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-cro-frm\000gsd-fo-cro-frm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-cro-pre\000gsd-fo-cro-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-cro-pre\1NNarr-fo-cro-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-cro-pre\300sob-fo-cro-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-cro.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-hag-def\000gi-fo-hag-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-hag-def\001ca-fo-hag-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-hag-def\002bp-fo-hag-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-hag-def\003fi-fo-hag-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-hag-def\004fd-fo-hag-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-hag-def\900dd-fo-hag-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-hag-pre\000gi-fo-hag-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-hag-pre\001ca-fo-hag-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-hag-pre\002bp-fo-hag-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-hag-pre\003fi-fo-hag-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-hag-pre\004fd-fo-hag-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-hag.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-cal\100bsa-fo-tax-cal.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-cal\300trc-fo-tax-cal.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-cal\305trc-fo-tax-cal.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-cal\309ota-fo-tax-cal.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-cal\500isf-fo-tax-cal.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-cal\501isn-fo-tax-cal.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-cal\503ist-fo-tax-cal.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-cal\504sti-fo-tax-cal.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-cal\510ws-fo-tax-cal.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-def\000gi-fo-tax-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-def\000gsd-fo-tax-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-def\100bsa-fo-tax-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-def\200sc-fo-tax-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-def\300trc-fo-tax-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-def\301md-fo-tax-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-def\302doo-fo-tax-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-def\303dos-fo-tax-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-def\304djt-fo-tax-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-def\305trc-fo-tax-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-def\306dpf-fo-tax-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-def\307dfc-fo-tax-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-def\308ita-fo-tax-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-def\309ota-fo-tax-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-def\310tti-fo-tax-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-def\311rdw-fo-tax-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-def\500hsd-fo-tax-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-def\500isf-fo-tax-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-def\501isn-fo-tax-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-def\503ist-fo-tax-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-def\504sti-fo-tax-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-def\505dcs-fo-tax-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-def\506dcp-fo-tax-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-def\510ws-fo-tax-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-def\900ddm-fo-tax-def.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-pre\000gi-fo-tax-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-pre\000gsd-fo-tax-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-pre\100bsa-fo-tax-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-pre\200sc-fo-tax-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-pre\300trc-fo-tax-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-pre\301md-fo-tax-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-pre\302doo-fo-tax-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-pre\303dos-fo-tax-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-pre\304djt-fo-tax-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-pre\305trc-fo-tax-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-pre\306dpf-fo-tax-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-pre\307dfc-fo-tax-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-pre\308ita-fo-tax-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-pre\309ota-fo-tax-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-pre\310tti-fo-tax-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-pre\311rdw-fo-tax-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-pre\500hsd-fo-tax-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-pre\500isf-fo-tax-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-pre\501isn-fo-tax-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-pre\503ist-fo-tax-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-pre\504sti-fo-tax-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-pre\505dcs-fo-tax-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-pre\506dcp-fo-tax-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax-pre\510ws-fo-tax-pre.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\fo-tax.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="20191101\XBRLFO20191101\labels\arr-lab-fo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\labels\cmn-gla-fo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\labels\cmn-lab-fo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\labels\fo-cro-gla-da.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\labels\fo-cro-gla-en.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\labels\fo-cro-gla-fo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\labels\fo-cro-lab-da.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\labels\fo-cro-lab-en.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\labels\fo-cro-lab-fo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\labels\fo-hag-gla-da.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\labels\fo-hag-gla-en.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\labels\fo-hag-gla-fo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\labels\fo-hag-lab-da.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\labels\fo-hag-lab-en.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\labels\fo-hag-lab-fo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\labels\fo-tax-gla-en.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\labels\fo-tax-gla-fo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\labels\fo-tax-lab-en.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\labels\fo-tax-lab-fo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\labels\fsa-gla-en.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\labels\fsa-gla-fo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\labels\fsa-lab-en.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\labels\fsa-lab-fo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\labels\gsd-lab-fo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\labels\mrv-gla-fo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\labels\mrv-lab-fo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="20191101\XBRLFO20191101\labels\sob-lab-fo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
