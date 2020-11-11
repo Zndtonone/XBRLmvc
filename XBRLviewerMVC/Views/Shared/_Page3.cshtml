@@ -1,80 +1,74 @@
 ﻿@{
-    @model List<XBRLviewerMVC.Models.FactModel>
+    @model List<FactModel>
 }
+
+@{ FactModel f, f2, f3, f4, f5; string fId, fId2, fId3, fId4, fId5; string noValue = ": Einki virði"; }
 
 <table class="table table-sm table-bordered table-striped">
     <tbody>
         <tr>
             <td class="font-weight-bold">Felagið</td>
             <td>
-                <!-- Felagið sum leggur rokaskapin fram, navn -->
                 @{
-                    XBRLviewerMVC.Models.FactModel nameOfReportingEntity = new XBRLviewerMVC.Models.FactModel();
-                    nameOfReportingEntity = Model.FirstOrDefault(x => x.Id == "NameOfReportingEntity");
-                    @nameOfReportingEntity.Value
-                } <br />
-
-                <!-- Bústaður hjá felagnum sum leggur roknskapin fram, gøtunavn -->
-                <!-- Bústaður hjá felagnum sum leggur roknskapin fram, gøtunummar og hædd -->
-                @{
-                    XBRLviewerMVC.Models.FactModel addressOfReportingEntityStreetName = new XBRLviewerMVC.Models.FactModel();
-                    XBRLviewerMVC.Models.FactModel addressOfReportingEntityStreetBuildingIdentifier = new XBRLviewerMVC.Models.FactModel();
-                    addressOfReportingEntityStreetName = Model.FirstOrDefault(x => x.Id == "AddressOfReportingEntityStreetName");
-                    addressOfReportingEntityStreetBuildingIdentifier = Model.FirstOrDefault(x => x.Id == "AddressOfReportingEntityStreetBuildingIdentifier");
-                    @addressOfReportingEntityStreetName.Value @addressOfReportingEntityStreetBuildingIdentifier.Value
-                } <br />
-
-                <!-- Bústaður hjá fyritøkuni sum letur roknskapin inn, postnummar og býur -->
-                @{
-                    XBRLviewerMVC.Models.FactModel addressOfSubmittingEnterprisePostcodeAndTown = new XBRLviewerMVC.Models.FactModel();
-                    addressOfSubmittingEnterprisePostcodeAndTown = Model.FirstOrDefault(x => x.Id == "AddressOfSubmittingEnterprisePostcodeAndTown");
-                    @addressOfSubmittingEnterprisePostcodeAndTown.Value
-                } <br /><br />
-
-                <!-- Felag sum leggur roknskapin fram, skrásetingarnummar/ v-tal -->
-                @{
-                    XBRLviewerMVC.Models.FactModel identificationNumberCvrOfReportingEntity = new XBRLviewerMVC.Models.FactModel();
-                    identificationNumberCvrOfReportingEntity = Model.FirstOrDefault(x => x.Id == "IdentificationNumberCvrOfReportingEntity");
-                    <p>Skrás.nr.: @identificationNumberCvrOfReportingEntity.Value</p>
+                    fId = "NameOfReportingEntity";
+                    f = Model.FirstOrDefault(x => x.Id == fId);
+                    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fId + noValue)</p>
                 }
 
-                <!-- Roknskaparperioda, byrjanardagfesting -->
-                <!-- Roknskaparperioda, endadagfesting -->
                 @{
-                    XBRLviewerMVC.Models.FactModel reportingPeriodStartDate = new XBRLviewerMVC.Models.FactModel();
-                    reportingPeriodStartDate = Model.FirstOrDefault(x => x.Id == "ReportingPeriodStartDate");
-                    XBRLviewerMVC.Models.FactModel reportingPeriodEndDate = new XBRLviewerMVC.Models.FactModel();
-                    reportingPeriodEndDate = Model.FirstOrDefault(x => x.Id == "ReportingPeriodEndDate");
+                    fId = "AddressOfReportingEntityStreetName";
+                    fId2 = "AddressOfReportingEntityStreetBuildingIdentifier";
 
-                    <p>Roknskaparár: @reportingPeriodStartDate.Value - @reportingPeriodEndDate.Value</p>
+                    f = Model.FirstOrDefault(x => x.Id == fId);
+                    f2 = Model.FirstOrDefault(x => x.Id == fId2);
+                    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label &#10;@f2?.Label">@(f?.Value ?? fId + noValue) @(f2?.Value ?? fId2 + noValue)</p>
+                }
+
+                @{
+                    fId = "AddressOfSubmittingEnterprisePostcodeAndTown";
+                    f = Model.FirstOrDefault(x => x.Id == fId);
+                    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fId + noValue)</p>
+                }
+
+                @{
+                    fId = "IdentificationNumberCvrOfReportingEntity";
+                    f = Model.FirstOrDefault(x => x.Id == fId);
+                    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">Skrás.nr.: @(f?.Value ?? fId + noValue)</p>
+                }
+
+                @{
+                    fId = "ReportingPeriodStartDate";
+                    fId2 = "ReportingPeriodEndDate";
+                    f = Model.FirstOrDefault(x => x.Id == fId);
+                    f2 = Model.FirstOrDefault(x => x.Id == fId2);
+                    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label &#10;@f2?.Label">Roknskaparár: @(f?.Value ?? fId + noValue) - @(f2?.Value ?? fId2 + noValue)</p>
                 }
             </td>
         </tr>
         <tr>
             <td class="font-weight-bold">Nevnd</td>
             <td>
-                <!-- First name and surname of member of supervisory board -->
-                <!-- Title of member of supervisory board -->
                 @{
-                    var memberNames = Model.Where(x => x.Id == "NameAndSurnameOfMemberOfSupervisoryBoard")
+                    fId = "NameAndSurnameOfMemberOfSupervisoryBoard";
+                    fId2 = "TitleOfMemberOfSupervisoryBoard";
+
+                    var memberNames = Model.Where(x => x.Id == fId)
                         .Select(x => x);
 
-                    var memberTitles = Model.Where(x => x.Id == "TitleOfMemberOfSupervisoryBoard")
+                    var memberTitles = Model.Where(x => x.Id == fId2)
                         .Select(x => x);
 
                     foreach (var mn in memberNames)
                     {
-                        @mn.Value
+                        <p class="text-left p-1" data-toggle="tooltip" title="@mn?.Label">@(mn?.Value ?? fId + noValue)</p>
 
                         foreach (var mt in memberTitles)
                         {
                             if (mn.ContextID == mt.ContextID)
                             {
-                                <span>, </span>@mt.Value
+                                <p class="text-left p-1 font-italic" data-toggle="tooltip" title="@mt?.Label">@(mt?.Value ?? fId2 + noValue)</p>
                             }
                         }
-
-                        <br/>
                     }
                 }
             </td>
@@ -82,26 +76,45 @@
         <tr>
             <td class="font-weight-bold">Stjórn</td>
             <td>
-
-                <!-- First name and surname of member of executive board -->
                 @{
-                    XBRLviewerMVC.Models.FactModel nameAndSurnameOfMemberOfExecutiveBoard = new XBRLviewerMVC.Models.FactModel();
-                    nameAndSurnameOfMemberOfExecutiveBoard = Model.FirstOrDefault(x => x.Id == "NameAndSurnameOfMemberOfExecutiveBoard");
-                    <p>Skrás.nr.: @nameAndSurnameOfMemberOfExecutiveBoard.Value</p>
+                    fId = "NameAndSurnameOfMemberOfExecutiveBoard";
+                    f = Model.FirstOrDefault(x => x.Id == fId);
+                    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fId + noValue)</p>
                 }
             </td>
         </tr>
         <tr>
             <td class="font-weight-bold">Grannskoðan</td>
-            <td></td>
+            <td>
+                @{
+                    fId = "NameOfAuditFirm";
+                    fId2 = "AddressOfAuditorStreetName";
+                    fId3 = "AddressOfAuditorStreetBuildingIdentifier";
+                    fId4 = "AddressOfAuditorPostCodeIdentifier";
+                    fId5 = "AddressOfAuditorDistrictName";
+
+                    f = Model.FirstOrDefault(x => x.Id == fId);
+                    f2 = Model.FirstOrDefault(x => x.Id == fId2);
+                    f3 = Model.FirstOrDefault(x => x.Id == fId3);
+                    f4 = Model.FirstOrDefault(x => x.Id == fId4);
+                    f5 = Model.FirstOrDefault(x => x.Id == fId5);
+
+                    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fId + noValue)</p>
+                    <p class="text-left p-1" data-toggle="tooltip" title="@f2?.Label&#10;@f3?.Label">@(f2?.Value ?? fId2 + noValue) @(f3?.Value ?? fId3 + noValue)</p>
+                    <p class="text-left p-1" data-toggle="tooltip" title="@f4?.Label&#10;@f5?.Label">@(f4?.Value ?? fId4 + noValue) @(f5?.Value ?? fId5 + noValue)</p>
+                }
+            </td>
         </tr>
+
         <tr>
             <td class="font-weight-bold">Samtaksroknskapur</td>
-            <td></td>
+            <td>
+            </td>
         </tr>
         <tr>
             <td class="font-weight-bold">Ársaðalfundur</td>
-            <td></td>
+            <td>
+            </td>
         </tr>
     </tbody>
 </table>

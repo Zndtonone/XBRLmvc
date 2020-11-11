@@ -1,0 +1,13 @@
+﻿@{
+    @model List<XBRLviewerMVC.Models.FactModel>
+}
+
+@{ FactModel f, f2; string fId, fId2; string noValue = ": Einki virði"; }
+
+@{
+    fId = "ReportingPeriodStartDate";
+    fId2 = "ReportingPeriodEndDate";
+    f = Model.FirstOrDefault(x => x.Id == fId);
+    f2 = Model.FirstOrDefault(x => x.Id == fId2);
+    <h2 class="text-left p-1 font-weight-bold" data-toggle="tooltip" title="@f?.Label &#10;@f2?.Label">Roknskaparár: @(f?.Value ?? fId + noValue) - @(f2?.Value ?? fId2 + noValue)</h2>
+}

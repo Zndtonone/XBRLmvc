@@ -2,87 +2,82 @@
     @model List<XBRLviewerMVC.Models.FactModel>
 }
 
-<!-- Identification of approved annual report -->
+@{ FactModel f, f2; string fId, fId2; string noValue = ": Einki virði"; }
+
 @{
-    XBRLviewerMVC.Models.FactModel identificationOfApprovedAnnualReport = new XBRLviewerMVC.Models.FactModel();
-    identificationOfApprovedAnnualReport = Model.FirstOrDefault(x => x.Id == "IdentificationOfApprovedAnnualReport");
-    <p class="text-left p-1" data-toggle="tooltip" title="Identification of approved annual report">@identificationOfApprovedAnnualReport.Value</p>
+    fId = "IdentificationOfApprovedAnnualReport";
+    f = Model.FirstOrDefault(x => x.Id == fId);
+    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fId + noValue)</p>
 }
 
-<!-- Confirmation that annual report is presented in accordance with requirements provided for by legislation, any standards and requirements provided by articles of association or by agreement -->
 @{
-    XBRLviewerMVC.Models.FactModel confirmationThatAnnualReportIsPresentedInAccordanceWithRequirementsProvidedForByLegislationAnyStandardsAndRequirementsProvidedByArticlesOfAssociationOrByAgreement = new XBRLviewerMVC.Models.FactModel();
-    confirmationThatAnnualReportIsPresentedInAccordanceWithRequirementsProvidedForByLegislationAnyStandardsAndRequirementsProvidedByArticlesOfAssociationOrByAgreement = Model.FirstOrDefault(x => x.Id == "ConfirmationThatAnnualReportIsPresentedInAccordanceWithRequirementsProvidedForByLegislationAnyStandardsAndRequirementsProvidedByArticlesOfAssociationOrByAgreement");
-    <p class="text-left p-1" data-toggle="tooltip" title="Confirmation that annual report is presented in accordance with requirements provided for by legislation, any standards and requirements provided by articles of association or by agreement">@confirmationThatAnnualReportIsPresentedInAccordanceWithRequirementsProvidedForByLegislationAnyStandardsAndRequirementsProvidedByArticlesOfAssociationOrByAgreement.Value</p>
+    fId = "ConfirmationThatAnnualReportIsPresentedInAccordanceWithRequirementsProvidedForByLegislationAnyStandardsAndRequirementsProvidedByArticlesOfAssociationOrByAgreement";
+    f = Model.FirstOrDefault(x => x.Id == fId);
+    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fId + noValue)</p>
 }
 
-<!-- Confirmation that financial statements gives true and fair view of assets, liabilities, equity, financial position and results -->
 @{
-    XBRLviewerMVC.Models.FactModel confirmationThatFinancialStatementGivesTrueAndFairViewOfAssetsLiabilitiesEquityFinancialPositionAndResults = new XBRLviewerMVC.Models.FactModel();
-    confirmationThatFinancialStatementGivesTrueAndFairViewOfAssetsLiabilitiesEquityFinancialPositionAndResults = Model.FirstOrDefault(x => x.Id == "ConfirmationThatFinancialStatementGivesTrueAndFairViewOfAssetsLiabilitiesEquityFinancialPositionAndResults");
-    <p class="text-left p-1" data-toggle="tooltip" title="Confirmation that financial statements gives true and fair view of assets, liabilities, equity, financial position and results">@confirmationThatFinancialStatementGivesTrueAndFairViewOfAssetsLiabilitiesEquityFinancialPositionAndResults.Value</p>
+    fId = "ConfirmationThatFinancialStatementGivesTrueAndFairViewOfAssetsLiabilitiesEquityFinancialPositionAndResults";
+    f = Model.FirstOrDefault(x => x.Id == fId);
+    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fId + noValue)</p>
 }
 
-<!-- Management's statement about management's review -->
 @{
-    XBRLviewerMVC.Models.FactModel managementsStatementAboutManagementsReview = new XBRLviewerMVC.Models.FactModel();
-    managementsStatementAboutManagementsReview = Model.FirstOrDefault(x => x.Id == "ManagementsStatementAboutManagementsReview");
-    <p class="text-left p-1" data-toggle="tooltip" title="Confirmation that financial statements gives true and fair view of assets, liabilities, equity, financial position and results">@managementsStatementAboutManagementsReview.Value</p>
+    fId = "ManagementsStatementAboutManagementsReview";
+    f = Model.FirstOrDefault(x => x.Id == fId);
+    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fId + noValue)</p>
 }
 
-<!-- Recommendation of annual report for approval by general meeting -->
 @{
-    XBRLviewerMVC.Models.FactModel recommendationForApprovalOfAnnualReportByGeneralMeeting = new XBRLviewerMVC.Models.FactModel();
-    recommendationForApprovalOfAnnualReportByGeneralMeeting = Model.FirstOrDefault(x => x.Id == "RecommendationForApprovalOfAnnualReportByGeneralMeeting");
-    <p class="text-left p-1" data-toggle="tooltip" title="Recommendation of annual report for approval by general meeting">@recommendationForApprovalOfAnnualReportByGeneralMeeting.Value</p>
+    fId = "RecommendationForApprovalOfAnnualReportByGeneralMeeting";
+    f = Model.FirstOrDefault(x => x.Id == fId);
+    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fId + noValue)</p>
 }
 
-<!-- Aðalfundardagfesting -->
-<!-- Bústaður hjá felagnum sum leggur roknskapin fram, býur -->
 @{
-    XBRLviewerMVC.Models.FactModel dateOfGeneralMeeting = new XBRLviewerMVC.Models.FactModel();
-    dateOfGeneralMeeting = Model.FirstOrDefault(x => x.Id == "DateOfGeneralMeeting");
-    XBRLviewerMVC.Models.FactModel addressOfReportingEntityDistrictName = new XBRLviewerMVC.Models.FactModel();
-    addressOfReportingEntityDistrictName = Model.FirstOrDefault(x => x.Id == "AddressOfReportingEntityDistrictName");
-    <p class="text-left p-1" data-toggle="tooltip" title="Aðalfundardagfesting og bústaður hjá felagnum sum leggur roknskapin fram, býur">@dateOfGeneralMeeting.Value, @addressOfReportingEntityDistrictName.Value</p>
+    fId = "DateOfGeneralMeeting";
+    f = Model.FirstOrDefault(x => x.Id == fId);
+
+    fId2 = "AddressOfReportingEntityDistrictName";
+    f2 = Model.FirstOrDefault(x => x.Id == fId2);
+    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label &#10;@f2?.Label">@(f?.Value ?? fId + noValue), @(f2?.Value ?? fId2 + noValue)</p>
 }
 
-<!-- First name and surname of member of executive board -->
-<!-- Title of member of executive board -->
 @{
+    fId = "NameAndSurnameOfMemberOfExecutiveBoard";
+    f = Model.FirstOrDefault(x => x.Id == fId);
+
+    fId2 = "TitleOfMemberOfExecutiveBoard";
+    f2 = Model.FirstOrDefault(x => x.Id == fId2);
+
     <p class="text-left p-1 font-weight-bold">Stjórn</p>
-
-    XBRLviewerMVC.Models.FactModel nameAndSurnameOfMemberOfExecutiveBoard = new XBRLviewerMVC.Models.FactModel();
-    nameAndSurnameOfMemberOfExecutiveBoard = Model.FirstOrDefault(x => x.Id == "NameAndSurnameOfMemberOfExecutiveBoard");
-    XBRLviewerMVC.Models.FactModel titleOfMemberOfExecutiveBoard = new XBRLviewerMVC.Models.FactModel();
-    titleOfMemberOfExecutiveBoard = Model.FirstOrDefault(x => x.Id == "TitleOfMemberOfExecutiveBoard");
-
-    <p class="text-left p-1" data-toggle="tooltip" title="First name and surname of member of executive board and title of member of executive board">
-        @nameAndSurnameOfMemberOfExecutiveBoard.Value<br />
-        @titleOfMemberOfExecutiveBoard.Value
+    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label &#10;@f2?.Label">
+        @(f?.Value ?? fId + noValue)<br />
+        <span class="font-italic">@(f2?.Value ?? fId2 + noValue)</span>
     </p>
 }
 
-<!-- First name and surname of member of supervisory board -->
-<!-- Title of member of supervisory board -->
 @{
+    fId = "NameAndSurnameOfMemberOfSupervisoryBoard";
+    fId2 = "TitleOfMemberOfSupervisoryBoard";
+
+    var memberNames = Model.Where(x => x.Id == fId)
+        .Select(x => x);
+
+    var memberTitles = Model.Where(x => x.Id == fId2)
+        .Select(x => x);
+
     <p class="text-left p-1 font-weight-bold">Nevnd</p>
-
-    var memberNames = Model.Where(x => x.Id == "NameAndSurnameOfMemberOfSupervisoryBoard")
-        .Select(x => x);
-
-    var memberTitles = Model.Where(x => x.Id == "TitleOfMemberOfSupervisoryBoard")
-        .Select(x => x);
 
     foreach (var mn in memberNames)
     {
-        <p class="text-left p-1" data-toggle="tooltip" title="First name and surname of member of supervisory board">@mn.Value</p>
+    <p class="text-left p-1" data-toggle="tooltip" title="@mn?.Label">@(mn?.Value ?? fId + noValue)</p>
 
         foreach (var mt in memberTitles)
         {
             if (mn.ContextID == mt.ContextID)
             {
-                <p class="text-left p-1" data-toggle="tooltip" title="First name and surname of member of supervisory board">@mt.Value</p>
+                <p class="text-left p-1 font-italic" data-toggle="tooltip" title="@mt?.Label">@(mt?.Value ?? fId + noValue)</p>
             }
         }
     }

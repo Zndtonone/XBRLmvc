@@ -2,54 +2,49 @@
     @model List<XBRLviewerMVC.Models.FactModel>
 }
 
-<!-- Navn á virki sum sendir inn roknskapin -->
+@{ FactModel f, f2; string fId, fId2; string noValue = ": Einki virði"; }
+
 @{
-    XBRLviewerMVC.Models.FactModel nameOfSubmittingEnterprise = new XBRLviewerMVC.Models.FactModel();
-    nameOfSubmittingEnterprise = Model.FirstOrDefault(x => x.Id == "NameOfSubmittingEnterprise");
-    <h4 class="text-left p-1" data-toggle="tooltip" title="Navn á virki sum sendir inn roknskapin">@nameOfSubmittingEnterprise.Value</h4>
+    fId = "NameOfSubmittingEnterprise";
+    f = Model.FirstOrDefault(x => x.Id == fId);
+    <p class="text-left p-1 font-weight-bold" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fId + noValue)</p>
 }
 
-<!-- Felagið sum leggur rokaskapin fram, navn -->
 @{
-    XBRLviewerMVC.Models.FactModel nameOfReportingEntity = new XBRLviewerMVC.Models.FactModel();
-    nameOfReportingEntity = Model.FirstOrDefault(x => x.Id == "NameOfReportingEntity");
-    <h1 class="text-center p-1" data-toggle="tooltip" title="Felagið sum leggur rokaskapin fram, navn">@nameOfReportingEntity.Value</h1>
+    fId = "NameOfReportingEntity";
+    f = Model.FirstOrDefault(x => x.Id == fId);
+    <h1 class="text-center p-1 font-weight-bold" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fId + noValue)</h1>
 }
 
-<!-- Bústaður hjá felagnum sum leggur roknskapin fram, gøtunavn -->
-<!-- Bústaður hjá felagnum sum leggur roknskapin fram, gøtunummar og hædd -->
 @{
-    XBRLviewerMVC.Models.FactModel addressOfReportingEntityStreetName = new XBRLviewerMVC.Models.FactModel();
-    XBRLviewerMVC.Models.FactModel addressOfReportingEntityStreetBuildingIdentifier = new XBRLviewerMVC.Models.FactModel();
-    addressOfReportingEntityStreetName = Model.FirstOrDefault(x => x.Id == "AddressOfReportingEntityStreetName");
-    addressOfReportingEntityStreetBuildingIdentifier = Model.FirstOrDefault(x => x.Id == "AddressOfReportingEntityStreetBuildingIdentifier");
-    <h2 class="text-center p-1" data-toggle="tooltip" title="Bústaður hjá felagnum sum leggur roknskapin fram, gøtunavn og Bústaður hjá felagnum sum leggur roknskapin fram, gøtunummar og hædd">@addressOfReportingEntityStreetName.Value @addressOfReportingEntityStreetBuildingIdentifier.Value</h2>
+    fId = "AddressOfReportingEntityStreetName";
+    fId2 = "AddressOfReportingEntityStreetBuildingIdentifier";
+
+    f = Model.FirstOrDefault(x => x.Id == fId);
+    f2 = Model.FirstOrDefault(x => x.Id == fId2);
+    <h2 class="text-center p-1" data-toggle="tooltip" title="@f?.Label &#10;@f2?.Label">@(f?.Value ?? fId + noValue) @(f2?.Value ?? fId2 + noValue)</h2>
 }
 
-<!-- Bústaður hjá fyritøkuni sum letur roknskapin inn, postnummar og býur -->
 @{
-    XBRLviewerMVC.Models.FactModel addressOfSubmittingEnterprisePostcodeAndTown = new XBRLviewerMVC.Models.FactModel();
-    addressOfSubmittingEnterprisePostcodeAndTown = Model.FirstOrDefault(x => x.Id == "AddressOfSubmittingEnterprisePostcodeAndTown");
-    <h2 class="text-center p-1" data-toggle="tooltip" title="Bústaður hjá fyritøkuni sum letur roknskapin inn, postnummar og býur">@addressOfSubmittingEnterprisePostcodeAndTown.Value</h2>
+    fId = "AddressOfSubmittingEnterprisePostcodeAndTown";
+    f = Model.FirstOrDefault(x => x.Id == fId);
+    <h2 class="text-center p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fId + noValue)</h2>
 }
 
-<!-- Felag sum leggur roknskapin fram, skrásetingarnummar/ v-tal -->
 @{
-    XBRLviewerMVC.Models.FactModel identificationNumberCvrOfReportingEntity = new XBRLviewerMVC.Models.FactModel();
-    identificationNumberCvrOfReportingEntity = Model.FirstOrDefault(x => x.Id == "IdentificationNumberCvrOfReportingEntity");
-    <h4 class="text-center p-1" data-toggle="tooltip" title="Felag sum leggur roknskapin fram, skrásetingarnummar/ v-tal">Skrás.nr. @identificationNumberCvrOfReportingEntity.Value</h4>
+    fId = "IdentificationNumberCvrOfReportingEntity";
+    f = Model.FirstOrDefault(x => x.Id == fId);
+    <h4 class="text-center p-1" data-toggle="tooltip" title="@f?.Label"><span class="font-weight-bold">Skrás.nr.: </span>@(f?.Value ?? fId + noValue)</h4>
 }
 
-<!-- Dagfesting fyri nær leiðslan góðkendi ársfrásagnina -->
 @{
-    XBRLviewerMVC.Models.FactModel dateOfApprovalOfReport = new XBRLviewerMVC.Models.FactModel();
-    dateOfApprovalOfReport = Model.FirstOrDefault(x => x.Id == "DateOfApprovalOfReport");
-    <h4 class="text-center p-1" data-toggle="tooltip" title="Dagfesting fyri nær leiðslan góðkendi ársfrásagnina">Góðkend: @dateOfApprovalOfReport.Value</h4>
+    fId = "DateOfApprovalOfReport";
+    f = Model.FirstOrDefault(x => x.Id == fId);
+    <h4 class="text-center p-1" data-toggle="tooltip" title="@f?.Label"><span class="font-weight-bold">Góðkend: </span>@(f?.Value ?? fId + noValue)</h4>
 }
 
-<!-- Navn og orðstýrara ella vara orðstýrara á aðalfundinum -->
 @{
-    XBRLviewerMVC.Models.FactModel nameAndSurnameOfChairmanOfGeneralMeeting = new XBRLviewerMVC.Models.FactModel();
-    nameAndSurnameOfChairmanOfGeneralMeeting = Model.FirstOrDefault(x => x.Id == "NameAndSurnameOfChairmanOfGeneralMeeting");
-    <h4 class="text-center p-1" data-toggle="tooltip" title="Navn og orðstýrara ella vara orðstýrara á aðalfundinum">Fundarstjóri: @nameAndSurnameOfChairmanOfGeneralMeeting.Value</h4>
+    fId = "NameAndSurnameOfChairmanOfGeneralMeeting";
+    f = Model.FirstOrDefault(x => x.Id == fId);
+    <h4 class="text-center p-1" data-toggle="tooltip" title="@f?.Label"><span class="font-weight-bold">Fundarstjóri: </span>@(f?.Value ?? fId + noValue)</h4>
 }
