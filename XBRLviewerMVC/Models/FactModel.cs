@@ -11,6 +11,6 @@ namespace XBRLviewerMVC.Models
         public string Label { get; set; }
         public string Value { get; set; }
         public string Namespace { get; set; }
-        public string ContextRefID { get; set; }
+        public string ContextID { get; set; }
     }
 }
