@@ -36,7 +36,9 @@ namespace XBRLviewerMVC.Controllers
 
             // Converting XBRL instance to JSON
             //List<object> listToConvert = XBRLservices.GepsioDataExtractor.GetAllValuesFromFactsList(xbrlInstance);
-            //string jsonToRead = XBRLservices.JSONServices.JsonConvert(listToConvert);
+
+            // Saving file to local (should be saved to wwwroot / data in the future)
+            //XBRLservices.JSONServices.JsonWriteToFileFromList(listToConvert); // This file should be saved to the wwwroot / data folder, and then be available for usage.
 
             // Deserializing JSON and loading it to FactModel list
             facts = JsonConvert.DeserializeObject<List<FactModel>>(XBRLservices.JSONServices.Read("facts.json", "data"));

@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\XBRLviewer\JeffFerguson.Gepsio\JeffFerguson.Gepsio.csproj" />
+    <ProjectReference Include="..\JeffFerguson.Gepsio\JeffFerguson.Gepsio.csproj" />
     <ProjectReference Include="..\XBRLservices\XBRLservices.csproj" />
   </ItemGroup>
 

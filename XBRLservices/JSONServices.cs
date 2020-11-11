@@ -50,10 +50,10 @@ namespace XBRLservices
         {
             var output = Newtonsoft.Json.JsonConvert.SerializeObject(listToConvert);
 
-            File.WriteAllText(@"c:\GepsioJSON\myObj.json", output);
+            File.WriteAllText(@"c:\GepsioJSON\myObj2.json", output);
         }
 
-        // RTH - Convert to JSON and write to file from List
+        // RTH - Convert to JSON
         public static string JsonConvert(List<object> listToConvert)
         {
             var json = Newtonsoft.Json.JsonConvert.SerializeObject(listToConvert);

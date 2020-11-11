@@ -82,12 +82,12 @@
         <tr>
             <td class="font-weight-bold">Stjórn</td>
             <td>
-                
-                <!-- Felag sum leggur roknskapin fram, skrásetingarnummar/ v-tal -->
+
+                <!-- First name and surname of member of executive board -->
                 @{
-                    XBRLviewerMVC.Models.FactModel identificationNumberCvrOfReportingEntity = new XBRLviewerMVC.Models.FactModel();
-                    identificationNumberCvrOfReportingEntity = Model.FirstOrDefault(x => x.Id == "IdentificationNumberCvrOfReportingEntity");
-                    <p>Skrás.nr.: @identificationNumberCvrOfReportingEntity.Value</p>
+                    XBRLviewerMVC.Models.FactModel nameAndSurnameOfMemberOfExecutiveBoard = new XBRLviewerMVC.Models.FactModel();
+                    nameAndSurnameOfMemberOfExecutiveBoard = Model.FirstOrDefault(x => x.Id == "NameAndSurnameOfMemberOfExecutiveBoard");
+                    <p>Skrás.nr.: @nameAndSurnameOfMemberOfExecutiveBoard.Value</p>
                 }
             </td>
         </tr>
