@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <Content Remove="wwwroot\data\20191101\2065_1_2019.xml" />
-    <Content Remove="wwwroot\data\20191101\2874_1_2019.xml" />
     <Content Remove="wwwroot\data\20191101\ALL.xsd" />
     <Content Remove="wwwroot\data\20191101\DCCAFOALLentry.xsd" />
     <Content Remove="wwwroot\data\20191101\entryFODanishGAAPBalanceSheetAccountByCurrentAndLongTermFormIncomeStatementByFunctionIncludingManagementsReviewStatisticsAndTax20171001.xsd" />
@@ -295,9 +294,6 @@
 
   <ItemGroup>
     <None Include="wwwroot\data\20191101\2065_1_2019.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="wwwroot\data\20191101\2874_1_2019.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="wwwroot\data\20191101\ALL.xsd">

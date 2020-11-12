@@ -49,10 +49,25 @@ namespace XBRLviewerMVC.Controllers
                 List<object> listToConvert = XBRLservices.GepsioDataExtractor.GetAllValuesFromFactsList(xbrlInstance);
                 var json = JsonConvert.SerializeObject(listToConvert);
                 // FileName - .xml og leggja .json afturat
-                //System.IO.File.WriteAllText($"{_env.WebRootPath}/data/json/" + $"{fileUpload.FormFile.FileName}", json);
+
+                string jsonFileName = $"{_env.WebRootPath}/data/json/" + $"{fileUpload.FormFile.FileName}";
+
+                removeExtension(jsonFileName);
+
+                System.IO.File.WriteAllText(jsonFileName + ".json", json);
             }
             
             return Redirect("/");
+        }
+
+        public static string removeExtension(string strPath)
+        {
+            while (strPath.IndexOf(".") > 0)
+            {
+                strPath = strPath.Substring(strPath.IndexOf("."));
+            }
+
+            return strPath;
         }
 
         public IActionResult XBRLviewer()
