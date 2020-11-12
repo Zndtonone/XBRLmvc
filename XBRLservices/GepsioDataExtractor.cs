@@ -18,7 +18,7 @@ namespace XBRLservices
         //==================================================== PUBLIC METHODS =================================================================
 
         // GEPSIO - Returns a list of anonymous types containing id, label, value, namespace, contextID
-        public static List<object> GetAllValuesFromFactsList(XbrlDocument xbrlInstance)
+        public static List<object> GetValuesFromFactsToList(XbrlDocument xbrlInstance)
         {
             List<object> factList = new List<object>();
 

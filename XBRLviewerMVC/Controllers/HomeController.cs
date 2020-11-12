@@ -45,30 +45,18 @@ namespace XBRLviewerMVC.Controllers
                 }
 
                 var xbrlInstance = new XbrlDocument();
-                xbrlInstance.Load(filePath); // Fær ikki facts um sama fíla longu liggur á staðnum.
-                List<object> listToConvert = XBRLservices.GepsioDataExtractor.GetAllValuesFromFactsList(xbrlInstance);
+                xbrlInstance.Load(filePath); // Does not get the facts, if a file with the same name is already in the directory.
+                List<object> listToConvert = XBRLservices.GepsioDataExtractor.GetValuesFromFactsToList(xbrlInstance);
                 var json = JsonConvert.SerializeObject(listToConvert);
-                // FileName - .xml og leggja .json afturat
 
-                string jsonFileName = $"{_env.WebRootPath}/data/json/" + $"{fileUpload.FormFile.FileName}";
+                string fileName = filePath.Substring(filePath.LastIndexOf("/") + 1, filePath.Substring(filePath.LastIndexOf("/")).Length - filePath.Substring(filePath.LastIndexOf(".")).Length - 1);
 
-                removeExtension(jsonFileName);
-
-                System.IO.File.WriteAllText(jsonFileName + ".json", json);
+                System.IO.File.WriteAllText($"{_env.WebRootPath}/data/json/" + fileName + ".json", json);
             }
             
-            return Redirect("/");
+            return Redirect(" / ");
         }
 
-        public static string removeExtension(string strPath)
-        {
-            while (strPath.IndexOf(".") > 0)
-            {
-                strPath = strPath.Substring(strPath.IndexOf("."));
-            }
-
-            return strPath;
-        }
 
         public IActionResult XBRLviewer()
         {

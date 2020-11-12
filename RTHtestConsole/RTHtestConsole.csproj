@@ -6,11 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\XBRLmvc\JeffFerguson.Gepsio\JeffFerguson.Gepsio.csproj" />
-    <ProjectReference Include="..\..\XBRLviewerMVC\XBRLservices\XBRLservices.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="20191101\2065_1_2019.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -889,6 +884,11 @@
     <Folder Include="20191101\XBRLFO20191101\fo-tax-def\" />
     <Folder Include="20191101\XBRLFO20191101\fo-tax-pre\" />
     <Folder Include="20191101\XBRLFO20191101\labels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\JeffFerguson.Gepsio\JeffFerguson.Gepsio.csproj" />
+    <ProjectReference Include="..\XBRLservices\XBRLservices.csproj" />
   </ItemGroup>
 
 </Project>

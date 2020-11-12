@@ -1,17 +1,18 @@
 ﻿@model XBRLviewerMVC.Models.FileUpload
 
-<div class="text-center">
+<div>
     <form asp-controller="Home" asp-action="UploadFile" enctype="multipart/form-data" method="POST">
-        <dl>
-            <dt>
-                <label asp-for="@Model.FormFile">
-                    Upload Your File
-                </label>
-            </dt>
-            <dd>
-                <input asp-for="@Model.FormFile" type="file" />
-            </dd>
-        </dl>
-        <button type="submit" class="btn btn-primary">Submit File</button>
+
+        <div class="custom-file p-2">
+
+            <label class="custom-file-label" for="customFile">Choose file</label>
+
+            <input class="custom-file-input" asp-for="@Model.FormFile" type="file" />
+        </div>
+
+        <div class="pt-2">
+            <button type="submit" class="btn btn-primary"><span class="fa fa-check"></span> Vátta</button>
+        </div>
+        
     </form>
 </div>

@@ -14,19 +14,24 @@ namespace TestConsoleApp
     {
         static void Main(string[] args)
         {
-            CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo("fo");
+            //CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo("fo");
 
-            var xbrlInstance = new XbrlDocument();
-            xbrlInstance.Load(Environment.CurrentDirectory + @"\20191101\2065_1_2019.xml");
+            //var xbrlInstance = new XbrlDocument();
+            //xbrlInstance.Load(Environment.CurrentDirectory + @"\20191101\2065_1_2019.xml");
 
-            // RTH - Layers testing
-            var listToConvert = XBRLservices.GepsioDataExtractor.GetAllValuesFromFactsList(xbrlInstance);
-            XBRLservices.JSONServices.JsonWriteToFileFromList(listToConvert);
+            //// RTH - Layers testing
+            //var listToConvert = XBRLservices.GepsioDataExtractor.GetAllValuesFromFactsList(xbrlInstance);
+            //XBRLservices.JSONServices.JsonWriteToFileFromList(listToConvert);
 
-            XBRLservices.GepsioDataPrinter.ShowUnitsInDocument(xbrlInstance);
-            XBRLservices.GepsioDataPrinter.ShowContextsInDocument(xbrlInstance);
-            XBRLservices.GepsioDataPrinter.ShowFactsInDocument(xbrlInstance);
-            XBRLservices.GepsioDataPrinter.PrintLabelsForFacts(xbrlInstance);
+            //XBRLservices.GepsioDataPrinter.ShowUnitsInDocument(xbrlInstance);
+            //XBRLservices.GepsioDataPrinter.ShowContextsInDocument(xbrlInstance);
+            //XBRLservices.GepsioDataPrinter.ShowFactsInDocument(xbrlInstance);
+            //XBRLservices.GepsioDataPrinter.PrintLabelsForFacts(xbrlInstance);
+
+            string path = @"C:/Users/RTH/ASP.NET repo/XBRLviewerMVC/wwwroot/data/20191101/2065_1_2019.xml";
+
+            int index = path.LastIndexOf('/');
+            string jsonFilePath = index == -1 ? path : path.Substring(0, index);
         }
 
         public static void WalkPresentableTree(XbrlDocument xbrlDoc)
