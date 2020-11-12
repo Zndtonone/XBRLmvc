@@ -10,38 +10,55 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using XBRLviewerMVC.Models;
+using System.Web;
+using Microsoft.AspNetCore.Hosting;
 
 namespace XBRLviewerMVC.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IWebHostEnvironment _env;
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IWebHostEnvironment env)
         {
             CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo("fo");
             _logger = logger;
+            _env = env;
+        }
+
+        public IActionResult FileUpload()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult UploadFile(FileUpload fileUpload)
+        {
+            if (fileUpload.FormFile != null)
+            {
+                string filePath = $"{_env.WebRootPath}/data/20191101/" + $"{fileUpload.FormFile.FileName}";
+
+                using (var stream = System.IO.File.Create(filePath))
+                {
+                    fileUpload.FormFile.CopyTo(stream);
+                }
+
+                var xbrlInstance = new XbrlDocument();
+                xbrlInstance.Load(filePath); // Fær ikki facts um sama fíla longu liggur á staðnum.
+                List<object> listToConvert = XBRLservices.GepsioDataExtractor.GetAllValuesFromFactsList(xbrlInstance);
+                var json = JsonConvert.SerializeObject(listToConvert);
+                // FileName - .xml og leggja .json afturat
+                //System.IO.File.WriteAllText($"{_env.WebRootPath}/data/json/" + $"{fileUpload.FormFile.FileName}", json);
+            }
+            
+            return Redirect("/");
         }
 
         public IActionResult XBRLviewer()
         {
-            Response.Headers["Content-Type"] = "charset=utf-8";
-
             // Creating new list of FactModel
-            List<FactModel> facts = new List<FactModel>();
-
-            // Loading XBRL document
-            //var xbrlInstance = new XbrlDocument();
-            //xbrlInstance.Load(Environment.CurrentDirectory + @"\20191101\2065_1_2019.xml");
-
-            // Converting XBRL instance to JSON
-            //List<object> listToConvert = XBRLservices.GepsioDataExtractor.GetAllValuesFromFactsList(xbrlInstance);
-
-            // Saving file to local (should be saved to wwwroot / data in the future)
-            //XBRLservices.JSONServices.JsonWriteToFileFromList(listToConvert); // This file should be saved to the wwwroot / data folder, and then be available for usage.
-
-            // Deserializing JSON and loading it to FactModel list
-            facts = JsonConvert.DeserializeObject<List<FactModel>>(XBRLservices.JSONServices.Read("facts.json", "data"));
+            List<FactModel> facts = JsonConvert.DeserializeObject<List<FactModel>>(XBRLservices.JSONServices.Read("facts.json", "data"));
 
             return View(facts);
         }

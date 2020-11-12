@@ -1,0 +1,588 @@
+<xbrl xmlns="http://www.xbrl.org/2003/instance" xmlns:g="http://xbrl.dcca.dk/sob" xmlns:b="http://www.xbrl.gov.fo/entryBalanceSheetAccountFormIncomeStatementByNature" xmlns:f="http://xbrl.dcca.dk/arr" xmlns:d="http://xbrl.dcca.dk/cmn" xmlns:e="http://xbrl.dcca.dk/fsa" xmlns:c="http://xbrl.dcca.dk/gsd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:iso4217="http://www.xbrl.org/2003/iso4217" xmlns:xbrldi="http://xbrl.org/2006/xbrldi" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.gov.fo/entryBalanceSheetAccountFormIncomeStatementByNature https://www.vinnugluggin.fo/taxonomy/20191101/entryFODanishGAAPBalanceSheetAccountFormIncomeStatementByNatureIncludingManagementsReviewStatisticsAndTax20171001.xsd">
+  <link:schemaRef xlink:type="simple" xlink:href="https://www.vinnugluggin.fo/taxonomy/20191101/entryFODanishGAAPBalanceSheetAccountFormIncomeStatementByNatureIncludingManagementsReviewStatisticsAndTax20171001.xsd"/>
+  <c:InformationOnTypeOfSubmittedReport contextRef="c1">Årsrapport</c:InformationOnTypeOfSubmittedReport>
+  <c:IdentificationNumberCvrOfSubmittingEnterprise contextRef="c1">00601470</c:IdentificationNumberCvrOfSubmittingEnterprise>
+  <c:NameOfSubmittingEnterprise contextRef="c1">P/F Januar, løggilt grannskoðanarvirki</c:NameOfSubmittingEnterprise>
+  <c:AddressOfSubmittingEnterpriseStreetAndNumber contextRef="c1">Óðinshædd, 13</c:AddressOfSubmittingEnterpriseStreetAndNumber>
+  <c:AddressOfSubmittingEnterprisePostcodeAndTown contextRef="c1">110, Tórshavn</c:AddressOfSubmittingEnterprisePostcodeAndTown>
+  <c:PrecedingReportingPeriodStartDate contextRef="c1">2018-01-01</c:PrecedingReportingPeriodStartDate>
+  <c:PredingReportingPeriodEndDate contextRef="c1">2018-12-31</c:PredingReportingPeriodEndDate>
+  <c:ReportingPeriodStartDate contextRef="c1">2019-01-01</c:ReportingPeriodStartDate>
+  <c:ReportingPeriodEndDate contextRef="c1">2019-12-31</c:ReportingPeriodEndDate>
+  <c:DateOfApprovalOfReport contextRef="c1">2020-02-21</c:DateOfApprovalOfReport>
+  <c:IdentificationNumberCvrOfReportingEntity contextRef="c1">00489409</c:IdentificationNumberCvrOfReportingEntity>
+  <c:NameOfReportingEntity contextRef="c1">Sp/f Undir Bryggjubakka</c:NameOfReportingEntity>
+  <c:AddressOfReportingEntityStreetName contextRef="c1">Bryggjubakki</c:AddressOfReportingEntityStreetName>
+  <c:AddressOfReportingEntityStreetBuildingIdentifier contextRef="c1">22</c:AddressOfReportingEntityStreetBuildingIdentifier>
+  <c:AddressOfReportingEntityPostCodeIdentifier contextRef="c1">FO-100</c:AddressOfReportingEntityPostCodeIdentifier>
+  <c:AddressOfReportingEntityDistrictName contextRef="c1">100 Tórshavn</c:AddressOfReportingEntityDistrictName>
+  <d:NameOfAuditFirm contextRef="c87">P/F Januar, løggilt grannskoðanarvirki</d:NameOfAuditFirm>
+  <d:IdentificationNumberCvrOfAuditFirm contextRef="c87">00601470</d:IdentificationNumberCvrOfAuditFirm>
+  <d:NameAndSurnameOfAuditor contextRef="c87">Heini Thomsen</d:NameAndSurnameOfAuditor>
+  <d:DescriptionOfAuditor contextRef="c87">statsaut. revisor</d:DescriptionOfAuditor>
+  <c:AddressOfAuditorStreetName contextRef="c87">Óðinshædd</c:AddressOfAuditorStreetName>
+  <c:AddressOfAuditorStreetBuildingIdentifier contextRef="c87">13</c:AddressOfAuditorStreetBuildingIdentifier>
+  <c:AddressOfAuditorPostCodeIdentifier contextRef="c87">110</c:AddressOfAuditorPostCodeIdentifier>
+  <c:AddressOfAuditorDistrictName contextRef="c87">Tórshavn</c:AddressOfAuditorDistrictName>
+  <c:AddressOfAuditorCountry contextRef="c1">Føroyar</c:AddressOfAuditorCountry>
+  <c:TelephoneNumberOfAuditor contextRef="c87">+298 314700</c:TelephoneNumberOfAuditor>
+  <c:EmailOfAuditor contextRef="c1">januar@januar.fo</c:EmailOfAuditor>
+  <c:DateOfGeneralMeeting contextRef="c1">2020-06-05</c:DateOfGeneralMeeting>
+  <c:NameAndSurnameOfChairmanOfGeneralMeeting contextRef="c1">Árni Rasmussen</c:NameAndSurnameOfChairmanOfGeneralMeeting>
+  <e:ClassOfReportingEntity contextRef="c1">Regnskabsklasse B</e:ClassOfReportingEntity>
+  <d:TypeOfAuditorAssistance contextRef="c1">Revisionspåtegning</d:TypeOfAuditorAssistance>
+  <f:AddresseeOfAuditorsReportOnAuditedFinancialStatements contextRef="c1">kapitaleigaran</f:AddresseeOfAuditorsReportOnAuditedFinancialStatements>
+  <f:SignatureOfAuditorsPlace contextRef="c1">Tórshavn</f:SignatureOfAuditorsPlace>
+  <f:SignatureOfAuditorsDate contextRef="c1">2020-02-21</f:SignatureOfAuditorsDate>
+  <g:PlaceOfSignatureOfStatement contextRef="c1">Tórshavn</g:PlaceOfSignatureOfStatement>
+  <g:DateOfApprovalOfAnnualReport contextRef="c1">2020-02-21</g:DateOfApprovalOfAnnualReport>
+  <e:GrossProfitLoss contextRef="c1" unitRef="u5" decimals="0">1103577</e:GrossProfitLoss>
+  <e:GrossProfitLoss contextRef="c3" unitRef="u5" decimals="-3">1116000</e:GrossProfitLoss>
+  <e:DepreciationAmortisationExpenseAndImpairmentLossesOfPropertyPlantAndEquipmentAndIntangibleAssetsRecognisedInProfitOrLoss contextRef="c1" unitRef="u5" decimals="0">700478</e:DepreciationAmortisationExpenseAndImpairmentLossesOfPropertyPlantAndEquipmentAndIntangibleAssetsRecognisedInProfitOrLoss>
+  <e:DepreciationAmortisationExpenseAndImpairmentLossesOfPropertyPlantAndEquipmentAndIntangibleAssetsRecognisedInProfitOrLoss contextRef="c3" unitRef="u5" decimals="-3">700000</e:DepreciationAmortisationExpenseAndImpairmentLossesOfPropertyPlantAndEquipmentAndIntangibleAssetsRecognisedInProfitOrLoss>
+  <e:ProfitLossFromOrdinaryOperatingActivities contextRef="c1" unitRef="u5" decimals="0">403099</e:ProfitLossFromOrdinaryOperatingActivities>
+  <e:ProfitLossFromOrdinaryOperatingActivities contextRef="c3" unitRef="u5" decimals="-3">416000</e:ProfitLossFromOrdinaryOperatingActivities>
+  <e:OtherFinanceExpenses contextRef="c1" unitRef="u5" decimals="0">505553</e:OtherFinanceExpenses>
+  <e:OtherFinanceExpenses contextRef="c3" unitRef="u5" decimals="-3">536000</e:OtherFinanceExpenses>
+  <e:ProfitLossFromOrdinaryActivitiesBeforeTax contextRef="c1" unitRef="u5" decimals="0">-102454</e:ProfitLossFromOrdinaryActivitiesBeforeTax>
+  <e:ProfitLossFromOrdinaryActivitiesBeforeTax contextRef="c3" unitRef="u5" decimals="-3">-120000</e:ProfitLossFromOrdinaryActivitiesBeforeTax>
+  <e:TaxExpenseOnOrdinaryActivities contextRef="c1" unitRef="u5" decimals="0">-73158</e:TaxExpenseOnOrdinaryActivities>
+  <e:TaxExpenseOnOrdinaryActivities contextRef="c3" unitRef="u5" decimals="-3">-121000</e:TaxExpenseOnOrdinaryActivities>
+  <e:ProfitLoss contextRef="c1" unitRef="u5" decimals="0">-29296</e:ProfitLoss>
+  <e:ProfitLoss contextRef="c3" unitRef="u5" decimals="-3">1000</e:ProfitLoss>
+  <e:ProfitLoss contextRef="c119" unitRef="u5" decimals="0">-29296</e:ProfitLoss>
+  <e:ProfitLoss contextRef="c120" unitRef="u5" decimals="-3">1000</e:ProfitLoss>
+  <e:LandAndBuildings contextRef="c6" unitRef="u5" decimals="0">43381509</e:LandAndBuildings>
+  <e:LandAndBuildings contextRef="c4" unitRef="u5" decimals="-3">42515000</e:LandAndBuildings>
+  <e:FixturesFittingsToolsAndEquipment contextRef="c6" unitRef="u5" decimals="0">64171</e:FixturesFittingsToolsAndEquipment>
+  <e:FixturesFittingsToolsAndEquipment contextRef="c4" unitRef="u5" decimals="-3">193000</e:FixturesFittingsToolsAndEquipment>
+  <e:PropertyPlantAndEquipment contextRef="c6" unitRef="u5" decimals="0">43445680</e:PropertyPlantAndEquipment>
+  <e:PropertyPlantAndEquipment contextRef="c4" unitRef="u5" decimals="-3">42708000</e:PropertyPlantAndEquipment>
+  <e:NoncurrentAssets contextRef="c6" unitRef="u5" decimals="0">43445680</e:NoncurrentAssets>
+  <e:NoncurrentAssets contextRef="c4" unitRef="u5" decimals="-3">42708000</e:NoncurrentAssets>
+  <e:ShorttermTradeReceivables contextRef="c6" unitRef="u5" decimals="0">49139</e:ShorttermTradeReceivables>
+  <e:ShorttermTradeReceivables contextRef="c4" unitRef="u5" decimals="-3">99000</e:ShorttermTradeReceivables>
+  <e:ShorttermReceivables contextRef="c6" unitRef="u5" decimals="0">49139</e:ShorttermReceivables>
+  <e:ShorttermReceivables contextRef="c4" unitRef="u5" decimals="-3">99000</e:ShorttermReceivables>
+  <e:CashAndCashEquivalents contextRef="c6" unitRef="u5" decimals="0">47984</e:CashAndCashEquivalents>
+  <e:CashAndCashEquivalents contextRef="c4" unitRef="u5" decimals="-3">47000</e:CashAndCashEquivalents>
+  <e:CurrentAssets contextRef="c6" unitRef="u5" decimals="0">97123</e:CurrentAssets>
+  <e:CurrentAssets contextRef="c4" unitRef="u5" decimals="-3">146000</e:CurrentAssets>
+  <e:Assets contextRef="c6" unitRef="u5" decimals="0">43542803</e:Assets>
+  <e:Assets contextRef="c4" unitRef="u5" decimals="-3">42854000</e:Assets>
+  <e:RecognisedButNotOwnedAssets contextRef="c1" unitRef="u5" decimals="0">0</e:RecognisedButNotOwnedAssets>
+  <e:ContributedCapital contextRef="c6" unitRef="u5" decimals="0">13346115</e:ContributedCapital>
+  <e:ContributedCapital contextRef="c4" unitRef="u5" decimals="-3">13346000</e:ContributedCapital>
+  <e:RetainedEarnings contextRef="c6" unitRef="u5" decimals="0">-821136</e:RetainedEarnings>
+  <e:RetainedEarnings contextRef="c4" unitRef="u5" decimals="-3">-792000</e:RetainedEarnings>
+  <e:Equity contextRef="c6" unitRef="u5" decimals="0">12524979</e:Equity>
+  <e:Equity contextRef="c4" unitRef="u5" decimals="-3">12554000</e:Equity>
+  <e:ProvisionsForDeferredTax contextRef="c6" unitRef="u5" decimals="0">2054531</e:ProvisionsForDeferredTax>
+  <e:ProvisionsForDeferredTax contextRef="c4" unitRef="u5" decimals="-3">2128000</e:ProvisionsForDeferredTax>
+  <e:Provisions contextRef="c6" unitRef="u5" decimals="0">2054531</e:Provisions>
+  <e:Provisions contextRef="c4" unitRef="u5" decimals="-3">2128000</e:Provisions>
+  <e:LongtermDebtToBanks contextRef="c6" unitRef="u5" decimals="0">18347128</e:LongtermDebtToBanks>
+  <e:LongtermDebtToBanks contextRef="c4" unitRef="u5" decimals="-3">19617000</e:LongtermDebtToBanks>
+  <e:LongtermLiabilitiesOtherThanProvisions contextRef="c6" unitRef="u5" decimals="0">18347128</e:LongtermLiabilitiesOtherThanProvisions>
+  <e:LongtermLiabilitiesOtherThanProvisions contextRef="c4" unitRef="u5" decimals="-3">19617000</e:LongtermLiabilitiesOtherThanProvisions>
+  <e:ShorttermPartOfLongtermLiabilitiesOtherThanProvisions contextRef="c6" unitRef="u5" decimals="0">1246425</e:ShorttermPartOfLongtermLiabilitiesOtherThanProvisions>
+  <e:ShorttermPartOfLongtermLiabilitiesOtherThanProvisions contextRef="c4" unitRef="u5" decimals="-3">1214000</e:ShorttermPartOfLongtermLiabilitiesOtherThanProvisions>
+  <e:ShorttermPrepaymentsReceivedFromCustomers contextRef="c6" unitRef="u5" decimals="0">46875</e:ShorttermPrepaymentsReceivedFromCustomers>
+  <e:ShorttermPrepaymentsReceivedFromCustomers contextRef="c4" unitRef="u5" decimals="-3">47000</e:ShorttermPrepaymentsReceivedFromCustomers>
+  <e:ShorttermTradePayables contextRef="c6" unitRef="u5" decimals="0">547047</e:ShorttermTradePayables>
+  <e:ShorttermTradePayables contextRef="c4" unitRef="u5" decimals="-3">22000</e:ShorttermTradePayables>
+  <e:ShorttermPayablesToGroupEnterprises contextRef="c6" unitRef="u5" decimals="0">8607816</e:ShorttermPayablesToGroupEnterprises>
+  <e:ShorttermPayablesToGroupEnterprises contextRef="c4" unitRef="u5" decimals="-3">7106000</e:ShorttermPayablesToGroupEnterprises>
+  <e:OtherShorttermPayables contextRef="c6" unitRef="u5" decimals="0">168002</e:OtherShorttermPayables>
+  <e:OtherShorttermPayables contextRef="c4" unitRef="u5" decimals="-3">166000</e:OtherShorttermPayables>
+  <e:ShorttermLiabilitiesOtherThanProvisions contextRef="c6" unitRef="u5" decimals="0">10616165</e:ShorttermLiabilitiesOtherThanProvisions>
+  <e:ShorttermLiabilitiesOtherThanProvisions contextRef="c4" unitRef="u5" decimals="-3">8555000</e:ShorttermLiabilitiesOtherThanProvisions>
+  <e:LiabilitiesOtherThanProvisions contextRef="c6" unitRef="u5" decimals="0">28963293</e:LiabilitiesOtherThanProvisions>
+  <e:LiabilitiesOtherThanProvisions contextRef="c4" unitRef="u5" decimals="-3">28172000</e:LiabilitiesOtherThanProvisions>
+  <e:LiabilitiesAndEquity contextRef="c6" unitRef="u5" decimals="0">43542803</e:LiabilitiesAndEquity>
+  <e:LiabilitiesAndEquity contextRef="c4" unitRef="u5" decimals="-3">42854000</e:LiabilitiesAndEquity>
+  <e:PropertyPlantAndEquipmentGross contextRef="c142" unitRef="u5" decimals="0">31189764</e:PropertyPlantAndEquipmentGross>
+  <e:AdditionsToPropertyPlantAndEquipment contextRef="c146" unitRef="u5" decimals="0">1438700</e:AdditionsToPropertyPlantAndEquipment>
+  <e:PropertyPlantAndEquipmentGross contextRef="c147" unitRef="u5" decimals="0">32628464</e:PropertyPlantAndEquipmentGross>
+  <e:AccumulatedRevaluationOfPropertyPlantAndEquipment contextRef="c142" unitRef="u5" decimals="0">15847139</e:AccumulatedRevaluationOfPropertyPlantAndEquipment>
+  <e:AccumulatedRevaluationOfPropertyPlantAndEquipment contextRef="c147" unitRef="u5" decimals="0">15847139</e:AccumulatedRevaluationOfPropertyPlantAndEquipment>
+  <e:AccumulatedImpairmentLossesAndDepreciationOfPropertyPlantAndEquipment contextRef="c142" unitRef="u5" decimals="0">4521957</e:AccumulatedImpairmentLossesAndDepreciationOfPropertyPlantAndEquipment>
+  <e:DepreciationOfPropertyPlantAndEquipment contextRef="c146" unitRef="u5" decimals="0">572137</e:DepreciationOfPropertyPlantAndEquipment>
+  <e:AccumulatedImpairmentLossesAndDepreciationOfPropertyPlantAndEquipment contextRef="c147" unitRef="u5" decimals="0">5094094</e:AccumulatedImpairmentLossesAndDepreciationOfPropertyPlantAndEquipment>
+  <e:PropertyPlantAndEquipment contextRef="c147" unitRef="u5" decimals="0">43381509</e:PropertyPlantAndEquipment>
+  <e:PropertyPlantAndEquipmentGross contextRef="c157" unitRef="u5" decimals="0">641707</e:PropertyPlantAndEquipmentGross>
+  <e:PropertyPlantAndEquipmentGross contextRef="c159" unitRef="u5" decimals="0">641707</e:PropertyPlantAndEquipmentGross>
+  <e:AccumulatedImpairmentLossesAndDepreciationOfPropertyPlantAndEquipment contextRef="c157" unitRef="u5" decimals="0">449195</e:AccumulatedImpairmentLossesAndDepreciationOfPropertyPlantAndEquipment>
+  <e:DepreciationOfPropertyPlantAndEquipment contextRef="c158" unitRef="u5" decimals="0">128341</e:DepreciationOfPropertyPlantAndEquipment>
+  <e:AccumulatedImpairmentLossesAndDepreciationOfPropertyPlantAndEquipment contextRef="c159" unitRef="u5" decimals="0">577536</e:AccumulatedImpairmentLossesAndDepreciationOfPropertyPlantAndEquipment>
+  <e:PropertyPlantAndEquipment contextRef="c159" unitRef="u5" decimals="0">64171</e:PropertyPlantAndEquipment>
+  <e:LongtermLiabilitiesOtherThanProvisionsDueInOneYear contextRef="c1009" unitRef="u5" decimals="0">1246425</e:LongtermLiabilitiesOtherThanProvisionsDueInOneYear>
+  <e:LongtermLiabilitiesOtherThanProvisionsDueAfterFiveYearsAndMore contextRef="c1009" unitRef="u5" decimals="0">0</e:LongtermLiabilitiesOtherThanProvisionsDueAfterFiveYearsAndMore>
+  <e:Equity contextRef="c177" unitRef="u5" decimals="0">13346115</e:Equity>
+  <e:Equity contextRef="c704" unitRef="u5" decimals="-3">13346000</e:Equity>
+  <e:Equity contextRef="c179" unitRef="u5" decimals="0">13346115</e:Equity>
+  <e:Equity contextRef="c706" unitRef="u5" decimals="-3">13346000</e:Equity>
+  <e:Equity contextRef="c195" unitRef="u5" decimals="0">-791840</e:Equity>
+  <e:Equity contextRef="c725" unitRef="u5" decimals="-3">-793000</e:Equity>
+  <e:ProfitLoss contextRef="c196" unitRef="u5" decimals="0">-29296</e:ProfitLoss>
+  <e:ProfitLoss contextRef="c726" unitRef="u5" decimals="-3">1000</e:ProfitLoss>
+  <e:Equity contextRef="c197" unitRef="u5" decimals="0">-821136</e:Equity>
+  <e:Equity contextRef="c727" unitRef="u5" decimals="-3">-792000</e:Equity>
+  <g:IdentificationOfApprovedAnnualReport contextRef="c1" xml:lang="da">
+    Stjórnin hevur í dag lagt fram ársfrásøgnina fyri 2019 hjá Sp/f Undir Bryggjubakka.
+  </g:IdentificationOfApprovedAnnualReport>
+  <g:ConfirmationThatAnnualReportIsPresentedInAccordanceWithRequirementsProvidedForByLegislationAnyStandardsAndRequirementsProvidedByArticlesOfAssociationOrByAgreement contextRef="c1" xml:lang="da">
+    Ársfrásøgnin er gjørd í samsvari við ársroknskaparlógina.
+  </g:ConfirmationThatAnnualReportIsPresentedInAccordanceWithRequirementsProvidedForByLegislationAnyStandardsAndRequirementsProvidedByArticlesOfAssociationOrByAgreement>
+  <g:ConfirmationThatFinancialStatementGivesTrueAndFairViewOfAssetsLiabilitiesEquityFinancialPositionAndResults contextRef="c1" xml:lang="da">
+    Tað er mín fatan, at nýtti roknskaparhátturin er hóskandi, og at ársroknskapurin gevur eina rættvísandi mynd av ognum, skyldum og fíggjarligu støðu pr. 31. desember 2019 hjá felagnum og av úrslitinum av virkseminum hjá felagnum fyri roknskaparárið 1. januar - 31. desember 2019.
+  </g:ConfirmationThatFinancialStatementGivesTrueAndFairViewOfAssetsLiabilitiesEquityFinancialPositionAndResults>
+  <g:RecommendationForApprovalOfAnnualReportByGeneralMeeting contextRef="c1" xml:lang="da">Ársfrásøgnin verður løgd fyri ársaðalfundin við tilmæli um góðkenning.</g:RecommendationForApprovalOfAnnualReportByGeneralMeeting>
+  <d:NameAndSurnameOfMemberOfExecutiveBoard contextRef="c70">Árni Tór Rasmussen</d:NameAndSurnameOfMemberOfExecutiveBoard>
+  <d:TitleOfMemberOfExecutiveBoard contextRef="c70">stjóri</d:TitleOfMemberOfExecutiveBoard>
+  <f:IdentificationOfAuditedFinancialStatements contextRef="c1" xml:lang="da">
+    Vit hava grannskoðað ársroknskapin hjá Sp/f Undir Bryggjubakka fyri roknskaparárið 1. januar - 31. desember 2019 við  nýttum roknskaparhátti, rakstrarroknskapi, fíggjarstøðu og notum, undir hesum nýttur roknskaparháttur. Ársroknskapurin er gjørdur  eftir ársroknskaparlógini.
+  </f:IdentificationOfAuditedFinancialStatements>
+  <f:OpinionOnAuditedFinancialStatements contextRef="c1" xml:lang="da">
+    Tað er okkara fatan, at ársroknskapurin gevur eina rættvísandi mynd av ognum, skyldum og fíggjarligu støðuni pr. 31. desember 2019 hjá felagnum og av úrslitinum av virkseminum hjá felagnum í roknskaparárinum 1. januar - 31. desember 2019 samsvarandi ársroknskaparlógini.
+  </f:OpinionOnAuditedFinancialStatements>
+  <f:DescriptionOfQualificationsOfAuditedFinancialStatements contextRef="c1" xml:lang="da">
+    Grundarlag fyri niðurstøðuni
+    Grannskoðanin er løgd til rættis í samsvari við altjóða standardir um grannskoðan og aðrar ásetingar, sum eru galdandi í Føroyum. Okkara ábyrgd eftir hesum standardum og ásetingum er nærri greidd frá í niðanfyri standandi broti ”Ábyrgd grannskoðarans av at grannskoða ársroknskapin”. Vit eru óheft av felagnum samsvarandi altjóða etisku krøvunum fyri grannskoðarar (etisku reglunum hjá IESBA) og øðrum ásetingum, sum eru galdandi í Føroyum, og vit hava hildið okkara etisku skyldur, sum ásettar eru í hesum standardum og krøvum. Tað er okkara fatan, at vit hava fingið nøktandi grannskoðanarprógv, ið kunnu vera grundarlag undir okkara niðurstøðu.
+  </f:DescriptionOfQualificationsOfAuditedFinancialStatements>
+  <f:StatementOfExecutiveAndSupervisoryBoardsResponsibilityForFinancialStatements contextRef="c1" xml:lang="da">
+    Leiðslan hevur ábyrgdina av at gera ein ársroknskap, ið gevur eina rættvísandi mynd í samsvari við ársroknskaparlógina. Leiðslan hevur harumframt ábyrgdina av tí innanhýsis eftirliti, ið leiðslan metir skal til, fyri at ársroknskapurin kann gerast uttan týðandi skeivleikar, uttan mun til um skeivleikarnir standast av sviki ella mistøkum.
+
+    Tá ársroknskapurin verður gjørdur, hevur leiðslan ábyrgdina av at meta, um felagið megnar at halda fram við rakstrinum; at upplýsa um viðurskifti viðvíkjandi framhaldandi rakstri, har tað er viðkomandi; umframt at gera ársroknskapin eftir roknskaparmeginregluni um framhaldandi rakstur, uttan so at leiðslan hevur í hyggju at avtaka felagið, steðga rakstrinum, ella at leiðslan í roynd og veru ikki hevur annan møguleika enn at gera tað.
+  </f:StatementOfExecutiveAndSupervisoryBoardsResponsibilityForFinancialStatements>
+  <f:StatementOfAuditorsResponsibilityForAuditAndAuditPerformed contextRef="c1" xml:lang="da">
+    Okkara endamál er at fáa grundaða vissu fyri, at ársroknskapurin í síni heild ikki hevur týðandi skeivleikar, uttan mun til um skeivleikarnir standast av sviki ella mistøkum, og at geva eina grannskoðanarátekning við eini niðurstøðu. Grundað vissa er vissa á høgum stigi, men er ikki full trygd fyri, at ein grannskoðan, sum er gjørd eftir ásetingunum í altjóða standardum um grannskoðan og øðrum ásetingum, sum eru galdandi í Føroyum, altíð kann avdúka týðandi skeivleikar, tá slíkir eru. Skeivleikar kunnu koma fyri orsakað av sviki ella mistøkum og kunnu metast at vera týðandi, um tað kann væntast, at teir hvør sær ella saman ávirka fíggjarligu avgerðirnar, sum roknskaparbrúkararnir taka við støði í ársroknskapinum.
+
+    Sum ein liður í grannskoðanini, ið verður gjørd eftir altjóða standardum um grannskoðan og øðrum ásetingum, sum eru galdandi í Føroyum, gera vit yrkisligar metingar og hava eitt yrkisligt ivingarsemi undir grannskoðanini. Har vit eisini:
+
+    Eyðmerkja og meta um váðan fyri týðandi skeivleikum í ársroknskapinum, uttan mun til um skeivleikarnir standast av sviki ella mistøkum, leggja til rættis og gera tey grannskoðanararbeiðir, sum hesir váðar krevja, umframt fáa til vega tey grannskoðanarprógv, sum eru nøktandi at vera grundarlag undir okkara niðurstøðu. Váðin fyri ikki at varnast týðandi skeivleikar, sum  standast av sviki, er størri, enn tá talan er um týðandi skeivleikar, sum standast av mistøkum, tí svik kann vera av samanløgdum ráðum, skjalafalsan, tilætlaðari burturúrlegging, villleiðingum ella við at skúgva innanhýsis eftirlitið til viks.
+
+    Fáa eina fatan av innanhýsis eftirlitinum, sum er viðkomandi fyri grannskoðanina, fyri at kunna leggja grannskoðanina til rættis eftir umstøðunum, men ikki fyri at kunna gera eina niðurstøðu um dygdina á innanhýsis eftirlitinum.
+
+    Taka støðu til um roknskaparhátturin, sum leiðslan nýtir, er hóskandi, og um tær roknskaparligu metingarnar og tilhoyrandi upplýsingar, sum leiðslan hevur gjørt eru rímiligar.
+
+    Gera niðurstøðu um, hvørt tað er hóskandi, at leiðslan hevur gjørt ársroknskapin við støði í roknskaparmeginregluni um framhaldandi rakstur, umframt um tað við støði í teimum grannskoðanarprógvum, sum eru fingin til vega, er týðandi óvissa um hendingar og viðurskifti, sum kunnu viðføra týðandi iva, um felagið megnar at halda fram við rakstrinum. Um okkara niðurstøða er, at tað er ein týðandi óvissa, skulu vit í okkara grannskoðanarátekning vísa á upplýsingar um hesi viðurskifti í ársroknskapinum ella, um hesar upplýsingar ikki eru nøktandi, tillaga okkara niðurstøðu. Okkara niðurstøður byggja á tey grannskoðanarprógv, sum vit hava fingið fram til dagfestingina á okkara grannskoðanarátekning. Hendingar og viðurskifti í framtíðini kunnu tó føra við sær, at felagið ikki longur megnar at halda fram við rakstrinum.
+
+    Meta um samlaðu framløguna, bygnaðin og innihaldið í ársroknskapinum, herundir upplýsingarnar í notunum, umframt um ársroknskapurin vísir tey undirliggjandi handilsviðurskifti og hendingar á ein slíkan hátt, at tað gevur eina rættvísandi mynd av hesum.
+
+    Vit samskifta við ovastu leiðsluna um millum annað vavið á ætlaðu grannskoðanini, og nær grannskoðað verður, og eisini um týðandi eygleiðingar, herundir um møguligar týðandi manglar í innanhýsis eftirlitinum, sum vit eyðmerkja undir grannskoðanini.
+  </f:StatementOfAuditorsResponsibilityForAuditAndAuditPerformed>
+  <e:InformationOnReportingClassOfEntity contextRef="c1" xml:lang="da">
+    Ársfrásøgnin fyri Sp/f Undir Bryggjubakka er gjørd í samsvari við ásetingarnar í ársroknskaparlógini fyri feløg í flokki B. Harumframt hevur felagið valt at brúka einstakar ásetingar fyri feløg í flokki C.
+
+    Ársfrásøgnin er gjørd eftir sama roknskaparhátti sum undanfarna ár og verður gjørd í donskum krónum (DKK).
+
+    Upphæddir í rakstrarroknskapi, fíggjarstøðu og notum v.m. verða avrundaðar til heil tøl, og samanberingartøl undanfarna ár verða avrundað til heil túsund. Av tí, at tølini verða avrundað hvørt fyri seg, kunnu avrundingarmunir vera millum upplýstar samanteljingar og summin av teimum undirliggjandi tølunum.
+  </e:InformationOnReportingClassOfEntity>
+  <e:DescriptionOfGeneralMattersRelatedToRecognitionMeasurementAndChangesInAccountingPolicies contextRef="c1" xml:lang="da">
+    Alment um innrokning og virðisáseting
+    Í rakstrarroknskapinum verða inntøkur innroknaðar, so hvørt tær verða vunnar. Sama er galdandi fyri virðisjavningar av fíggjarligum ognum og skyldum. Í rakstrarroknskapinum verða somuleiðis allir kostnaðir innroknaðir, herímillum avskrivingar, niðurskrivingar, avsettar skyldur og afturføringar, sum standast av broyttum roknskaparligum metingum av upphæddum, ið áður hava verið innroknaðar í rakstrarroknskapinum.
+
+    Ognir verða innroknaðar í fíggjarstøðuna, tá sannlíkt er, at tær í framtíðini geva felagnum fíggjarligar fyrimunir, og virðið á ognini kann ásetast álítandi.
+
+    Skyldur verða innroknaðar í fíggjarstøðuna, tá sannlíkt er, at tær í framtíðini taka fíggjarligar fyrimunir úr felagnum, og virðið á skylduni kann ásetast álítandi.
+
+    Við fyrstu innrokning verða ognir og skyldur virðisásettar til útveganarvirði. Síðani verða ognir og skyldur virðisásettar, sum greitt er frá niðanfyri um einstøku roknskaparpostarnar.
+
+    Við innrokning og virðisáseting verður atlit tikið at væntaðum tapi og váða, ið vísa seg, áðrenn ársfrásøgnin  er liðug, og sum viðvíkja viðurskiftum, sum vóru til staðar við roknskaparlok.
+  </e:DescriptionOfGeneralMattersRelatedToRecognitionMeasurementAndChangesInAccountingPolicies>
+  <e:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfOtherOperatingIncomeAndExpenses contextRef="c1" xml:lang="da">
+    Aðrar rakstrarinntøkur umfata roknskaparpostar, sum hava minni týdning í mun til høvuðsvirksemið hjá felagnum, herímillum vinning og tap við sølu av immateriellari og materiellari støðisogn.
+  </e:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfOtherOperatingIncomeAndExpenses>
+  <e:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfExternalExpenses contextRef="c1" xml:lang="da">
+    Aðrir uttanhýsis kostnaðir umfata kostnaðir til sølu, marknaðarføring, fyrisiting, hølir, tap av áogn og operationellar leasingkostnaðir.
+  </e:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfExternalExpenses>
+  <e:DescriptionOfMethodsOfImpairmentLossesAndDepreciation contextRef="c1" xml:lang="da">
+    Av- og niðurskrivingar
+    Av- og niðurskrivingar umfata av- og niðurskrivingar í árinum av immateriellari og materiellari støðisogn.
+  </e:DescriptionOfMethodsOfImpairmentLossesAndDepreciation>
+  <e:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfFinanceIncomeAndExpenses contextRef="c1" xml:lang="da">
+    Fíggjarligar inntøkur og kostnaðir
+    Fíggjarligir postar umfata rentur, staðfestan og ikki staðfestan kursvinning og -tap viðvíkjandi fíggjarligum ognum og skyldum umframt amortisering av fíggjarligum ognum og skyldum. Fíggjarligar inntøkur og kostnaðir verða innroknað í rakstrarroknskapin við teimum upphæddum, sum viðvíkja roknskaparárinum.
+  </e:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfFinanceIncomeAndExpenses>
+  <e:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfTaxExpenses contextRef="c1" xml:lang="da">
+    Skattur av ársúrslitinum
+    Skattur í árinum, ið er partafelagsskatturin fyri árið og broytingin í útsettum skatti, verður innroknaður í rakstrarroknskapinum við tí parti, sum viðvíkur ársúrslitinum. Skattur viðvíkjandi møguligum bókingum beinleiðis á eginognina, verður bókaður á eginognina.
+  </e:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfTaxExpenses>
+  <e:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfPropertyPlantAndEquipment contextRef="c1" xml:lang="da">
+    Materiell støðisogn
+    Grundøki og bygningar verða virðisásett til útveganarvirði, við uppskrivingum løgdum afturat og frádrigið samlaðar avskrivingar og niðurskrivingar. Grundøki verða ikki avskrivað.
+
+    Avskrivingargrundarlagið er kostprísur við uppskrivingum til dagsvirði løgdum afturat, og frádrigið møguligt væntað restvirði eftir lokna brúkstíð.
+
+    Onnur materiell støðisogn verður virðisásett til útveganarvirði, frádrigið samlaðar avskrivingar og niðurskrivingar.
+
+    Avskrivingargrundarlagið er kostprísur frádrigið møguligt væntað restvirði eftir lokna brúkstíð.
+
+    Útveganarvirðið umfatar keypsprísin og kostnaðir, ið beinleiðis er knýttir at útveganini, til ognin er klár at taka í nýtslu.
+
+    Jøvn avskriving verður framd grundað á niðanfyristandandi meting av væntaðu brúkstíðunum og restvirðunum hjá ognunum:
+
+    Bygningar Brúkstíð 40 ár Restvirði 10,6. mio. kr.
+    Onnur tól, rakstrargøgn og innbúgv Brúkstíð 5 ár Restvirði 0 kr.
+    Smáamboð við eini væntaðari livitíð á undir 1 ár verða útreiðsluførd í útveganarárinum.
+
+    Vinningur ella tap við at avhenda materiella støðisogn verður gjørt upp sum munurin millum søluprís við frádrátti av sølukostnaðum og roknskaparliga virðið á søludegnum. Vinningur ella tap verður innroknað í rakstrarroknskapin undir ávikavist aðrar rakstrarinntøkur og aðrir rakstrarkostnaðir.
+  </e:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfPropertyPlantAndEquipment>
+  <e:DescriptionOfMethodsOfAmortisationOfNoncurrentAssets contextRef="c1" xml:lang="da">
+    Niðurskriving av støðisogn
+    Hvørt ár verður mett um roknskaparligu virðini á bæði immateriellari og materiellari støðisogn, umframt kapitalpørtum í dótturfyritøkum og assosieraðum fyritøkum fyri at vita, um ábending er um, at tey eru minkað meir í virði enn tað, sum er avskrivað.
+
+    Eru ábendingar um virðisminkan, verður ein niðurskrivingarroynd gjørd av hvørji einstakari ogn ella ognarbólki. Niðurskrivað verður til endurvinningarvirðið, um hetta er lægri enn roknskaparliga virðið.
+
+    Sum endurvinningarvirði verður hægra virði av nettosøluprísi og kapitalvirði nýtt. Kapitalvirðið verður uppgjørt sum nútíðarvirði av væntaðu nettopengastreymunum frá nýtsluni av ognini ella ognarbólkinum.
+
+    Áður innroknaðar niðurskrivingar verða afturførdar, tá ið grundarlagið fyri niðurskrivingini ikki er longur. Niðurskriving viðvíkjandi goodwill verður ikki afturførd.
+  </e:DescriptionOfMethodsOfAmortisationOfNoncurrentAssets>
+  <e:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfReceivables contextRef="c1" xml:lang="da">
+    Áogn
+    Áogn verður virðisásett til amortiserað útveganarvirði, sum vanliga svarar til áljóðandi virði. Fyri at standa ímóti møguligum tapi verður niðurskrivað til nettorealisatiónsvirðið.
+  </e:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfReceivables>
+  <e:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfCashAndCashEquivalents contextRef="c1" xml:lang="da">
+    Tøkur peningur
+    Tøkur peningur umfatar innistandandi í peningastovnum og reiðan pening.
+  </e:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfCashAndCashEquivalents>
+  <e:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfTaxPayablesAndDeferredTax contextRef="c1" xml:lang="da">
+    Partafelagsskattur og útsettur skattur
+    Skyldugur skattur verður innroknaður í fíggjarstøðuna við teirri upphædd, sum kann útroknast av skattskyldugu inntøkuni fyri árið, javnað fyri skatt frá undanfarnum árum.
+
+    Útsettur skattur verður roknaður av øllum viðkomandi tíðarbundnum munum millum roknskaparlig og skattlig virðir av ognum og skyldum. Hetta verður uppgjørt við støði í ætlaðu nýtsluni av ognini, ella hvussu skyldan ætlandi verður afturgoldin.
+
+    Útsett skattaáogn, herímillum skattliga virðið á framflytingarheimilaðum skattligum hallum, verður innroknað við tí virði, sum ognin væntandi verður realiserað fyri, antin við at javna í skatti av framtíðarinntøkum ella við at mótrokna útsetta skattaskyldu innan fyri somu løgfrøðiligu skattaeind. Møgulig útsett nettoskattaáogn verður tikin við til nettorealisatiónsvirðið.
+
+    Útsettur skattur verður virðisásettur við støði í teimum skattareglum og skattasatsum, sum eru galdandi við roknskaparlok.
+  </e:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfTaxPayablesAndDeferredTax>
+  <e:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfLiabilitiesOtherThanProvisions contextRef="c1" xml:lang="da">
+    Skuld
+    Í sambandi við lántøku verður fíggjarlig skuld innroknað til útveganarvirðið, svarandi til móttiknu upphæddina eftir frádrignan handilskostnað. Eftirfylgjandi tíðarskeið verður fíggjarlig skuld innroknað til amortiserað útveganarvirðið, sum svarar til kapitaliseraða virðið við effektivu rentuni, soleiðis at munurin millum móttiknu upphæddina og áljóðandi virðið, verður innroknaður í rakstrarroknskapin yvir lánitíðarskeiðið.
+
+    Onnur skuld verður tikin við til amortiserað útveganarvirði, sum vanliga er áljóðandi virðið.
+  </e:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfLiabilitiesOtherThanProvisions>
+  <e:DisclosureOfMainActivitiesAndAccountingAndFinancialMatters contextRef="c1" xml:lang="da">
+    1.
+    Høvuðsvirksemi felagsins
+
+    Felagið fæst við at reka og leiga út fast ogn.
+
+
+
+
+  </e:DisclosureOfMainActivitiesAndAccountingAndFinancialMatters>
+  <e:DisclosureOfMortgagesAndCollaterals contextRef="c1" xml:lang="da">
+    7. Veðsetingar og trygdarveitingar
+    Sum trygd fyri skuld til peningastovnar, 19.594 t.kr., er latið veð í grundøkjum og bygningum, hvørs roknskaparligu virðir pr. 31. desember 2019 eru 41.385 t.kr.
+
+  </e:DisclosureOfMortgagesAndCollaterals>
+  <!--Aktuelle periode enkelt selskab-->
+  <context id="c1">
+    <entity>
+      <identifier scheme="http://www.dcca.dk/cvr">2874</identifier>
+    </entity>
+    <period>
+      <startDate>2019-01-01</startDate>
+      <endDate>2019-12-31</endDate>
+    </period>
+  </context>
+  <!--Forrige periode enkelt selskab-->
+  <context id="c3">
+    <entity>
+      <identifier scheme="http://www.dcca.dk/cvr">2874</identifier>
+    </entity>
+    <period>
+      <startDate>2018-01-01</startDate>
+      <endDate>2018-12-31</endDate>
+    </period>
+  </context>
+  <!--Slutdato forrige periode enkelt selskab-->
+  <context id="c4">
+    <entity>
+      <identifier scheme="http://www.dcca.dk/cvr">2874</identifier>
+    </entity>
+    <period>
+      <instant>2018-12-31</instant>
+    </period>
+  </context>
+  <!--Slutdato aktuelle periode enkelt selskab-->
+  <context id="c6">
+    <entity>
+      <identifier scheme="http://www.dcca.dk/cvr">2874</identifier>
+    </entity>
+    <period>
+      <instant>2019-12-31</instant>
+    </period>
+  </context>
+  <!--CEO1-->
+  <context id="c70">
+    <entity>
+      <identifier scheme="http://www.dcca.dk/cvr">2874</identifier>
+    </entity>
+    <period>
+      <startDate>2019-01-01</startDate>
+      <endDate>2019-12-31</endDate>
+    </period>
+    <scenario>
+      <xbrldi:typedMember dimension="d:IdentificationOfMemberOfExecutiveBoardDimension">
+        <d:memberOfBoardIdentifier>1</d:memberOfBoardIdentifier>
+      </xbrldi:typedMember>
+    </scenario>
+  </context>
+  <!--REVISOR1-->
+  <context id="c87">
+    <entity>
+      <identifier scheme="http://www.dcca.dk/cvr">2874</identifier>
+    </entity>
+    <period>
+      <startDate>2019-01-01</startDate>
+      <endDate>2019-12-31</endDate>
+    </period>
+    <scenario>
+      <xbrldi:typedMember dimension="d:IdentificationOfAuditorDimension">
+        <d:auditorIdentifier>1</d:auditorIdentifier>
+      </xbrldi:typedMember>
+    </scenario>
+  </context>
+  <!--Overfoert resultat aktuel i aaret-->
+  <context id="c119">
+    <entity>
+      <identifier scheme="http://www.dcca.dk/cvr">2874</identifier>
+    </entity>
+    <period>
+      <startDate>2019-01-01</startDate>
+      <endDate>2019-12-31</endDate>
+    </period>
+    <scenario>
+      <xbrldi:explicitMember dimension="e:ResultDistributionDimension">e:RetainedEarningsMember</xbrldi:explicitMember>
+    </scenario>
+  </context>
+  <!--Overfoert resultat forrige i aaret-->
+  <context id="c120">
+    <entity>
+      <identifier scheme="http://www.dcca.dk/cvr">2874</identifier>
+    </entity>
+    <period>
+      <startDate>2018-01-01</startDate>
+      <endDate>2018-12-31</endDate>
+    </period>
+    <scenario>
+      <xbrldi:explicitMember dimension="e:ResultDistributionDimension">e:RetainedEarningsMember</xbrldi:explicitMember>
+    </scenario>
+  </context>
+  <!--Grunde og bygninger aktuel primo-->
+  <context id="c142">
+    <entity>
+      <identifier scheme="http://www.dcca.dk/cvr">2874</identifier>
+    </entity>
+    <period>
+      <instant>2019-01-01</instant>
+    </period>
+    <scenario>
+      <xbrldi:explicitMember dimension="e:ClassesOfPropertyPlantAndEquipmentDimension">e:LandAndBuildingsMember</xbrldi:explicitMember>
+    </scenario>
+  </context>
+  <!--Grunde og bygninger aktuel i aaret-->
+  <context id="c146">
+    <entity>
+      <identifier scheme="http://www.dcca.dk/cvr">2874</identifier>
+    </entity>
+    <period>
+      <startDate>2019-01-01</startDate>
+      <endDate>2019-12-31</endDate>
+    </period>
+    <scenario>
+      <xbrldi:explicitMember dimension="e:ClassesOfPropertyPlantAndEquipmentDimension">e:LandAndBuildingsMember</xbrldi:explicitMember>
+    </scenario>
+  </context>
+  <!--Grunde og bygninger aktuel ultimo-->
+  <context id="c147">
+    <entity>
+      <identifier scheme="http://www.dcca.dk/cvr">2874</identifier>
+    </entity>
+    <period>
+      <instant>2019-12-31</instant>
+    </period>
+    <scenario>
+      <xbrldi:explicitMember dimension="e:ClassesOfPropertyPlantAndEquipmentDimension">e:LandAndBuildingsMember</xbrldi:explicitMember>
+    </scenario>
+  </context>
+  <!--Andre anlag aktuel primo-->
+  <context id="c157">
+    <entity>
+      <identifier scheme="http://www.dcca.dk/cvr">2874</identifier>
+    </entity>
+    <period>
+      <instant>2019-01-01</instant>
+    </period>
+    <scenario>
+      <xbrldi:explicitMember dimension="e:ClassesOfPropertyPlantAndEquipmentDimension">e:FixturesFittingsToolsAndEquipmentMember</xbrldi:explicitMember>
+    </scenario>
+  </context>
+  <!--Andre anlag aktuel i aaret-->
+  <context id="c158">
+    <entity>
+      <identifier scheme="http://www.dcca.dk/cvr">2874</identifier>
+    </entity>
+    <period>
+      <startDate>2019-01-01</startDate>
+      <endDate>2019-12-31</endDate>
+    </period>
+    <scenario>
+      <xbrldi:explicitMember dimension="e:ClassesOfPropertyPlantAndEquipmentDimension">e:FixturesFittingsToolsAndEquipmentMember</xbrldi:explicitMember>
+    </scenario>
+  </context>
+  <!--Andre anlag aktuel ultimo-->
+  <context id="c159">
+    <entity>
+      <identifier scheme="http://www.dcca.dk/cvr">2874</identifier>
+    </entity>
+    <period>
+      <instant>2019-12-31</instant>
+    </period>
+    <scenario>
+      <xbrldi:explicitMember dimension="e:ClassesOfPropertyPlantAndEquipmentDimension">e:FixturesFittingsToolsAndEquipmentMember</xbrldi:explicitMember>
+    </scenario>
+  </context>
+  <!--Virksomhedskapital aktuel primo-->
+  <context id="c177">
+    <entity>
+      <identifier scheme="http://www.dcca.dk/cvr">2874</identifier>
+    </entity>
+    <period>
+      <instant>2019-01-01</instant>
+    </period>
+    <scenario>
+      <xbrldi:explicitMember dimension="e:ClassesOfEquityDimension">e:ContributedCapitalMember</xbrldi:explicitMember>
+    </scenario>
+  </context>
+  <!--Virksomhedskapital aktuel ultimo-->
+  <context id="c179">
+    <entity>
+      <identifier scheme="http://www.dcca.dk/cvr">2874</identifier>
+    </entity>
+    <period>
+      <instant>2019-12-31</instant>
+    </period>
+    <scenario>
+      <xbrldi:explicitMember dimension="e:ClassesOfEquityDimension">e:ContributedCapitalMember</xbrldi:explicitMember>
+    </scenario>
+  </context>
+  <!--Overfort res aktuel primo-->
+  <context id="c195">
+    <entity>
+      <identifier scheme="http://www.dcca.dk/cvr">2874</identifier>
+    </entity>
+    <period>
+      <instant>2019-01-01</instant>
+    </period>
+    <scenario>
+      <xbrldi:explicitMember dimension="e:ClassesOfEquityDimension">e:RetainedEarningsMember</xbrldi:explicitMember>
+    </scenario>
+  </context>
+  <!--Overfort res aktuel i aaret-->
+  <context id="c196">
+    <entity>
+      <identifier scheme="http://www.dcca.dk/cvr">2874</identifier>
+    </entity>
+    <period>
+      <startDate>2019-01-01</startDate>
+      <endDate>2019-12-31</endDate>
+    </period>
+    <scenario>
+      <xbrldi:explicitMember dimension="e:ClassesOfEquityDimension">e:RetainedEarningsMember</xbrldi:explicitMember>
+    </scenario>
+  </context>
+  <!--Overfort res aktuel ultimo-->
+  <context id="c197">
+    <entity>
+      <identifier scheme="http://www.dcca.dk/cvr">2874</identifier>
+    </entity>
+    <period>
+      <instant>2019-12-31</instant>
+    </period>
+    <scenario>
+      <xbrldi:explicitMember dimension="e:ClassesOfEquityDimension">e:RetainedEarningsMember</xbrldi:explicitMember>
+    </scenario>
+  </context>
+  <!--Virksomhedskapital forrige EKprimo-->
+  <context id="c704">
+    <entity>
+      <identifier scheme="http://www.dcca.dk/cvr">2874</identifier>
+    </entity>
+    <period>
+      <instant>2018-01-01</instant>
+    </period>
+    <scenario>
+      <xbrldi:explicitMember dimension="e:ClassesOfEquityDimension">e:ContributedCapitalMember</xbrldi:explicitMember>
+    </scenario>
+  </context>
+  <!--Virksomhedskapital forrige EKultimo-->
+  <context id="c706">
+    <entity>
+      <identifier scheme="http://www.dcca.dk/cvr">2874</identifier>
+    </entity>
+    <period>
+      <instant>2018-12-31</instant>
+    </period>
+    <scenario>
+      <xbrldi:explicitMember dimension="e:ClassesOfEquityDimension">e:ContributedCapitalMember</xbrldi:explicitMember>
+    </scenario>
+  </context>
+  <!--Overfort res forrige EKprimo-->
+  <context id="c725">
+    <entity>
+      <identifier scheme="http://www.dcca.dk/cvr">2874</identifier>
+    </entity>
+    <period>
+      <instant>2018-01-01</instant>
+    </period>
+    <scenario>
+      <xbrldi:explicitMember dimension="e:ClassesOfEquityDimension">e:RetainedEarningsMember</xbrldi:explicitMember>
+    </scenario>
+  </context>
+  <!--Overfort res forrige EKi aaret-->
+  <context id="c726">
+    <entity>
+      <identifier scheme="http://www.dcca.dk/cvr">2874</identifier>
+    </entity>
+    <period>
+      <startDate>2018-01-01</startDate>
+      <endDate>2018-12-31</endDate>
+    </period>
+    <scenario>
+      <xbrldi:explicitMember dimension="e:ClassesOfEquityDimension">e:RetainedEarningsMember</xbrldi:explicitMember>
+    </scenario>
+  </context>
+  <!--Overfort res forrige EKultimo-->
+  <context id="c727">
+    <entity>
+      <identifier scheme="http://www.dcca.dk/cvr">2874</identifier>
+    </entity>
+    <period>
+      <instant>2018-12-31</instant>
+    </period>
+    <scenario>
+      <xbrldi:explicitMember dimension="e:ClassesOfEquityDimension">e:RetainedEarningsMember</xbrldi:explicitMember>
+    </scenario>
+  </context>
+  <!--Gald banker aktuel ultimo-->
+  <context id="c1009">
+    <entity>
+      <identifier scheme="http://www.dcca.dk/cvr">2874</identifier>
+    </entity>
+    <period>
+      <instant>2019-12-31</instant>
+    </period>
+    <scenario>
+      <xbrldi:explicitMember dimension="e:ClassesOfLongTermLiabilitiesDimension">e:LongtermDebtToBanksMember</xbrldi:explicitMember>
+    </scenario>
+  </context>
+  <!--DKK enere-->
+  <unit id="u5">
+    <measure>iso4217:DKK</measure>
+  </unit>
+</xbrl>
+
