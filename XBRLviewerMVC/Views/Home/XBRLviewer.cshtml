@@ -3,27 +3,19 @@
     ViewData["Title"] = "XBRLviewer";
 }
 
-<head>
-    <script>
-        $(document).ready(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-    </script>
-</head>
-
-<br />
+<h1 class="bg-primary text-white text-center p-2">XBRL vísari</h1>
 
 <div id="accordion">
     <div class="card">
         <div class="card-header" id="heading1">
             <h5 class="mb-0">
-                <button class="btn btn-link" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                    S1 - Roknskaparupplýsingar
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                    S1 - Forsíða
                 </button>
             </h5>
         </div>
 
-        <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordion">
+        <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#accordion">
             <div class="card-body">
                 <partial name="_Page1" />
             </div>
@@ -33,13 +25,13 @@
         <div class="card-header" id="heading2">
             <h5 class="mb-0">
                 <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                    S2 - Leiðsluátekning
+                    S2 - Upplýsingar um felagið
                 </button>
             </h5>
         </div>
         <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordion">
             <div class="card-body">
-                <partial name="_Page2" />
+                <partial name="_Page3" />
             </div>
         </div>
     </div>
@@ -47,13 +39,13 @@
         <div class="card-header" id="heading3">
             <h5 class="mb-0">
                 <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                    S3 - Upplýsingar um felagið
+                    S3 - Leiðsluátekning
                 </button>
             </h5>
         </div>
         <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordion">
             <div class="card-body">
-                <partial name="_Page3" />
+                <partial name="_Page2" />
             </div>
         </div>
     </div>

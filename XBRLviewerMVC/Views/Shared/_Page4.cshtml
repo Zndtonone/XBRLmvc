@@ -11,3 +11,54 @@
     f2 = Model.FirstOrDefault(x => x.Id == fId2);
     <h2 class="text-left p-1 font-weight-bold" data-toggle="tooltip" title="@f?.Label &#10;@f2?.Label">Roknskaparár: @(f?.Value ?? fId + noValue) - @(f2?.Value ?? fId2 + noValue)</h2>
 }
+
+<table class="table table-sm table-bordered table-striped">
+
+    <thead>
+        <tr>
+            <th></th>
+            <th>Nota</th>
+            <th>2019</th>
+            <th>2018</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td class="font-weight-bold">Bruttoúrslit</td>
+            <td></td>
+
+            @{
+                fId = "GrossProfitLoss";
+                var gplList = Model
+                    .Where(x => x.Id == fId)
+                    .OrderBy(x => x.ContextID)
+                    .Select(x => x);
+
+                int counter = 0;
+
+                foreach (var gpl in gplList)
+                {
+                    if (counter < 2)
+                    {
+                        <td class="text-left p-1" data-toggle="tooltip" title="@gpl?.Label">@(gpl?.Value ?? fId + noValue)</td>
+                    }
+
+                    counter++;
+                }
+            }
+
+        </tr>
+
+        <tr>
+            <td class="font-weight-bold">Samtaksroknskapur</td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td class="font-weight-bold">Ársaðalfundur</td>
+            <td>
+            </td>
+        </tr>
+    </tbody>
+</table>
