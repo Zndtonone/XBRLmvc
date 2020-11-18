@@ -13,6 +13,7 @@ using XBRLviewerMVC.Models;
 using System.Web;
 using Microsoft.AspNetCore.Hosting;
 using XBRLviewerMVC.ViewModels;
+using Newtonsoft.Json.Linq;
 
 namespace XBRLviewerMVC.Controllers
 {
@@ -63,12 +64,16 @@ namespace XBRLviewerMVC.Controllers
 
         public IActionResult XBRLviewer()
         {
-            List<FactModel> facts = JsonConvert.DeserializeObject<List<FactModel>>(XBRLservices.JSONServices.Read("facts.json", "data"));
-            List<ContextModel> contexts = JsonConvert.DeserializeObject<List<ContextModel>>(XBRLservices.JSONServices.Read("facts.json", "data"));
+            string json = XBRLservices.JSONServices.Read("facts.json", "data");
+
+            JObject jObject = JObject.Parse(json);
+
+            JArray factsJson = (JArray)jObject["facts"];
+            JArray contextsJson = (JArray)jObject["contexts"];
 
             XBRLViewerViewModel palavm = new XBRLViewerViewModel();
-            palavm.Facts = facts;
-            palavm.Contexts = contexts;
+            palavm.Facts = factsJson.ToObject<List<FactModel>>();
+            palavm.Contexts = contextsJson.ToObject<List<ContextModel>>();
 
             return View(palavm);
         }
