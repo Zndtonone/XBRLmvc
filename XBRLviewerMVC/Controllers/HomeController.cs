@@ -53,8 +53,7 @@ namespace XBRLviewerMVC.Controllers
 
                 string fileName = filePath.Substring(filePath.LastIndexOf("/") + 1, filePath.Substring(filePath.LastIndexOf("/")).Length - filePath.Substring(filePath.LastIndexOf(".")).Length - 1);
 
-                System.IO.File.WriteAllText($"{_env.WebRootPath}/data/json/" + fileName + ".json", factsJson);
-                System.IO.File.WriteAllText($"{_env.WebRootPath}/data/json/" + fileName + "2" + ".json", contextJson);
+                System.IO.File.WriteAllText($"{_env.WebRootPath}/data/json/" + fileName + ".json", factsJson + contextJson);
             }
             
             return Redirect(" / ");
