@@ -61,7 +61,6 @@ namespace XBRLviewerMVC.Controllers
             return Redirect(" / ");
         }
 
-
         public IActionResult XBRLviewer()
         {
             string json = XBRLservices.JSONServices.Read("facts.json", "data");
