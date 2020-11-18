@@ -2,14 +2,14 @@
     @model List<XBRLviewerMVC.Models.FactModel>
 }
 
-@{ FactModel f, f2; string fId, fId2; string noValue = ": Einki virði"; }
+@{ FactModel f, f2; string fName, fName2; string noValue = ": Einki virði"; }
 
 @{
-    fId = "ReportingPeriodStartDate";
-    fId2 = "ReportingPeriodEndDate";
-    f = Model.FirstOrDefault(x => x.Id == fId);
-    f2 = Model.FirstOrDefault(x => x.Id == fId2);
-    <h2 class="text-left p-1 font-weight-bold" data-toggle="tooltip" title="@f?.Label &#10;@f2?.Label">Roknskaparár: @(f?.Value ?? fId + noValue) - @(f2?.Value ?? fId2 + noValue)</h2>
+    fName = "ReportingPeriodStartDate";
+    fName2 = "ReportingPeriodEndDate";
+    f = Model.FirstOrDefault(x => x.Name == fName);
+    f2 = Model.FirstOrDefault(x => x.Name == fName2);
+    <h2 class="text-left p-1 font-weight-bold" data-toggle="tooltip" title="@f?.Label &#10;@f2?.Label">Roknskaparár: @(f?.Value ?? fName + noValue) - @(f2?.Value ?? fName2 + noValue)</h2>
 }
 
 <table class="table table-sm table-bordered table-striped">
@@ -29,10 +29,10 @@
             <td></td>
 
             @{
-                fId = "GrossProfitLoss";
+                fName = "GrossProfitLoss";
                 var gplList = Model
-                    .Where(x => x.Id == fId)
-                    .OrderBy(x => x.ContextID)
+                    .Where(x => x.Name == fName)
+                    .OrderBy(x => x.ContextRefName)
                     .Select(x => x);
 
                 int counter = 0;
@@ -41,7 +41,7 @@
                 {
                     if (counter < 2)
                     {
-                        <td class="text-left p-1" data-toggle="tooltip" title="@gpl?.Label">@(gpl?.Value ?? fId + noValue)</td>
+                        <td class="text-left p-1" data-toggle="tooltip" title="@gpl?.Label">@(gpl?.Value ?? fName + noValue)</td>
                     }
 
                     counter++;

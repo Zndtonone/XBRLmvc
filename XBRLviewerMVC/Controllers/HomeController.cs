@@ -46,12 +46,15 @@ namespace XBRLviewerMVC.Controllers
 
                 var xbrlInstance = new XbrlDocument();
                 xbrlInstance.Load(filePath); // Does not get the facts, if a file with the same name is already in the directory.
-                List<object> listToConvert = XBRLservices.GepsioDataExtractor.GetValuesFromFactsToList(xbrlInstance);
-                var json = JsonConvert.SerializeObject(listToConvert);
+                List<object> factsList = XBRLservices.GepsioDataExtractor.GetValuesFromFactsToList(xbrlInstance);
+                List<object> contextsList = XBRLservices.GepsioDataExtractor.GetValuesFromContextToList(xbrlInstance);
+                var factsJson = JsonConvert.SerializeObject(factsList);
+                var contextJson = JsonConvert.SerializeObject(contextsList);
 
                 string fileName = filePath.Substring(filePath.LastIndexOf("/") + 1, filePath.Substring(filePath.LastIndexOf("/")).Length - filePath.Substring(filePath.LastIndexOf(".")).Length - 1);
 
-                System.IO.File.WriteAllText($"{_env.WebRootPath}/data/json/" + fileName + ".json", json);
+                System.IO.File.WriteAllText($"{_env.WebRootPath}/data/json/" + fileName + ".json", factsJson);
+                System.IO.File.WriteAllText($"{_env.WebRootPath}/data/json/" + fileName + "2" + ".json", contextJson);
             }
             
             return Redirect(" / ");

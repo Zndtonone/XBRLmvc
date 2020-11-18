@@ -16,6 +16,38 @@ namespace XBRLservices
         }
 
         //==================================================== PUBLIC METHODS =================================================================
+        // GEPSIO - Get contexts in fragment in a list
+        public static List<object> GetValuesFromContextToList(XbrlDocument xbrlInstance)
+        {
+            List<object> contextList = new List<object>();
+
+            foreach (var currentFragment in xbrlInstance.XbrlFragments)
+            {
+                foreach (var currentContext in currentFragment.Contexts)
+                {
+                    string[] arr = GetContext(currentContext);
+
+                    {
+                        var c = new
+                        {
+                            DurationPeriod = arr[0],
+                            ForeverPeriod = arr[1],
+                            Fragment = arr[2],
+                            Id = arr[3],
+                            Identifier = arr[4],
+                            IdentifierScheme = arr[5],
+                            InstantDate = arr[6],
+                            InstantPeriod = arr[7],
+                            PeriodEndDate = arr[8],
+                            PeriodStartDate = arr[9],
+                        };
+                        contextList.Add(c);
+                    }
+                }
+            }
+
+            return contextList;
+        }
 
         // GEPSIO - Returns a list of anonymous types containing id, label, value, namespace, contextID
         public static List<object> GetValuesFromFactsToList(XbrlDocument xbrlInstance)
@@ -33,11 +65,13 @@ namespace XBRLservices
                     if (string.IsNullOrEmpty(matchingLabel) == false)
                     {
                         var f = new {
-                            Id = currentFact.Name,
+                            Name = currentFact.Name,
                             Label = matchingLabel,
                             Value = arr[0],
                             Namespace = arr[1],
-                            ContextID = arr[2]
+                            ContextRefName = arr[2],
+                            Id = arr[3],
+                            UnitRefName = arr[4]
                         };
                         factList.Add(f);
                     }
@@ -45,24 +79,6 @@ namespace XBRLservices
             }
 
             return factList;
-        }
-
-        // GEPSIO - Returns facts in document (type, namespace, value, context)
-        public static void ShowFactsInDocument(XbrlDocument xbrlInstance)
-        {
-            foreach (var currentFragment in xbrlInstance.XbrlFragments)
-            {
-                ShowFactsInFragment(currentFragment);
-            }
-        }
-
-        // GEPSIO - Returns contexts in document
-        public static void ShowContextsInDocument(XbrlDocument doc)
-        {
-            foreach (var currentFragment in doc.XbrlFragments)
-            {
-                ShowContextsInFragment(currentFragment);
-            }
         }
 
         // GEPSIO - Returns units in document
@@ -76,7 +92,7 @@ namespace XBRLservices
 
         //==================================================== PRIVATE METHODS ================================================================
 
-        // RTH - Get value from fact
+        // RTH - Get values from fact
         private static string[] GetFact(Fact fact)
         {
             if (fact is Item)
@@ -88,22 +104,43 @@ namespace XBRLservices
             return null;
         }
 
+        // GEPSIO - Get values from context
+        private static string[] GetContext(Context currentContext)
+        {
+            string[] arr;
+
+            arr = new string[]
+            {
+                currentContext.DurationPeriod.ToString(),
+                currentContext.ForeverPeriod.ToString(),
+                currentContext.Fragment.ToString(),
+                currentContext.Id,
+                currentContext.Identifier,
+                currentContext.IdentifierScheme,
+                currentContext.InstantDate.ToString(),
+                currentContext.InstantPeriod.ToString(),
+                currentContext.PeriodEndDate.ToString(),
+                currentContext.PeriodStartDate.ToString()
+            };
+
+            return arr;
+        }
+
         // RTH - Show item
         private static string[] GetItem(Item item)
         {
             string[] arr;
 
-            arr = new string[3]
+            arr = new string[5]
             {
                 item.Value,
                 item.Namespace,
-                item.ContextRefName
+                item.ContextRefName,
+                item.Id,
+                item.UnitRefName
             };
 
             return arr;
-
-            //if (item.ContextRef != null)
-            //    ShowContext(item.ContextRef);
         }
 
         // GEPSIO - Find label for fact
@@ -167,69 +204,6 @@ namespace XBRLservices
                 }
             }
             return string.Empty;
-        }
-
-        // GEPSIO - Show facts in fragment
-        private static void ShowFactsInFragment(XbrlFragment currentFragment)
-        {
-            foreach (var currentFact in currentFragment.Facts)
-            {
-                ShowFact(currentFact);
-            }
-        }
-
-        // GEPSIO - Show fact
-        private static void ShowFact(Fact fact)
-        {
-            Console.WriteLine($"FACT {fact.Name}");
-
-            if (fact is Item)
-            {
-                ShowItem(fact as Item);
-            }
-        }
-
-        // GEPSIO - Show item
-        private static void ShowItem(Item item)
-        {
-            Console.WriteLine("\tType      : Item");
-            Console.WriteLine($"\tNamespace : {item.Namespace}");
-            Console.WriteLine($"\tValue     : {item.Value}");
-            Console.WriteLine($"\tContext ID: {item.ContextRefName}");
-
-            if (item.ContextRef != null)
-                ShowContext(item.ContextRef);
-        }
-
-        // GEPSIO - Show contexts in fragment
-        private static void ShowContextsInFragment(XbrlFragment currentFragment)
-        {
-            foreach (var currentContext in currentFragment.Contexts)
-            {
-                ShowContext(currentContext);
-            }
-        }
-
-        // GEPSIO - Show context
-        private static void ShowContext(Context currentContext)
-        {
-            Console.WriteLine("CONTEXT");
-            Console.WriteLine($"\tID          : {currentContext.Id}");
-            Console.Write($"\tPeriod Type : ");
-            if (currentContext.InstantPeriod)
-            {
-                Console.WriteLine("instant");
-                Console.WriteLine($"\tInstant Date: {currentContext.InstantDate}");
-            }
-            else if (currentContext.DurationPeriod)
-            {
-                Console.WriteLine("period");
-                Console.WriteLine($"\tPeriod Date : from {currentContext.PeriodStartDate} to {currentContext.PeriodEndDate}");
-            }
-            else if (currentContext.ForeverPeriod)
-            {
-                Console.WriteLine("forever");
-            }
         }
 
         // GEPSIO - Show units in fragment

@@ -7,10 +7,12 @@ namespace XBRLviewerMVC.Models
 {
     public class FactModel
     {
-        public string Id { get; set; }
+        public string Name { get; set; }
         public string Label { get; set; }
         public string Value { get; set; }
         public string Namespace { get; set; }
-        public string ContextID { get; set; }
+        public string ContextRefName { get; set; }
+        public string Id { get; set; }
+        public string UnitRefName { get; set; }
     }
 }

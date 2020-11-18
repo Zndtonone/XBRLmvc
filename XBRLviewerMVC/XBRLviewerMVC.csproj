@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\data\20191101\2065_1_2019.xml" />
     <Content Remove="wwwroot\data\20191101\ALL.xsd" />
     <Content Remove="wwwroot\data\20191101\DCCAFOALLentry.xsd" />
     <Content Remove="wwwroot\data\20191101\entryFODanishGAAPBalanceSheetAccountByCurrentAndLongTermFormIncomeStatementByFunctionIncludingManagementsReviewStatisticsAndTax20171001.xsd" />
@@ -293,9 +292,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\data\20191101\2065_1_2019.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="wwwroot\data\20191101\ALL.xsd">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
@@ -1216,12 +1212,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="20191101\2065_1_2019.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="20191101\2874_1_2019.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <Folder Include="wwwroot\data\json\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="20191101\ALL.xsd">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
@@ -2123,10 +2117,6 @@
     <None Update="20191101\XBRLFO20191101\labels\sob-lab-fo.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\data\json\" />
   </ItemGroup>
 
 </Project>

@@ -2,7 +2,7 @@
     @model List<FactModel>
 }
 
-@{ FactModel f, f2, f3, f4, f5; string fId, fId2, fId3, fId4, fId5; string noValue = ": Einki virði"; }
+@{ FactModel f, f2, f3, f4, f5; string fName, fName2, fName3, fName4, fName5; string noValue = ": Einki virði"; }
 
 <table class="table table-sm table-bordered table-striped">
     <tbody>
@@ -10,38 +10,38 @@
             <td class="font-weight-bold">Felagið</td>
             <td>
                 @{
-                    fId = "NameOfReportingEntity";
-                    f = Model.FirstOrDefault(x => x.Id == fId);
-                    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fId + noValue)</p>
+                    fName = "NameOfReportingEntity";
+                    f = Model.FirstOrDefault(x => x.Name == fName);
+                    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
                 }
 
                 @{
-                    fId = "AddressOfReportingEntityStreetName";
-                    fId2 = "AddressOfReportingEntityStreetBuildingIdentifier";
+                    fName = "AddressOfReportingEntityStreetName";
+                    fName2 = "AddressOfReportingEntityStreetBuildingIdentifier";
 
-                    f = Model.FirstOrDefault(x => x.Id == fId);
-                    f2 = Model.FirstOrDefault(x => x.Id == fId2);
-                    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label &#10;@f2?.Label">@(f?.Value ?? fId + noValue) @(f2?.Value ?? fId2 + noValue)</p>
+                    f = Model.FirstOrDefault(x => x.Name == fName);
+                    f2 = Model.FirstOrDefault(x => x.Name == fName2);
+                    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label &#10;@f2?.Label">@(f?.Value ?? fName + noValue) @(f2?.Value ?? fName2 + noValue)</p>
                 }
 
                 @{
-                    fId = "AddressOfSubmittingEnterprisePostcodeAndTown";
-                    f = Model.FirstOrDefault(x => x.Id == fId);
-                    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fId + noValue)</p>
+                    fName = "AddressOfSubmittingEnterprisePostcodeAndTown";
+                    f = Model.FirstOrDefault(x => x.Name == fName);
+                    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
                 }
 
                 @{
-                    fId = "IdentificationNumberCvrOfReportingEntity";
-                    f = Model.FirstOrDefault(x => x.Id == fId);
-                    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">Skrás.nr.: @(f?.Value ?? fId + noValue)</p>
+                    fName = "IdentificationNumberCvrOfReportingEntity";
+                    f = Model.FirstOrDefault(x => x.Name == fName);
+                    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">Skrás.nr.: @(f?.Value ?? fName + noValue)</p>
                 }
 
                 @{
-                    fId = "ReportingPeriodStartDate";
-                    fId2 = "ReportingPeriodEndDate";
-                    f = Model.FirstOrDefault(x => x.Id == fId);
-                    f2 = Model.FirstOrDefault(x => x.Id == fId2);
-                    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label &#10;@f2?.Label">Roknskaparár: @(f?.Value ?? fId + noValue) - @(f2?.Value ?? fId2 + noValue)</p>
+                    fName = "ReportingPeriodStartDate";
+                    fName2 = "ReportingPeriodEndDate";
+                    f = Model.FirstOrDefault(x => x.Name == fName);
+                    f2 = Model.FirstOrDefault(x => x.Name == fName2);
+                    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label &#10;@f2?.Label">Roknskaparár: @(f?.Value ?? fName + noValue) - @(f2?.Value ?? fName2 + noValue)</p>
                 }
             </td>
         </tr>
@@ -49,24 +49,24 @@
             <td class="font-weight-bold">Nevnd</td>
             <td>
                 @{
-                    fId = "NameAndSurnameOfMemberOfSupervisoryBoard";
-                    fId2 = "TitleOfMemberOfSupervisoryBoard";
+                    fName = "NameAndSurnameOfMemberOfSupervisoryBoard";
+                    fName2 = "TitleOfMemberOfSupervisoryBoard";
 
-                    var memberNames = Model.Where(x => x.Id == fId)
+                    var memberNames = Model.Where(x => x.Name == fName)
                         .Select(x => x);
 
-                    var memberTitles = Model.Where(x => x.Id == fId2)
+                    var memberTitles = Model.Where(x => x.Name == fName2)
                         .Select(x => x);
 
                     foreach (var mn in memberNames)
                     {
-                        <p class="text-left p-1" data-toggle="tooltip" title="@mn?.Label">@(mn?.Value ?? fId + noValue)</p>
+                        <p class="text-left p-1" data-toggle="tooltip" title="@mn?.Label">@(mn?.Value ?? fName + noValue)</p>
 
                         foreach (var mt in memberTitles)
                         {
-                            if (mn.ContextID == mt.ContextID)
+                            if (mn.ContextRefName == mt.ContextRefName)
                             {
-                                <p class="text-left p-1 font-italic" data-toggle="tooltip" title="@mt?.Label">@(mt?.Value ?? fId2 + noValue)</p>
+                                <p class="text-left p-1 font-italic" data-toggle="tooltip" title="@mt?.Label">@(mt?.Value ?? fName2 + noValue)</p>
                             }
                         }
                     }
@@ -77,9 +77,9 @@
             <td class="font-weight-bold">Stjórn</td>
             <td>
                 @{
-                    fId = "NameAndSurnameOfMemberOfExecutiveBoard";
-                    f = Model.FirstOrDefault(x => x.Id == fId);
-                    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fId + noValue)</p>
+                    fName = "NameAndSurnameOfMemberOfExecutiveBoard";
+                    f = Model.FirstOrDefault(x => x.Name == fName);
+                    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
                 }
             </td>
         </tr>
@@ -87,21 +87,21 @@
             <td class="font-weight-bold">Grannskoðan</td>
             <td>
                 @{
-                    fId = "NameOfAuditFirm";
-                    fId2 = "AddressOfAuditorStreetName";
-                    fId3 = "AddressOfAuditorStreetBuildingIdentifier";
-                    fId4 = "AddressOfAuditorPostCodeIdentifier";
-                    fId5 = "AddressOfAuditorDistrictName";
+                    fName = "NameOfAuditFirm";
+                    fName2 = "AddressOfAuditorStreetName";
+                    fName3 = "AddressOfAuditorStreetBuildingIdentifier";
+                    fName4 = "AddressOfAuditorPostCodeIdentifier";
+                    fName5 = "AddressOfAuditorDistrictName";
 
-                    f = Model.FirstOrDefault(x => x.Id == fId);
-                    f2 = Model.FirstOrDefault(x => x.Id == fId2);
-                    f3 = Model.FirstOrDefault(x => x.Id == fId3);
-                    f4 = Model.FirstOrDefault(x => x.Id == fId4);
-                    f5 = Model.FirstOrDefault(x => x.Id == fId5);
+                    f = Model.FirstOrDefault(x => x.Name == fName);
+                    f2 = Model.FirstOrDefault(x => x.Name == fName2);
+                    f3 = Model.FirstOrDefault(x => x.Name == fName3);
+                    f4 = Model.FirstOrDefault(x => x.Name == fName4);
+                    f5 = Model.FirstOrDefault(x => x.Name == fName5);
 
-                    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fId + noValue)</p>
-                    <p class="text-left p-1" data-toggle="tooltip" title="@f2?.Label&#10;@f3?.Label">@(f2?.Value ?? fId2 + noValue) @(f3?.Value ?? fId3 + noValue)</p>
-                    <p class="text-left p-1" data-toggle="tooltip" title="@f4?.Label&#10;@f5?.Label">@(f4?.Value ?? fId4 + noValue) @(f5?.Value ?? fId5 + noValue)</p>
+                    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+                    <p class="text-left p-1" data-toggle="tooltip" title="@f2?.Label&#10;@f3?.Label">@(f2?.Value ?? fName2 + noValue) @(f3?.Value ?? fName3 + noValue)</p>
+                    <p class="text-left p-1" data-toggle="tooltip" title="@f4?.Label&#10;@f5?.Label">@(f4?.Value ?? fName4 + noValue) @(f5?.Value ?? fName5 + noValue)</p>
                 }
             </td>
         </tr>
