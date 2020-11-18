@@ -1,54 +1,54 @@
 ﻿@{
-    @model List<XBRLviewerMVC.Models.FactModel>
+    @model XBRLviewerMVC.ViewModels.XBRLViewerViewModel
 }
 
 @{ FactModel f, f2; string fName, fName2; string noValue = ": Einki virði"; }
 
 @{
     fName = "IdentificationOfApprovedAnnualReport";
-    f = Model.FirstOrDefault(x => x.Name == fName);
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
     <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
 }
 
 @{
     fName = "ConfirmationThatAnnualReportIsPresentedInAccordanceWithRequirementsProvidedForByLegislationAnyStandardsAndRequirementsProvidedByArticlesOfAssociationOrByAgreement";
-    f = Model.FirstOrDefault(x => x.Name == fName);
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
     <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
 }
 
 @{
     fName = "ConfirmationThatFinancialStatementGivesTrueAndFairViewOfAssetsLiabilitiesEquityFinancialPositionAndResults";
-    f = Model.FirstOrDefault(x => x.Name == fName);
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
     <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
 }
 
 @{
     fName = "ManagementsStatementAboutManagementsReview";
-    f = Model.FirstOrDefault(x => x.Name == fName);
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
     <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
 }
 
 @{
     fName = "RecommendationForApprovalOfAnnualReportByGeneralMeeting";
-    f = Model.FirstOrDefault(x => x.Name == fName);
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
     <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
 }
 
 @{
     fName = "DateOfGeneralMeeting";
-    f = Model.FirstOrDefault(x => x.Name == fName);
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
 
     fName2 = "AddressOfReportingEntityDistrictName";
-    f2 = Model.FirstOrDefault(x => x.Name == fName2);
+    f2 = Model.Facts.FirstOrDefault(x => x.Name == fName2);
     <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label &#10;@f2?.Label">@(f?.Value ?? fName + noValue), @(f2?.Value ?? fName2 + noValue)</p>
 }
 
 @{
     fName = "NameAndSurnameOfMemberOfExecutiveBoard";
-    f = Model.FirstOrDefault(x => x.Name == fName);
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
 
     fName2 = "TitleOfMemberOfExecutiveBoard";
-    f2 = Model.FirstOrDefault(x => x.Name == fName2);
+    f2 = Model.Facts.FirstOrDefault(x => x.Name == fName2);
 
     <p class="text-left p-1 font-weight-bold">Stjórn</p>
     <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label &#10;@f2?.Label">
@@ -61,10 +61,10 @@
     fName = "NameAndSurnameOfMemberOfSupervisoryBoard";
     fName2 = "TitleOfMemberOfSupervisoryBoard";
 
-    var memberNames = Model.Where(x => x.Name == fName)
+    var memberNames = Model.Facts.Where(x => x.Name == fName)
         .Select(x => x);
 
-    var memberTitles = Model.Where(x => x.Name == fName2)
+    var memberTitles = Model.Facts.Where(x => x.Name == fName2)
         .Select(x => x);
 
     <p class="text-left p-1 font-weight-bold">Nevnd</p>

@@ -1,18 +1,18 @@
 ﻿@{
-    @model List<XBRLviewerMVC.Models.FactModel>
+    @model XBRLviewerMVC.ViewModels.XBRLViewerViewModel
 }
 
 @{ FactModel f, f2; string fName, fName2; string noValue = ": Einki virði"; }
 
 @{
     fName = "NameOfSubmittingEnterprise";
-    f = Model.FirstOrDefault(x => x.Name == fName);
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
     <p class="text-left p-1 font-weight-bold" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
 }
 
 @{
     fName = "NameOfReportingEntity";
-    f = Model.FirstOrDefault(x => x.Name == fName);
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
     <h1 class="text-center p-1 font-weight-bold" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</h1>
 }
 
@@ -20,31 +20,31 @@
     fName = "AddressOfReportingEntityStreetName";
     fName2 = "AddressOfReportingEntityStreetBuildingIdentifier";
 
-    f = Model.FirstOrDefault(x => x.Name == fName);
-    f2 = Model.FirstOrDefault(x => x.Name == fName2);
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    f2 = Model.Facts.FirstOrDefault(x => x.Name == fName2);
     <h2 class="text-center p-1" data-toggle="tooltip" title="@f?.Label &#10;@f2?.Label">@(f?.Value ?? fName + noValue) @(f2?.Value ?? fName2 + noValue)</h2>
 }
 
 @{
     fName = "AddressOfSubmittingEnterprisePostcodeAndTown";
-    f = Model.FirstOrDefault(x => x.Name == fName);
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
     <h2 class="text-center p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</h2>
 }
 
 @{
     fName = "IdentificationNumberCvrOfReportingEntity";
-    f = Model.FirstOrDefault(x => x.Name == fName);
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
     <h4 class="text-center p-1" data-toggle="tooltip" title="@f?.Label"><span class="font-weight-bold">Skrás.nr.: </span>@(f?.Value ?? fName + noValue)</h4>
 }
 
 @{
     fName = "DateOfApprovalOfReport";
-    f = Model.FirstOrDefault(x => x.Name == fName);
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
     <h4 class="text-center p-1" data-toggle="tooltip" title="@f?.Label"><span class="font-weight-bold">Góðkend: </span>@(f?.Value ?? fName + noValue)</h4>
 }
 
 @{
     fName = "NameAndSurnameOfChairmanOfGeneralMeeting";
-    f = Model.FirstOrDefault(x => x.Name == fName);
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
     <h4 class="text-center p-1" data-toggle="tooltip" title="@f?.Label"><span class="font-weight-bold">Fundarstjóri: </span>@(f?.Value ?? fName + noValue)</h4>
 }

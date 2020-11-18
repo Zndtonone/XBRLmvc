@@ -1,5 +1,5 @@
 ﻿@{
-    @model List<FactModel>
+    @model XBRLviewerMVC.ViewModels.XBRLViewerViewModel
 }
 
 @{ FactModel f, f2, f3, f4, f5; string fName, fName2, fName3, fName4, fName5; string noValue = ": Einki virði"; }
@@ -11,7 +11,7 @@
             <td>
                 @{
                     fName = "NameOfReportingEntity";
-                    f = Model.FirstOrDefault(x => x.Name == fName);
+                    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
                     <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
                 }
 
@@ -19,28 +19,28 @@
                     fName = "AddressOfReportingEntityStreetName";
                     fName2 = "AddressOfReportingEntityStreetBuildingIdentifier";
 
-                    f = Model.FirstOrDefault(x => x.Name == fName);
-                    f2 = Model.FirstOrDefault(x => x.Name == fName2);
+                    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+                    f2 = Model.Facts.FirstOrDefault(x => x.Name == fName2);
                     <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label &#10;@f2?.Label">@(f?.Value ?? fName + noValue) @(f2?.Value ?? fName2 + noValue)</p>
                 }
 
                 @{
                     fName = "AddressOfSubmittingEnterprisePostcodeAndTown";
-                    f = Model.FirstOrDefault(x => x.Name == fName);
+                    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
                     <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
                 }
 
                 @{
                     fName = "IdentificationNumberCvrOfReportingEntity";
-                    f = Model.FirstOrDefault(x => x.Name == fName);
+                    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
                     <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">Skrás.nr.: @(f?.Value ?? fName + noValue)</p>
                 }
 
                 @{
                     fName = "ReportingPeriodStartDate";
                     fName2 = "ReportingPeriodEndDate";
-                    f = Model.FirstOrDefault(x => x.Name == fName);
-                    f2 = Model.FirstOrDefault(x => x.Name == fName2);
+                    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+                    f2 = Model.Facts.FirstOrDefault(x => x.Name == fName2);
                     <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label &#10;@f2?.Label">Roknskaparár: @(f?.Value ?? fName + noValue) - @(f2?.Value ?? fName2 + noValue)</p>
                 }
             </td>
@@ -52,10 +52,10 @@
                     fName = "NameAndSurnameOfMemberOfSupervisoryBoard";
                     fName2 = "TitleOfMemberOfSupervisoryBoard";
 
-                    var memberNames = Model.Where(x => x.Name == fName)
+                    var memberNames = Model.Facts.Where(x => x.Name == fName)
                         .Select(x => x);
 
-                    var memberTitles = Model.Where(x => x.Name == fName2)
+                    var memberTitles = Model.Facts.Where(x => x.Name == fName2)
                         .Select(x => x);
 
                     foreach (var mn in memberNames)
@@ -78,7 +78,7 @@
             <td>
                 @{
                     fName = "NameAndSurnameOfMemberOfExecutiveBoard";
-                    f = Model.FirstOrDefault(x => x.Name == fName);
+                    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
                     <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
                 }
             </td>
@@ -93,11 +93,11 @@
                     fName4 = "AddressOfAuditorPostCodeIdentifier";
                     fName5 = "AddressOfAuditorDistrictName";
 
-                    f = Model.FirstOrDefault(x => x.Name == fName);
-                    f2 = Model.FirstOrDefault(x => x.Name == fName2);
-                    f3 = Model.FirstOrDefault(x => x.Name == fName3);
-                    f4 = Model.FirstOrDefault(x => x.Name == fName4);
-                    f5 = Model.FirstOrDefault(x => x.Name == fName5);
+                    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+                    f2 = Model.Facts.FirstOrDefault(x => x.Name == fName2);
+                    f3 = Model.Facts.FirstOrDefault(x => x.Name == fName3);
+                    f4 = Model.Facts.FirstOrDefault(x => x.Name == fName4);
+                    f5 = Model.Facts.FirstOrDefault(x => x.Name == fName5);
 
                     <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
                     <p class="text-left p-1" data-toggle="tooltip" title="@f2?.Label&#10;@f3?.Label">@(f2?.Value ?? fName2 + noValue) @(f3?.Value ?? fName3 + noValue)</p>

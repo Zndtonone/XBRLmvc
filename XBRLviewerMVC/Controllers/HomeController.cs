@@ -12,6 +12,7 @@ using Newtonsoft.Json;
 using XBRLviewerMVC.Models;
 using System.Web;
 using Microsoft.AspNetCore.Hosting;
+using XBRLviewerMVC.ViewModels;
 
 namespace XBRLviewerMVC.Controllers
 {
@@ -53,7 +54,7 @@ namespace XBRLviewerMVC.Controllers
 
                 string fileName = filePath.Substring(filePath.LastIndexOf("/") + 1, filePath.Substring(filePath.LastIndexOf("/")).Length - filePath.Substring(filePath.LastIndexOf(".")).Length - 1);
 
-                System.IO.File.WriteAllText($"{_env.WebRootPath}/data/json/" + fileName + ".json", factsJson + contextJson);
+                System.IO.File.WriteAllText($"{_env.WebRootPath}/data/json/" + fileName + ".json", "{" + "\"facts\":" + factsJson + "," + "\"contexts\":" + contextJson + "}");
             }
             
             return Redirect(" / ");
@@ -62,10 +63,14 @@ namespace XBRLviewerMVC.Controllers
 
         public IActionResult XBRLviewer()
         {
-            // Creating new list of FactModel
             List<FactModel> facts = JsonConvert.DeserializeObject<List<FactModel>>(XBRLservices.JSONServices.Read("facts.json", "data"));
+            List<ContextModel> contexts = JsonConvert.DeserializeObject<List<ContextModel>>(XBRLservices.JSONServices.Read("facts.json", "data"));
 
-            return View(facts);
+            XBRLViewerViewModel palavm = new XBRLViewerViewModel();
+            palavm.Facts = facts;
+            palavm.Contexts = contexts;
+
+            return View(palavm);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

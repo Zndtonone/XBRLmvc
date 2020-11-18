@@ -1,5 +1,5 @@
 ﻿@{
-    @model List<XBRLviewerMVC.Models.FactModel>
+    @model XBRLviewerMVC.ViewModels.XBRLViewerViewModel
 }
 
 @{ FactModel f, f2; string fName, fName2; string noValue = ": Einki virði"; }
@@ -7,8 +7,8 @@
 @{
     fName = "ReportingPeriodStartDate";
     fName2 = "ReportingPeriodEndDate";
-    f = Model.FirstOrDefault(x => x.Name == fName);
-    f2 = Model.FirstOrDefault(x => x.Name == fName2);
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    f2 = Model.Facts.FirstOrDefault(x => x.Name == fName2);
     <h2 class="text-left p-1 font-weight-bold" data-toggle="tooltip" title="@f?.Label &#10;@f2?.Label">Roknskaparár: @(f?.Value ?? fName + noValue) - @(f2?.Value ?? fName2 + noValue)</h2>
 }
 
@@ -30,9 +30,9 @@
 
             @{
                 fName = "GrossProfitLoss";
-                var gplList = Model
+                
+                var gplList = Model.Facts
                     .Where(x => x.Name == fName)
-                    .OrderBy(x => x.ContextRefName)
                     .Select(x => x);
 
                 int counter = 0;
