@@ -1,0 +1,78 @@
+﻿@{
+    @model XBRLviewerMVC.ViewModels.XBRLViewerViewModel
+}
+
+@{ FactModel f, f2; string fName, fName2; string noValue = ": Einki virði"; }
+
+<p class="text-left p-1 font-weight-bold">Niðurstøða</p>
+
+@{
+    fName = "AddresseeOfAuditorsReportOnAuditedFinancialStatements";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    <p class="text-left p-1 font-italic" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}
+
+@{
+    fName = "OpinionOnAuditedFinancialStatements";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}
+
+<p class="text-left p-1 font-weight-bold">Grundarlag fyri niðurstøðini</p>
+
+@{
+    fName = "DescriptionOfQualificationsOfAuditedFinancialStatements";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}
+
+<p class="text-left p-1 font-weight-bold">Ábyrgd leiðslunnar av ársroknskapinum</p>
+
+@{
+    fName = "StatementOfExecutiveAndSupervisoryBoardsResponsibilityForFinancialStatements";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}
+
+<p class="text-left p-1 font-weight-bold">Ábyrgd grannskoðarans av grannskoðanini av ársroknskapinum</p>
+
+@{
+    fName = "StatementOfAuditorsResponsibilityForAuditAndAuditPerformed";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}
+
+<p class="text-left p-1 font-weight-bold">Ummæli av leiðslufrágreiðingini</p>
+
+@{
+    fName = "StatementOnManagementsReviewAuditorsReportOnAuditedFinancialStatements";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}
+
+@{
+    fName = "DateOfApprovalOfReport";
+    fName2 = "AddressOfAuditorDistrictName";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    f2 = Model.Facts.FirstOrDefault(x => x.Name == fName2);
+    <p class="text-left p-1" data-toggle="tooltip" title="@f2?.Label">@(f2?.Value ?? fName2 + noValue)</p>
+    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}
+
+@{
+    fName = "NameOfAuditFirm";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}
+
+@{
+    fName = "NameAndSurnameOfAuditor";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    <p class="text-left p-1 font-italic" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}
+
+@{
+    fName = "DescriptionOfAuditor";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}

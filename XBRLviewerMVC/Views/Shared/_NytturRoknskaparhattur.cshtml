@@ -1,0 +1,165 @@
+﻿@{
+    @model XBRLviewerMVC.ViewModels.XBRLViewerViewModel
+}
+
+@{ FactModel f, f2; string fName, fName2; string noValue = ": Einki virði"; }
+
+@{
+    fName = "InformationOnReportingClassOfEntity";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    <p class="text-left p-1 font-italic" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}
+
+<p class="text-left p-1 font-weight-bold">Um innrokning og virðisáseting</p>
+
+@{
+    fName = "DescriptionOfGeneralMattersRelatedToRecognitionMeasurementAndChangesInAccountingPolicies";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    <p class="text-left p-1 font-italic" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}
+
+<p class="text-left p-1 font-weight-bold">Rakstrarroknskapurin</p>
+
+@{
+    fName = "DescriptionOfGeneralMattersRelatedToRecognitionMeasurementAndChangesInAccountingPolicies";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    <p class="text-left p-1 font-italic" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}
+
+<p class="text-left p-1 font-weight-bold">Bruttoúrslit</p>
+
+Manglar í 2065_1_2019
+
+<p class="text-left p-1 font-weight-bold">Nettosøla</p>
+
+Manglar í 2065_1_2019
+
+<p class="text-left p-1 font-weight-bold">Aðrir uttanhýsis kostnaðir</p>
+
+@{
+    fName = "DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfExternalExpenses";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    <p class="text-left p-1 font-italic" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}
+
+<p class="text-left p-1 font-weight-bold">Starvsfólkakostnaður</p>
+
+@{
+    fName = "DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfEmployeeBenefitExpense";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    <p class="text-left p-1 font-italic" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}
+
+<p class="text-left p-1 font-weight-bold">Av og niðurskrivingar</p>
+
+@{
+    fName = "DescriptionOfMethodsOfImpairmentLossesAndDepreciation";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    <p class="text-left p-1 font-italic" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}
+
+<p class="text-left p-1 font-weight-bold">Fíggjarligar inntøkur og kostnaðir</p>
+
+@{
+    fName = "DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfFinanceIncomeAndExpenses";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    <p class="text-left p-1 font-italic" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}
+
+<p class="text-left p-1 font-weight-bold">Skattur av ársúrslitinum</p>
+
+@{
+    fName = "DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfTaxExpenses";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    <p class="text-left p-1 font-italic" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}
+
+<p class="text-left p-1 font-weight-bold">Fíggjarstøðan</p>
+
+<p class="text-left p-1 font-weight-bold">Immateriell støðisogn</p>
+
+<p class="text-left p-1 font-weight-bold">Goodwill</p>
+
+@{
+    fName = "DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfIntangibleAssets";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    <p class="text-left p-1 font-italic" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}
+
+<p class="text-left p-1 font-weight-bold">Materiell støðisogn</p>
+
+@{
+    fName = "DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfPropertyPlantAndEquipment";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    <p class="text-left p-1 font-italic" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}
+
+<p class="text-left p-1 font-weight-bold">Virðisminking av støðisogn</p>
+
+@{
+    fName = "DescriptionOfMethodsOfAmortisationOfNoncurrentAssets";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    <p class="text-left p-1 font-italic" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}
+
+<p class="text-left p-1 font-weight-bold">Vørugoymslur</p>
+
+@{
+    fName = "DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfInventories";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    <p class="text-left p-1 font-italic" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}
+
+<p class="text-left p-1 font-weight-bold">Áogn</p>
+
+@{
+    fName = "DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfReceivables";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    <p class="text-left p-1 font-italic" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}
+
+<p class="text-left p-1 font-weight-bold">Eginogn</p>
+
+Manglar í 2065_1_2019
+
+<p class="text-left p-1 font-weight-bold">Vinningsbýti</p>
+
+@{
+    fName = "DescriptionOfMethodsOfDividends";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    <p class="text-left p-1 font-italic" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}
+
+<p class="text-left p-1 font-weight-bold">Partafelagsskattur og útsettur skattur</p>
+
+@{
+    fName = "DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfTaxPayablesAndDeferredTax";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    <p class="text-left p-1 font-italic" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}
+
+<p class="text-left p-1 font-weight-bold">Skyldur</p>
+
+@{
+    fName = "DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfLiabilitiesOtherThanProvisions";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    <p class="text-left p-1 font-italic" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}
+
+<p class="text-left p-1 font-weight-bold">Peningastremysuppgerð</p>
+
+@{
+    fName = "DescriptionMethodsOfRecognitionAndMeasurementBasisForCashFlowsStatement";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    <p class="text-left p-1 font-italic" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}
+
+<p class="text-left p-1 font-weight-bold">Yvirlit yvir høvuðs- og lyklatøl</p>
+
+<p class="text-left p-1">Frágreiðing til lyklatølini.</p>
+
+@{
+    fName = "DescriptionOfMethodsOfStatingKeyFiguresAndFinancialRatiosIncludedInManagementReview";
+    f = Model.Facts.FirstOrDefault(x => x.Name == fName);
+    <p class="text-left p-1 font-italic" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+}

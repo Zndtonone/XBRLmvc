@@ -1,0 +1,1581 @@
+{
+    "facts": [{
+            "Name": "InformationOnTypeOfSubmittedReport",
+            "Label": "Upplýsingar um slag av frásøgn",
+            "Value": "Årsrapport",
+            "Namespace": "http://xbrl.dcca.dk/gsd",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "IdentificationNumberCvrOfSubmittingEnterprise",
+            "Label": "Fyritøkan sum letur roknskapin inn, skráetingar nummar/ v-tal",
+            "Value": "00005698",
+            "Namespace": "http://xbrl.dcca.dk/gsd",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "NameOfSubmittingEnterprise",
+            "Label": "Navn á virki sum sendir inn roknskapin",
+            "Value": "NUMO",
+            "Namespace": "http://xbrl.dcca.dk/gsd",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "AddressOfSubmittingEnterpriseStreetAndNumber",
+            "Label": "Bústaður hjá fyritøkuni sum letur roknskapin inn, gøtunummar og gøtunavn",
+            "Value": "undir Bryggjubakka 13",
+            "Namespace": "http://xbrl.dcca.dk/gsd",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "AddressOfSubmittingEnterprisePostcodeAndTown",
+            "Label": "Bústaður hjá fyritøkuni sum letur roknskapin inn, postnummar og býur",
+            "Value": "100 Tórshavn",
+            "Namespace": "http://xbrl.dcca.dk/gsd",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "ReportingPeriodStartDate",
+            "Label": "Roknskaparperioda, byrjanardagfesting",
+            "Value": "2019-01-01",
+            "Namespace": "http://xbrl.dcca.dk/gsd",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "ReportingPeriodEndDate",
+            "Label": "Roknskaparperioda, endadagfesting",
+            "Value": "2019-12-31",
+            "Namespace": "http://xbrl.dcca.dk/gsd",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "DateOfApprovalOfReport",
+            "Label": "Dagfesting fyri nær leiðslan góðkendi ársfrásagnina",
+            "Value": "2020-03-21",
+            "Namespace": "http://xbrl.dcca.dk/gsd",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "IdentificationNumberCvrOfReportingEntity",
+            "Label": "Felag sum leggur roknskapin fram, skrásetingarnummar/ v-tal",
+            "Value": "00003678",
+            "Namespace": "http://xbrl.dcca.dk/gsd",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "NameOfReportingEntity",
+            "Label": "Felagið sum leggur rokaskapin fram, navn",
+            "Value": "Kreton Sp/f",
+            "Namespace": "http://xbrl.dcca.dk/gsd",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "AddressOfReportingEntityStreetName",
+            "Label": "Bústaður hjá felagnum sum leggur roknskapin fram, gøtunavn",
+            "Value": "Leitisvegur",
+            "Namespace": "http://xbrl.dcca.dk/gsd",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "AddressOfReportingEntityStreetBuildingIdentifier",
+            "Label": "Bústaður hjá felagnum sum leggur roknskapin fram, gøtunummar og hædd",
+            "Value": "35a",
+            "Namespace": "http://xbrl.dcca.dk/gsd",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "AddressOfReportingEntityPostCodeIdentifier",
+            "Label": "Bústaður hjá felagnum sum leggur roknskapin fram, postnummar",
+            "Value": "600",
+            "Namespace": "http://xbrl.dcca.dk/gsd",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "AddressOfReportingEntityDistrictName",
+            "Label": "Bústaður hjá felagnum sum leggur roknskapin fram, býur",
+            "Value": "Saltangará",
+            "Namespace": "http://xbrl.dcca.dk/gsd",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "AddressOfReportingEntityCountryIdentificationCode",
+            "Label": "Bústaður hjá felagnum sum leggur roknskapin fram, landakota",
+            "Value": "DK",
+            "Namespace": "http://xbrl.dcca.dk/gsd",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "AddressOfReportingEntityCountry",
+            "Label": "Bústaður hjá felagnum sum leggur roknskapin fram, land",
+            "Value": "Færøerne",
+            "Namespace": "http://xbrl.dcca.dk/gsd",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "RegisteredOfficeOfReportingEntity",
+            "Label": "Felag sum leggur fram roknskap, heimstaður",
+            "Value": "Runavíkar kommuna",
+            "Namespace": "http://xbrl.dcca.dk/gsd",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "NameOfAuditFirm",
+            "Label": "Name of audit firm",
+            "Value": "NUMO",
+            "Namespace": "http://xbrl.dcca.dk/cmn",
+            "ContextRefName": "c12",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "IdentificationNumberCvrOfAuditFirm",
+            "Label": "Identification number [CVR] of audit firm",
+            "Value": "00005698",
+            "Namespace": "http://xbrl.dcca.dk/cmn",
+            "ContextRefName": "c12",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "NameAndSurnameOfAuditor",
+            "Label": "First name and surname of auditor",
+            "Value": "Victor Nielsen",
+            "Namespace": "http://xbrl.dcca.dk/cmn",
+            "ContextRefName": "c12",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "DescriptionOfAuditor",
+            "Label": "Description of auditor",
+            "Value": "skrásettur grannskoðari",
+            "Namespace": "http://xbrl.dcca.dk/cmn",
+            "ContextRefName": "c12",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "AddressOfAuditorStreetName",
+            "Label": "Bústaður hjá grannskoðara, gøtunavn",
+            "Value": "Vágstún",
+            "Namespace": "http://xbrl.dcca.dk/gsd",
+            "ContextRefName": "c12",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "AddressOfAuditorStreetBuildingIdentifier",
+            "Label": "Bústaður hjá grannskoðara, gøtunummar og hædd",
+            "Value": "2",
+            "Namespace": "http://xbrl.dcca.dk/gsd",
+            "ContextRefName": "c12",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "AddressOfAuditorPostCodeIdentifier",
+            "Label": "Bústaður hjá grannskoðara, postnummar",
+            "Value": "700",
+            "Namespace": "http://xbrl.dcca.dk/gsd",
+            "ContextRefName": "c12",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "AddressOfAuditorDistrictName",
+            "Label": "Bústaður hjá grannskoðara, býur",
+            "Value": "Klaksvík",
+            "Namespace": "http://xbrl.dcca.dk/gsd",
+            "ContextRefName": "c12",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "AddressOfAuditorCountryIdentificationCode",
+            "Label": "Bústaður hjá grannskoðara, landakota",
+            "Value": "FO",
+            "Namespace": "http://xbrl.dcca.dk/gsd",
+            "ContextRefName": "c12",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "AddressOfAuditorCountry",
+            "Label": "Bústaður hjá grannskoðara, land",
+            "Value": "Færøerne",
+            "Namespace": "http://xbrl.dcca.dk/gsd",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "DateOfGeneralMeeting",
+            "Label": "Aðalfundardagfesting",
+            "Value": "2020-03-30",
+            "Namespace": "http://xbrl.dcca.dk/gsd",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "NameAndSurnameOfChairmanOfGeneralMeeting",
+            "Label": "Navn og orðstýrara ella vara orðstýrara á aðalfundinum",
+            "Value": "Suni Justinussen",
+            "Namespace": "http://xbrl.dcca.dk/gsd",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "ClassOfReportingEntity",
+            "Label": "Class of reporting entity",
+            "Value": "Regnskabsklasse B",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "TypeOfAuditorAssistance",
+            "Label": "Type af revisorbistand",
+            "Value": "Revisionspåtegning",
+            "Namespace": "http://xbrl.dcca.dk/cmn",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "NameAndSurnameOfMemberOfExecutiveBoard",
+            "Label": "First name and surname of member of executive board",
+            "Value": "Eyðun Magnussen",
+            "Namespace": "http://xbrl.dcca.dk/cmn",
+            "ContextRefName": "c104",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "TitleOfMemberOfExecutiveBoard",
+            "Label": "Title of member of executive board",
+            "Value": "stjóri",
+            "Namespace": "http://xbrl.dcca.dk/cmn",
+            "ContextRefName": "c104",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "NameAndSurnameOfMemberOfSupervisoryBoard",
+            "Label": "First name and surname of member of supervisory board",
+            "Value": "Suni Elmar Justinussen, formaður",
+            "Namespace": "http://xbrl.dcca.dk/cmn",
+            "ContextRefName": "c89",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "NameAndSurnameOfMemberOfSupervisoryBoard",
+            "Label": "First name and surname of member of supervisory board",
+            "Value": "Eyðun Magnussen",
+            "Namespace": "http://xbrl.dcca.dk/cmn",
+            "ContextRefName": "c90",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "NameAndSurnameOfMemberOfSupervisoryBoard",
+            "Label": "First name and surname of member of supervisory board",
+            "Value": "Ove Magnussen",
+            "Namespace": "http://xbrl.dcca.dk/cmn",
+            "ContextRefName": "c91",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "NameOfAuditFirm",
+            "Label": "Name of audit firm",
+            "Value": "NUMO",
+            "Namespace": "http://xbrl.dcca.dk/cmn",
+            "ContextRefName": "c12",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "NameAndSurnameOfAuditor",
+            "Label": "First name and surname of auditor",
+            "Value": "Victor Nielsen",
+            "Namespace": "http://xbrl.dcca.dk/cmn",
+            "ContextRefName": "c12",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "DescriptionOfAuditor",
+            "Label": "Description of auditor",
+            "Value": "skrásettur grannskoðari",
+            "Namespace": "http://xbrl.dcca.dk/cmn",
+            "ContextRefName": "c12",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "GrossProfitLoss",
+            "Label": "Gross profit (loss)",
+            "Value": "13321376",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "GrossProfitLoss",
+            "Label": "Gross profit (loss)",
+            "Value": "13111169",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c58",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "EmployeeBenefitsExpense",
+            "Label": "Employee expense",
+            "Value": "9017543",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "EmployeeBenefitsExpense",
+            "Label": "Employee expense",
+            "Value": "9801536",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c58",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "DepreciationAmortisationExpenseAndImpairmentLossesOfPropertyPlantAndEquipmentAndIntangibleAssetsRecognisedInProfitOrLoss",
+            "Label": "Depreciation, amortisation expense of property, plant and equipment and intangible assets recognised in profit or loss",
+            "Value": "2998476",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "DepreciationAmortisationExpenseAndImpairmentLossesOfPropertyPlantAndEquipmentAndIntangibleAssetsRecognisedInProfitOrLoss",
+            "Label": "Depreciation, amortisation expense of property, plant and equipment and intangible assets recognised in profit or loss",
+            "Value": "2297021",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c58",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ProfitLossFromOrdinaryOperatingActivities",
+            "Label": "Profit (loss) from ordinary operating activities",
+            "Value": "1305357",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ProfitLossFromOrdinaryOperatingActivities",
+            "Label": "Profit (loss) from ordinary operating activities",
+            "Value": "1012612",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c58",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "OtherFinanceIncome",
+            "Label": "Other finance income",
+            "Value": "0",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "OtherFinanceIncome",
+            "Label": "Other finance income",
+            "Value": "1508",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c58",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "OtherFinanceExpenses",
+            "Label": "Other finance expenses",
+            "Value": "691667",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "OtherFinanceExpenses",
+            "Label": "Other finance expenses",
+            "Value": "719868",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c58",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ProfitLossFromOrdinaryActivitiesBeforeTax",
+            "Label": "Profit (loss) from ordinary activities before tax",
+            "Value": "613690",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ProfitLossFromOrdinaryActivitiesBeforeTax",
+            "Label": "Profit (loss) from ordinary activities before tax",
+            "Value": "294252",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c58",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "TaxExpense",
+            "Label": "Tax expense",
+            "Value": "111820",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "TaxExpense",
+            "Label": "Tax expense",
+            "Value": "58385",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c58",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ProfitLoss",
+            "Label": "Profit (loss)",
+            "Value": "501870",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ProfitLoss",
+            "Label": "Profit (loss)",
+            "Value": "235867",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c58",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ProfitLoss",
+            "Label": "Profit (loss)",
+            "Value": "501870",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c72",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ProfitLoss",
+            "Label": "Profit (loss)",
+            "Value": "235867",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c73",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "LandAndBuildings",
+            "Label": "Land and buildings",
+            "Value": "5597746",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "LandAndBuildings",
+            "Label": "Land and buildings",
+            "Value": "5398781",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "FixturesFittingsToolsAndEquipment",
+            "Label": "Fixtures, fittings, tools and equipment",
+            "Value": "16021591",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "FixturesFittingsToolsAndEquipment",
+            "Label": "Fixtures, fittings, tools and equipment",
+            "Value": "13386586",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "PropertyPlantAndEquipment",
+            "Label": "Property plant and equipment",
+            "Value": "21619337",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "PropertyPlantAndEquipment",
+            "Label": "Property plant and equipment",
+            "Value": "18785367",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "OtherLongtermInvestments",
+            "Label": "Other long-term investments",
+            "Value": "30000",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "OtherLongtermInvestments",
+            "Label": "Other long-term investments",
+            "Value": "0",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "LongtermInvestmentsAndReceivables",
+            "Label": "Investments",
+            "Value": "30000",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "LongtermInvestmentsAndReceivables",
+            "Label": "Investments",
+            "Value": "0",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "NoncurrentAssets",
+            "Label": "Non-current assets",
+            "Value": "21649337",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "NoncurrentAssets",
+            "Label": "Non-current assets",
+            "Value": "18785367",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ShorttermTradeReceivables",
+            "Label": "Short-term trade receivables",
+            "Value": "8832659",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ShorttermTradeReceivables",
+            "Label": "Short-term trade receivables",
+            "Value": "5252258",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "DeferredIncomeAssets",
+            "Label": "Deferred income assets",
+            "Value": "224170",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "DeferredIncomeAssets",
+            "Label": "Deferred income assets",
+            "Value": "11718",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ShorttermReceivables",
+            "Label": "Short-term receivables",
+            "Value": "9056829",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ShorttermReceivables",
+            "Label": "Short-term receivables",
+            "Value": "5263976",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "CashAndCashEquivalents",
+            "Label": "Cash and cash equivalents",
+            "Value": "258831",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "CashAndCashEquivalents",
+            "Label": "Cash and cash equivalents",
+            "Value": "656833",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "CurrentAssets",
+            "Label": "Current assets",
+            "Value": "9315660",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "CurrentAssets",
+            "Label": "Current assets",
+            "Value": "5920809",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "Assets",
+            "Label": "Assets",
+            "Value": "30964997",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "Assets",
+            "Label": "Assets",
+            "Value": "24706176",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ContributedCapital",
+            "Label": "Contributed capital",
+            "Value": "80000",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ContributedCapital",
+            "Label": "Contributed capital",
+            "Value": "80000",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "RetainedEarnings",
+            "Label": "Retained earnings",
+            "Value": "5783616",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "RetainedEarnings",
+            "Label": "Retained earnings",
+            "Value": "5281749",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "Equity",
+            "Label": "Equity",
+            "Value": "5863616",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "Equity",
+            "Label": "Equity",
+            "Value": "5361749",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ProvisionsForDeferredTax",
+            "Label": "Provisions for deferred tax",
+            "Value": "772782",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ProvisionsForDeferredTax",
+            "Label": "Provisions for deferred tax",
+            "Value": "660962",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "Provisions",
+            "Label": "Provisions",
+            "Value": "772782",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "Provisions",
+            "Label": "Provisions",
+            "Value": "660962",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "LongtermDebtToBanks",
+            "Label": "Long-term debt to banks",
+            "Value": "7329176",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "LongtermDebtToBanks",
+            "Label": "Long-term debt to banks",
+            "Value": "8874549",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "LongtermLeaseCommitments",
+            "Label": "Long-term lease commitments",
+            "Value": "5205228",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "LongtermLeaseCommitments",
+            "Label": "Long-term lease commitments",
+            "Value": "2220852",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "LongtermLiabilitiesOtherThanProvisions",
+            "Label": "Long-term liabilities",
+            "Value": "12534404",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "LongtermLiabilitiesOtherThanProvisions",
+            "Label": "Long-term liabilities",
+            "Value": "11095401",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ShorttermPartOfLongtermLiabilitiesOtherThanProvisions",
+            "Label": "Short-term part of long-term liabilities other than provisions",
+            "Value": "3001190",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ShorttermPartOfLongtermLiabilitiesOtherThanProvisions",
+            "Label": "Short-term part of long-term liabilities other than provisions",
+            "Value": "2304960",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ShorttermDebtToBanks",
+            "Label": "Short-term debt to banks",
+            "Value": "879973",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ShorttermDebtToBanks",
+            "Label": "Short-term debt to banks",
+            "Value": "0",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ShorttermTradePayables",
+            "Label": "Short-term trade payables",
+            "Value": "6465079",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ShorttermTradePayables",
+            "Label": "Short-term trade payables",
+            "Value": "3784210",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ShorttermPayablesToShareholdersAndManagement",
+            "Label": "Short-term payables to shareholders and management",
+            "Value": "372602",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ShorttermPayablesToShareholdersAndManagement",
+            "Label": "Short-term payables to shareholders and management",
+            "Value": "686138",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "OtherShorttermPayables",
+            "Label": "Other short-term payables",
+            "Value": "1074411",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "OtherShorttermPayables",
+            "Label": "Other short-term payables",
+            "Value": "809744",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ShorttermDeferredIncome",
+            "Label": "Short-term deferred income",
+            "Value": "940",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ShorttermDeferredIncome",
+            "Label": "Short-term deferred income",
+            "Value": "3012",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ShorttermLiabilitiesOtherThanProvisions",
+            "Label": "Short-term liabilities other than provisions",
+            "Value": "11794195",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ShorttermLiabilitiesOtherThanProvisions",
+            "Label": "Short-term liabilities other than provisions",
+            "Value": "7588064",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "LiabilitiesOtherThanProvisions",
+            "Label": "Liabilities other than provisions",
+            "Value": "24328599",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "LiabilitiesOtherThanProvisions",
+            "Label": "Liabilities other than provisions",
+            "Value": "18683465",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "LiabilitiesAndEquity",
+            "Label": "Liabilities and equity",
+            "Value": "30964997",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c75",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "LiabilitiesAndEquity",
+            "Label": "Liabilities and equity",
+            "Value": "24706176",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c74",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "WagesAndSalaries",
+            "Label": "Wages and salaries",
+            "Value": "8108758",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "WagesAndSalaries",
+            "Label": "Wages and salaries",
+            "Value": "8876091",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c58",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "PostemploymentBenefitExpense",
+            "Label": "Post-employment benefit expense",
+            "Value": "513516",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "PostemploymentBenefitExpense",
+            "Label": "Post-employment benefit expense",
+            "Value": "498317",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c58",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "SocialSecurityContributions",
+            "Label": "Other social security contributions",
+            "Value": "395269",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "SocialSecurityContributions",
+            "Label": "Other social security contributions",
+            "Value": "427128",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c58",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "EmployeeBenefitsExpense",
+            "Label": "Employee expense",
+            "Value": "9017543",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "EmployeeBenefitsExpense",
+            "Label": "Employee expense",
+            "Value": "9801536",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c58",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "Equity",
+            "Label": "Equity",
+            "Value": "80000",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c113",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "Equity",
+            "Label": "Equity",
+            "Value": "5281746",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c131",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "ProfitLoss",
+            "Label": "Profit (loss)",
+            "Value": "501870",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c132",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "Equity",
+            "Label": "Equity",
+            "Value": "80000",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c115",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "Equity",
+            "Label": "Equity",
+            "Value": "5783616",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c133",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "NumberOfIssuedShares",
+            "Label": "Number of issued shares",
+            "Value": "2",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c226",
+            "Id": "",
+            "UnitRefName": "u1"
+        }, {
+            "Name": "NominalValueOfIssuedShares",
+            "Label": "Nominal value of issued shares",
+            "Value": "40000",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c226",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "LongtermLiabilitiesOtherThanProvisions",
+            "Label": "Long-term liabilities",
+            "Value": "10573125",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c722",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "LongtermLiabilitiesOtherThanProvisions",
+            "Label": "Long-term liabilities",
+            "Value": "9158980",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c720",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "LongtermLiabilitiesOtherThanProvisionsDueInOneYear",
+            "Label": "Long-term liabilities other than provisions falling due in less than one year after end of reporting period",
+            "Value": "1829804",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c720",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "LongtermLiabilitiesOtherThanProvisionsDueAfterFiveYearsAndMore",
+            "Label": "Long-term liabilities other than provisions falling due in more than five years after end of reporting period",
+            "Value": "879991",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c720",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "LongtermLiabilitiesOtherThanProvisions",
+            "Label": "Long-term liabilities",
+            "Value": "2827236",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c238",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "LongtermLiabilitiesOtherThanProvisions",
+            "Label": "Long-term liabilities",
+            "Value": "6376614",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c237",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "LongtermLiabilitiesOtherThanProvisionsDueInOneYear",
+            "Label": "Long-term liabilities other than provisions falling due in less than one year after end of reporting period",
+            "Value": "1171386",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c237",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "LongtermLiabilitiesOtherThanProvisionsDueAfterFiveYearsAndMore",
+            "Label": "Long-term liabilities other than provisions falling due in more than five years after end of reporting period",
+            "Value": "1590138",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c237",
+            "Id": "",
+            "UnitRefName": "u3"
+        }, {
+            "Name": "IdentificationOfApprovedAnnualReport",
+            "Label": "Identification of approved annual report",
+            "Value": "Nevndin og stjórnin hava í dag viðgjørt og góðkent ársfrásøgnina fyri roknskaparárið\r\n\t\t1. januar - 31. desember 2019 fyri Kreton Sp/f.",
+            "Namespace": "http://xbrl.dcca.dk/sob",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "ConfirmationThatAnnualReportIsPresentedInAccordanceWithRequirementsProvidedForByLegislationAnyStandardsAndRequirementsProvidedByArticlesOfAssociationOrByAgreement",
+            "Label": "Confirmation that annual report is presented in accordance with requirements provided for by legislation, any standards and requirements provided by articles of association or by agreement",
+            "Value": "Ársfrásøgnin er greidd úr hondum í samsvari við ársroknskaparlógina.",
+            "Namespace": "http://xbrl.dcca.dk/sob",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "ConfirmationThatFinancialStatementGivesTrueAndFairViewOfAssetsLiabilitiesEquityFinancialPositionAndResults",
+            "Label": "Confirmation that financial statements gives true and fair view of assets, liabilities, equity, financial position and results",
+            "Value": "Vit meta, at ársroknskapurin gevur eina rættvísandi mynd av ognum, skyldum og fíggjarligu støðu felagsins tann 31. desember 2019 umframt av felagsins virksemi fyri roknskaparárið 1. januar - 31. desember 2019.",
+            "Namespace": "http://xbrl.dcca.dk/sob",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "ManagementsStatementAboutManagementsReview",
+            "Label": "Management's statement about management's review",
+            "Value": "Vit meta, at leiðslufrágreiðingin inniheldur eina rættvísandi frágreiðing um tey viðurskifti, sum frágreiðingin umrøður.",
+            "Namespace": "http://xbrl.dcca.dk/sob",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "RecommendationForApprovalOfAnnualReportByGeneralMeeting",
+            "Label": "Recommendation of annual report for approval by general meeting",
+            "Value": "Ársfrásøgnin verður løgd fram til góðkenningar ársaðalfundsins.",
+            "Namespace": "http://xbrl.dcca.dk/sob",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "AddresseeOfAuditorsReportOnAuditedFinancialStatements",
+            "Label": "Addressee of auditor's report on audited financial statements",
+            "Value": "Til kapitaleigararnar í Kreton Sp/f",
+            "Namespace": "http://xbrl.dcca.dk/arr",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "OpinionOnAuditedFinancialStatements",
+            "Label": "Opinion on audited financial statements (audit)",
+            "Value": "Vit hava grannskoðað  ársroknskapin hjá Kreton Sp/f fyri roknskaparárið 1. januar - 31. desember 2019 við nýttum roknskaparhátti, rakstrarroknskapi, fíggjarstøðu og notum. Ársroknskapurin er gjørdur eftir ársroknskaparlógini.\r\n\t\tTað er okkara fatan, at ársroknskapurin gevur eina rættvísandi mynd av felagsins ognum, skyldum og fíggjarligu støðu tann 31. desember og úrslitinum av virksemi felagsins í roknskaparárinum 1. januar - 31. desember 2019 samsvarandi  ársroknskaparlógini.",
+            "Namespace": "http://xbrl.dcca.dk/arr",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "DescriptionOfQualificationsOfAuditedFinancialStatements",
+            "Label": "Basis for conclusion (Audit)",
+            "Value": "Vit hava grannskoðað samsvarandi altjóða standardum um grannskoðan og eftir øðrum ásetingum í føroysku grannskoðaralógini. Okkara ábyrgd sambært hesum standardum og krøvum er nærri lýst í grannskoðanarátekningini í pettinum “Ábyrgd grannskoðarans av grannskoðanini av ársroknskapinum“. Vit eru óheft av felagnum samsvarandi altjóða etisku reglunum fyri grannskoðarar (etisku reglurnar hjá IESBA) og øðrum ásetingum, ið eru galdandi í Føroyum, eins og vit hava lokið onnur etisk krøv, sum vit hava sambært hesum reglum og krøvum. Tað er okkara fatan, at vit hava fingið nøktandi grannskoðanarprógv, ið kunnu vera grundarlag undir okkara niðurstøðu.",
+            "Namespace": "http://xbrl.dcca.dk/arr",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "StatementOfExecutiveAndSupervisoryBoardsResponsibilityForFinancialStatements",
+            "Label": "Statement of executive and supervisory board's responsibility for financial statements (Audit)",
+            "Value": "Leiðslan hevur ábyrgdina av at gera ein ársroknskap, ið gevur eina rættvísandi mynd í samsvari við ársroknskaparlógina. Leiðslan hevur harumframt ábyrgdina av innanhýsis eftirlitinum, ið leiðslan metir skal til fyri at gera ársroknskapin uttan týðandi skeivleikar, uttan mun til um skeivleikarnir standast av sviki ella mistøkum.\r\n\t\tTá ið ársroknskapurin verður gjørdur, hevur leiðslan ábyrgdina av at meta um, hvørt felagið megnar at halda fram við rakstrinum, og har tað er viðkomandi at upplýsa um viðurskifti viðvíkjandi framhaldandi rakstri og at gera ein ársroknskap eftir roknskaparásetingunum um framhaldandi rakstur, uttan so at leiðslan hevur ætlanir um at avtaka felagið, steðga rakstrinum ella um leiðslan í roynd og veru ikki hevur aðrar møguleikar.",
+            "Namespace": "http://xbrl.dcca.dk/arr",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "StatementOfAuditorsResponsibilityForAuditAndAuditPerformed",
+            "Label": "Statement of auditor's responsibility for the audit of the financial statements (Audit)",
+            "Value": "Endamál okkara er at fáa eina grundaða vissu fyri, at ársroknskapurin sum heild er uttan týðandi skeivleikar, uttan mun til um skeivleikarnir standast av sviki ella mistøkum, og at gera eina grannskoðanarátekning við eini niðurstøðu. Grundað vissa er vissa á høgum stigi, men er tó ikki ein trygd fyri, at grannskoðan framd samsvarandi altjóða standardum um grannskoðan og øðrum ásetingum, sum eru galdandi í Føroyum, altíð kann avdúka týðandi skeivleikar, um slíkir eru. Skeivleikar kunnu koma fyri orsakað sviki ella mistøkum og mugu metast at verða týðandi, um tað er sannlíkt, at teir hvør sær ella saman kunnu metast at hava ávirkan á fíggjarligu avgerðirnar, ið roknskaparbrúkararnir taka við støði í ársroknskapinum.\r\n\t\tTá ið vit grannskoða samsvarandi altjóða standardum um grannskoðan og øðrum ásetingum í føroysku grannskoðaralógini, gera vit yrkisligar metingar og varðveita professionella ivasemið undir grannskoðanini. Harumframt:\r\n\t\tEyðmerkja og meta vit um váðan fyri týðandi skeivleikum í ársroknskapinum, uttan mun til um skeivleikarnir standast av sviki ella mistøkum, leggja til rættis og grannskoða samsvarandi hesum váða og fáa til vega grannskoðanarprógv, ið eru nóg góð og egnað sum grundarlag undir okkara niðurstøðu. Váðin fyri, at vit ikki avdúka týðandi feilir orsakað av sviki, er størri enn váðin fyri, at feilir orsakað  av mistøkum ikki verða avdúkaðir, av tí at svik kann umfata samansvørjing, skjalafalsan, ætlað dyljan, villleiðing ella at innanhýsis eftirlit verða skúgvað til viks.\r\n\t\tFáa vit fatan av tí innanhýsis eftirliti, ið er viðkomandi fyri grannskoðanina, soleiðis at vit kunnu leggja grannskoðanina til rættis á nøktandi hátt eftir umstøðunum, men ikki fyri at gera eina niðurstøðu um, hvussu virkið innanhýsis eftirlitið er.\r\n\t\tTaka vit støðu til, um tann av leiðsluni nýtti roknskaparháttur er hóskandi eins og vit meta um, hvørt roknskaparligu metingarnar og tilhoyrandi upplýsingar frá leiðsluni eru rímiligar.\r\n\t\tTaka vit støðu til, um tað er hóskandi, at leiðslan hevur valt at gera ársroknskapin grundað á roknskaparháttin um framhaldandi rakstur, og um tað, við støði í teimum grannskoðanarprógvum, ið eru fingin til vega, er týðandi óvissa ella viðurskifti, ið kunnu elva til týðandi óvissu um, hvørt felagið megnar at halda áfram. Er niðurstøðan, at tað er týðandi óvissa, skulu vit gera vart við hetta í grannskoðanarátekningini við at vísa til upplýsingar hesum viðvíkjandi í ársroknskapinum ella, um hesar upplýsingar ikki eru nøktandi, tillaga okkara niðurstøðu. Okkara niðurstøður eru grundaðar á tey grannskoðanarprógv, ið eru fingin til vega fram til dagin, tá ið okkara grannskoðanarátekning verður undirskrivað. Hendingar í framtíðini ella viðurskifti kunnu tó elva til, at felagið ikki er ført fyri at halda fram við rakstrinum.\r\n\t\tTaka vit støðu til samlaðu framløguna, bygnaðin og innihaldið í ársroknskapinum, íroknað upplýsingarnar í notunum umframt um ársroknskapurin vísir transaktiónir, sum liggja undir, og hendingar á ein slíkan hátt, at tað gevur eina rættvísandi mynd.\r\n\t\tVit samskifta við leiðsluna um millum annað vavið á ætlaðu grannskoðanini og nær vit vænta at grannskoða. Harumframt samskifta vit um týðandi eygleiðingar í sambandi við grannskoðanina, so sum týðandi manglar í innanhýsis eftirlitinum, ið vit eru komin fram á í sambandi við grannskoðanina.",
+            "Namespace": "http://xbrl.dcca.dk/arr",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "StatementOnManagementsReviewAuditorsReportOnAuditedFinancialStatements",
+            "Label": "Statement on management's review [Auditor's report on audited financial statements]",
+            "Value": "Ummæli av leiðslufrágreiðingini\r\n\t\tLeiðslan hevur ábyrgdina av leiðslufrágreiðingini.\r\n\t\tOkkara niðurstøða um ársroknskapin fevnir ikki um leiðslufrágreiðingina, og vit geva ikki nakra váttan við vissu um leiðslufrágreiðingina.\r\n\t\tTað er okkara ábyrgd, í sambandi við grannskoðanina av ársroknskapinum, at lesa leiðslufrágreiðingina og í hesum sambandi meta um, hvørt samanhangur er millum leiðslufrágreiðingina og ársroknskapin, ella um hon er í mótsøgn við ta vitan, ið vit hava fingið undir grannskoðanini, ella á annan hátt er tengd at týðandi skeivleikum.\r\n\t\tOkkara ábyrgd er harumframt at hugsa um hvørt leiðslufrágreiðingin hevur kravdu upplýsingarnar samsvarandi ársroknskaparlógini.\r\n\t\tGrundað á gjørda arbeiðið er tað okkara fatan, at leiðslufrágreiðingin samsvarar við ársroknskapin, og at hon er gjørd samsvarandi krøvunum í ársroknskaparlógini.  Vit eru ikki vorðin varug við týðandi feilir í leiðslufrágreiðingini.",
+            "Namespace": "http://xbrl.dcca.dk/arr",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "ManagementsReview",
+            "Label": "Management’s review",
+            "Value": "Høvuðsvirksemi felagsins\r\n\t\tHøvuðsvirksemi felagsins er entreprenørvirksemi og farmaflutningur.\r\n\t\tGongdin í virksemi og fíggjarlig viðurskifti\r\n\t\tRakstrarroknskapurin hjá felagnum fyri 2019 vísir eitt yvirskot á kr. 501.870, og fíggjarstøðan hin 31. desember vísir eina eginogn upp á kr. 5.863.616.\r\n\t\tHendingar eftir roknskaparárslok\r\n\t\tSíðani roknskaparárslok er onki hent, sum kann hava týðandi ávirkan á fíggjarligu støðu felagsins.",
+            "Namespace": "http://xbrl.dcca.dk/mrv",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "InformationOnReportingClassOfEntity",
+            "Label": "Information on reporting class of entity",
+            "Value": "Ársfrásøgnin hjá Kreton Sp/f fyri 2019 er gjørd í samsvari við ásetingarnar í ársroknskaparlógini for virksomheder i regnskabsklasse B\r\n\t\tTann nýtti roknskaparhátturin er óbroyttur í mun til síðsta ár.\r\n\t\tÁrsfrásøgnin fyri 2019 er gjørd í donskum krónum.",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "DescriptionOfGeneralMattersRelatedToRecognitionMeasurementAndChangesInAccountingPolicies",
+            "Label": "Description of general matters related to recognition, measurement and changes in accounting policies",
+            "Value": "Inntøkur verða innroknaðar í rakstrarroknskapin, so hvørt sum tær verða vunnar. Harumframt verða virðisjavningar av fíggjarligum ognum og skyldum innroknaðar. Í rakstrarroknskapinum verða somuleiðis allir kostnaðir, íroknað avskrivingar og niðurskrivingar, innroknaðir.\r\n\t\tOgnir verða innroknaðar í fíggjarstøðuna, tá ið tað er sannlíkt, at felagið í framtíðini fær fíggjarligar ágóðar, og virðið á ognini kann gerast upp álítandi.\r\n\t\tSkyldur verða innroknaðar í fíggjarstøðuna, tá ið tað er sannlíkt, at felagið í framtíðini skal av við fíggjarligar ágóðar, og virðið á skylduni kann gerast upp álítandi.\r\n\t\tTil at byrja við verða ognir og skyldur innroknaðar til kostprís. Síðani verða ognir og skyldur virðisásettar, sum lýst niðanfyri fyri einstøku roknskaparpostarnar.\r\n\t\tÁvísar fíggjarligar ognir og skyldur verða virðisásettar til amortiseraðan kostprís, og sostatt verður ein konstant effektiv renta innroknað yvir gildistíðina. Amortiseraður kostprísur verður uppgjørdur sum upprunaligur kostprísur við frádrátti av møguligum avdráttum og ískoyti/frádrátti av samlaðu amortiseringini av muninum millum kostprís og áljóðandi virði.\r\n\t\tÍ sambandi við innrokning og virðisáseting verður hædd tikin fyri væntaðum tapum og vandum, sum íkoma áðrenn ársfrásøgnin verður løgd fram, og sum sanna ella avsanna viðurskifti, ið vóru til staðar fíggjarstøðudagin.",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfCostOfSales",
+            "Label": "Description of methods of recognition and measurement basis of cost of sales",
+            "Value": "Kostnaður fyri rávørur og hjálpitilfar fevnir um nýtsluna av rávørum og hjálpitilfari, sum er nýtt til at røkka ársins nettosølu.",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfExternalExpenses",
+            "Label": "Description of methods of recognition and measurement basis of gains external expenses",
+            "Value": "Aðrir uttanhýsis kostnaðir fevna um kostnaðir til útbreiðslu, sølu, lýsingar, umsiting, høli, tap uppá skuldarar, langleigukostnaðir v.m.",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfEmployeeBenefitExpense",
+            "Label": "Description of methods of recognition and measurement basis of employee expense",
+            "Value": "Starvsfólkakostnaður fevnir um lønir, íroknað frítíðarløn og eftirlønir umframt aðrar kostnaðir til sosiala trygd v.m. til starvsfólk felagsins. Móttikin endurgjøld frá almennum myndugleikum eru drigin frá starvsfólkakostnaðinum. ",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "DescriptionOfMethodsOfImpairmentLossesAndDepreciation",
+            "Label": "Description of methods of impairment losses and depreciation",
+            "Value": "Av og niðurskrivingar fevna um ársins av-  og niðurskrivingar upp á  materiella støðisogn.",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfFinanceIncomeAndExpenses",
+            "Label": "Description of methods of recognition and measurement basis of finance income and expenses",
+            "Value": "Fíggjarligar inntøkur og kostnaðir fevna um rentur, kursvinning og -tap viðvíkjandi virðisbrøvum, skuld og flytingar í fremmandum gjaldoyra, amortisering av fíggjarligum ognum og skyldum.",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfTaxExpenses",
+            "Label": "Description of methods of recognition and measurement basis of tax expense",
+            "Value": "Skattur av ársúrslitinum fevnir um partafelagsskatt og broyting í útsettum skatti, íroknað broytingar ið stava frá broyting í skattastigi. Skattur, sum viðvíkur ársúrslitinum, verður innroknaður í rakstrarroknskapin og skattur, sum viðvíkur bókingum beinleiðis á eginognini, verður innroknaður beinleiðis á eginognina. ",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfPropertyPlantAndEquipment",
+            "Label": "Description of methods of recognition and measurement basis of property, plant and equipment",
+            "Value": "Materiell støðisogn verður virðisásett til kostprís við frádrátti av samlaðum av- og niðurskrivingum.\r\n\t\tAvskrivingargrundarlagið er kostprísur við frádrátti av væntaðum restvirði eftir lokna nýtslutíð. Grundøki verða ikki avskrivað.\r\n\t\tKostprísur er útveganarprísur umframt kostnaðir, ið beinleiðis eru knýttir at útveganini til dagin, tá ið ognin er klár at taka í nýtslu. Fyri egnar framleiddar ognir fevnir kostprísurin um beinleiðis og óbeinleiðis kostnaðir til tilfar, deilir, undirútvegarar og løn.\r\n\t\tKostprísurin á eini ogn verður býttur sundur í serstakar partar, ið verða avskrivaðir hvør sær, um nýtslutíðin er ymisk fyri ymsu partarnar.\r\n\t\tAvskrivingin er eins stór fyri tey einstøku roknskaparárini og er grundað á hesar metingar um nýtslutíðina á ognunum:\r\n\t\tBrúkstíð Restvirði\r\n\t\tFramleiðslubygningar  30  ár 31 %\r\n\t\tRakstrartól, innbúgv og onnur støðisogn  3-10  ár 0 %\r\n\t\tOgnir við einum kostprísi undir kr. 20.000 verða rakstrarførdar í útveganarárinum.\r\n\t\tVinningur ella tap verða innroknað í rakstrarroknskapin undir ávikavist aðrar rakstrarinntøkur ella aðrar rakstrarkostnaðir.",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "InformationOnLeasingContracts",
+            "Label": "Information on leasing contracts",
+            "Value": "Langleigusáttmálar viðvíkjandi materiellari støðisogn, har felagið hevur allar týðandi váðar og fyrimunir tengdar at ognarrættinum (fíggjarlig langleiga), verða í fyrstu atløgu  virðisásettir til lægsta virðið av dagsvirðinum av langleigaðu ognini og nútíðarvirðinum av framtíðar langleigukostnaðinum. Tá ið nútíðarvirðið verður roknað, verða annaðhvørt  innanhýsis rentufóturin á langleiguavtaluni ella lánsrentan hjá felagnum nýtt sum diskoneringsfaktor. Fíggjarliga langleigaðar ognir verða síðani viðgjørdar sum aðrar støðisognir felagsins.\r\n\t\tKapitaliseraða restleiguskyldan verður innroknað í fíggjarstøðuna sum skuld, og rentuparturin av langleigugjaldinum verður innroknaður í rakstrarroknskapin yvir gildistíðina í sáttmálanum.\r\n\t\tAllir aðrir langleigusáttmálar eru operationell langleiga. Gjøld í sambandi við operationellar langleigusáttmálar og aðrar leiguavtalur verða rakstrarførd yvir gildistíðina í sáttmálanum. Tann samlaða skyldan í sambandi við operationellar  langleigu  og leigusáttmálar verður upplýst undir eventualskyldum v.m.",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfReceivables",
+            "Label": "Description of methods of recognition and measurement basis of receivables",
+            "Value": "Áogn verður virðisásett til amortiseraðan kostprís.",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfDeferredIncomeAssets",
+            "Label": "Description of methods of recognition and measurement basis of deferred income assets",
+            "Value": "Tíðaravmarkingar, ið eru innroknaðar sum ogn í umferð, fevna um goldnar kostnaðir viðvíkjandi komandi roknskaparárum.",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfCashAndCashEquivalents",
+            "Label": "Description of methods of recognition and measurement basis of cash and cash equivalents",
+            "Value": "Tøkur peningur fevnir um tøkar peningaupphæddir og stuttfreistað virðisbrøv við eini gildistíð minni enn 3 mánaðir og sum uttan forðing kunnu vekslast til tøkan pening, og har vandin fyri virðisbroytingum er ótýðandi.",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfTaxPayablesAndDeferredTax",
+            "Label": "Description of methods of recognition and measurement basis of tax payables and deferred tax",
+            "Value": "Skyldugur skattur og skattaáogn verða innroknað í fíggjarstøðuna sum roknaður skattur av ársins skattskyldugu inntøku javnað fyri skatt av skattskyldugum inntøkum undanfarin ár.\r\n\t\tÚtsettur skattur verður virðisásettur eftir fíggjarstøðu skuldarháttinum av øllum fyribils munum millum roknskaparligu og skattligu virðini av ognum og skyldum.",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfLiabilitiesOtherThanProvisions",
+            "Label": "Description of methods of recognition and measurement basis of liabilities other than provisions",
+            "Value": "Við lántøku verða fíggjarligar skyldur innroknaðar við eini upphædd svarandi til móttiknu upphæddina frádrigið transaktiónskostnaðir. Seinni verða fíggjarligu skyldurnar virðisásettar til amortiseraðan kostprís svarandi til kapitaliseraða virðið við nýtslu av effektivu rentuni, soleiðis at munurin millum móttiknu upphæddina og áljóðandi virðið verður innroknaður í rakstrarroknskapin yvir lánitíðarskeiðið.\r\n\t\tFíggjarligu skyldurnar fevna eisini um kapitaliseraðu restlangleiguskylduna av fíggjarligum langleiguavtalum.\r\n\t\tAðrar skyldur verða virðisásettar til nettorealisationsvirði.",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }, {
+            "Name": "DisclosureOfMortgagesAndCollaterals",
+            "Label": "Disclosure of mortgages and collaterals",
+            "Value": "Sum trygd fyri skuld til peningastovn, t.kr. 9.158, er veitt veð í grundøki og bygningum við einum roknskaparligum virði tann  31.12.2019 upp á t.kr. 5.598. Av restini av materiellu støðisogn felagsins við einum roknskaparligum virði tann 31.12.2019 uppá t.kr. 15.708, verður mett, at t.kr. 4.662 eru fevndar av veðsetingini. Harafturat hevur felagið veitt virkisveð uppá tkr. 6.000.\r\n\t\tFramleiðslutól og rakstrartól v.m. við einum roknskaparligum virði tann 31.12.2019 upp á t.kr. 7.805, er fíggjað við fíggjarligari langleigu. Langleiguskyldan tann 31.12.2019 er uppgjørd til t.kr. 6.063.\r\n\t",
+            "Namespace": "http://xbrl.dcca.dk/fsa",
+            "ContextRefName": "c11",
+            "Id": "",
+            "UnitRefName": ""
+        }
+    ],
+    "contexts": [{
+            "DurationPeriod": "True",
+            "ForeverPeriod": "False",
+            "Fragment": "JeffFerguson.Gepsio.XbrlFragment",
+            "Id": "c11",
+            "Identifier": "3678",
+            "IdentifierScheme": "http://www.dcca.dk/cvr",
+            "InstantDate": "01.01.0001 00:00:00",
+            "InstantPeriod": "False",
+            "PeriodEndDate": "31.12.2019 00:00:00",
+            "PeriodStartDate": "01.01.2019 00:00:00"
+        }, {
+            "DurationPeriod": "True",
+            "ForeverPeriod": "False",
+            "Fragment": "JeffFerguson.Gepsio.XbrlFragment",
+            "Id": "c12",
+            "Identifier": "3678",
+            "IdentifierScheme": "http://www.dcca.dk/cvr",
+            "InstantDate": "01.01.0001 00:00:00",
+            "InstantPeriod": "False",
+            "PeriodEndDate": "31.12.2019 00:00:00",
+            "PeriodStartDate": "01.01.2019 00:00:00"
+        }, {
+            "DurationPeriod": "True",
+            "ForeverPeriod": "False",
+            "Fragment": "JeffFerguson.Gepsio.XbrlFragment",
+            "Id": "c58",
+            "Identifier": "3678",
+            "IdentifierScheme": "http://www.dcca.dk/cvr",
+            "InstantDate": "01.01.0001 00:00:00",
+            "InstantPeriod": "False",
+            "PeriodEndDate": "31.12.2018 00:00:00",
+            "PeriodStartDate": "01.01.2018 00:00:00"
+        }, {
+            "DurationPeriod": "True",
+            "ForeverPeriod": "False",
+            "Fragment": "JeffFerguson.Gepsio.XbrlFragment",
+            "Id": "c72",
+            "Identifier": "3678",
+            "IdentifierScheme": "http://www.dcca.dk/cvr",
+            "InstantDate": "01.01.0001 00:00:00",
+            "InstantPeriod": "False",
+            "PeriodEndDate": "31.12.2019 00:00:00",
+            "PeriodStartDate": "01.01.2019 00:00:00"
+        }, {
+            "DurationPeriod": "True",
+            "ForeverPeriod": "False",
+            "Fragment": "JeffFerguson.Gepsio.XbrlFragment",
+            "Id": "c73",
+            "Identifier": "3678",
+            "IdentifierScheme": "http://www.dcca.dk/cvr",
+            "InstantDate": "01.01.0001 00:00:00",
+            "InstantPeriod": "False",
+            "PeriodEndDate": "31.12.2018 00:00:00",
+            "PeriodStartDate": "01.01.2018 00:00:00"
+        }, {
+            "DurationPeriod": "False",
+            "ForeverPeriod": "False",
+            "Fragment": "JeffFerguson.Gepsio.XbrlFragment",
+            "Id": "c74",
+            "Identifier": "3678",
+            "IdentifierScheme": "http://www.dcca.dk/cvr",
+            "InstantDate": "31.12.2018 00:00:00",
+            "InstantPeriod": "True",
+            "PeriodEndDate": "01.01.0001 00:00:00",
+            "PeriodStartDate": "01.01.0001 00:00:00"
+        }, {
+            "DurationPeriod": "False",
+            "ForeverPeriod": "False",
+            "Fragment": "JeffFerguson.Gepsio.XbrlFragment",
+            "Id": "c75",
+            "Identifier": "3678",
+            "IdentifierScheme": "http://www.dcca.dk/cvr",
+            "InstantDate": "31.12.2019 00:00:00",
+            "InstantPeriod": "True",
+            "PeriodEndDate": "01.01.0001 00:00:00",
+            "PeriodStartDate": "01.01.0001 00:00:00"
+        }, {
+            "DurationPeriod": "True",
+            "ForeverPeriod": "False",
+            "Fragment": "JeffFerguson.Gepsio.XbrlFragment",
+            "Id": "c89",
+            "Identifier": "3678",
+            "IdentifierScheme": "http://www.dcca.dk/cvr",
+            "InstantDate": "01.01.0001 00:00:00",
+            "InstantPeriod": "False",
+            "PeriodEndDate": "31.12.2019 00:00:00",
+            "PeriodStartDate": "01.01.2019 00:00:00"
+        }, {
+            "DurationPeriod": "True",
+            "ForeverPeriod": "False",
+            "Fragment": "JeffFerguson.Gepsio.XbrlFragment",
+            "Id": "c90",
+            "Identifier": "3678",
+            "IdentifierScheme": "http://www.dcca.dk/cvr",
+            "InstantDate": "01.01.0001 00:00:00",
+            "InstantPeriod": "False",
+            "PeriodEndDate": "31.12.2019 00:00:00",
+            "PeriodStartDate": "01.01.2019 00:00:00"
+        }, {
+            "DurationPeriod": "True",
+            "ForeverPeriod": "False",
+            "Fragment": "JeffFerguson.Gepsio.XbrlFragment",
+            "Id": "c91",
+            "Identifier": "3678",
+            "IdentifierScheme": "http://www.dcca.dk/cvr",
+            "InstantDate": "01.01.0001 00:00:00",
+            "InstantPeriod": "False",
+            "PeriodEndDate": "31.12.2019 00:00:00",
+            "PeriodStartDate": "01.01.2019 00:00:00"
+        }, {
+            "DurationPeriod": "True",
+            "ForeverPeriod": "False",
+            "Fragment": "JeffFerguson.Gepsio.XbrlFragment",
+            "Id": "c104",
+            "Identifier": "3678",
+            "IdentifierScheme": "http://www.dcca.dk/cvr",
+            "InstantDate": "01.01.0001 00:00:00",
+            "InstantPeriod": "False",
+            "PeriodEndDate": "31.12.2019 00:00:00",
+            "PeriodStartDate": "01.01.2019 00:00:00"
+        }, {
+            "DurationPeriod": "False",
+            "ForeverPeriod": "False",
+            "Fragment": "JeffFerguson.Gepsio.XbrlFragment",
+            "Id": "c113",
+            "Identifier": "3678",
+            "IdentifierScheme": "http://www.dcca.dk/cvr",
+            "InstantDate": "01.01.2019 00:00:00",
+            "InstantPeriod": "True",
+            "PeriodEndDate": "01.01.0001 00:00:00",
+            "PeriodStartDate": "01.01.0001 00:00:00"
+        }, {
+            "DurationPeriod": "False",
+            "ForeverPeriod": "False",
+            "Fragment": "JeffFerguson.Gepsio.XbrlFragment",
+            "Id": "c115",
+            "Identifier": "3678",
+            "IdentifierScheme": "http://www.dcca.dk/cvr",
+            "InstantDate": "31.12.2019 00:00:00",
+            "InstantPeriod": "True",
+            "PeriodEndDate": "01.01.0001 00:00:00",
+            "PeriodStartDate": "01.01.0001 00:00:00"
+        }, {
+            "DurationPeriod": "False",
+            "ForeverPeriod": "False",
+            "Fragment": "JeffFerguson.Gepsio.XbrlFragment",
+            "Id": "c131",
+            "Identifier": "3678",
+            "IdentifierScheme": "http://www.dcca.dk/cvr",
+            "InstantDate": "01.01.2019 00:00:00",
+            "InstantPeriod": "True",
+            "PeriodEndDate": "01.01.0001 00:00:00",
+            "PeriodStartDate": "01.01.0001 00:00:00"
+        }, {
+            "DurationPeriod": "True",
+            "ForeverPeriod": "False",
+            "Fragment": "JeffFerguson.Gepsio.XbrlFragment",
+            "Id": "c132",
+            "Identifier": "3678",
+            "IdentifierScheme": "http://www.dcca.dk/cvr",
+            "InstantDate": "01.01.0001 00:00:00",
+            "InstantPeriod": "False",
+            "PeriodEndDate": "31.12.2019 00:00:00",
+            "PeriodStartDate": "01.01.2019 00:00:00"
+        }, {
+            "DurationPeriod": "False",
+            "ForeverPeriod": "False",
+            "Fragment": "JeffFerguson.Gepsio.XbrlFragment",
+            "Id": "c133",
+            "Identifier": "3678",
+            "IdentifierScheme": "http://www.dcca.dk/cvr",
+            "InstantDate": "31.12.2019 00:00:00",
+            "InstantPeriod": "True",
+            "PeriodEndDate": "01.01.0001 00:00:00",
+            "PeriodStartDate": "01.01.0001 00:00:00"
+        }, {
+            "DurationPeriod": "False",
+            "ForeverPeriod": "False",
+            "Fragment": "JeffFerguson.Gepsio.XbrlFragment",
+            "Id": "c226",
+            "Identifier": "3678",
+            "IdentifierScheme": "http://www.dcca.dk/cvr",
+            "InstantDate": "31.12.2019 00:00:00",
+            "InstantPeriod": "True",
+            "PeriodEndDate": "01.01.0001 00:00:00",
+            "PeriodStartDate": "01.01.0001 00:00:00"
+        }, {
+            "DurationPeriod": "False",
+            "ForeverPeriod": "False",
+            "Fragment": "JeffFerguson.Gepsio.XbrlFragment",
+            "Id": "c237",
+            "Identifier": "3678",
+            "IdentifierScheme": "http://www.dcca.dk/cvr",
+            "InstantDate": "31.12.2019 00:00:00",
+            "InstantPeriod": "True",
+            "PeriodEndDate": "01.01.0001 00:00:00",
+            "PeriodStartDate": "01.01.0001 00:00:00"
+        }, {
+            "DurationPeriod": "False",
+            "ForeverPeriod": "False",
+            "Fragment": "JeffFerguson.Gepsio.XbrlFragment",
+            "Id": "c238",
+            "Identifier": "3678",
+            "IdentifierScheme": "http://www.dcca.dk/cvr",
+            "InstantDate": "01.01.2019 00:00:00",
+            "InstantPeriod": "True",
+            "PeriodEndDate": "01.01.0001 00:00:00",
+            "PeriodStartDate": "01.01.0001 00:00:00"
+        }, {
+            "DurationPeriod": "False",
+            "ForeverPeriod": "False",
+            "Fragment": "JeffFerguson.Gepsio.XbrlFragment",
+            "Id": "c720",
+            "Identifier": "3678",
+            "IdentifierScheme": "http://www.dcca.dk/cvr",
+            "InstantDate": "31.12.2019 00:00:00",
+            "InstantPeriod": "True",
+            "PeriodEndDate": "01.01.0001 00:00:00",
+            "PeriodStartDate": "01.01.0001 00:00:00"
+        }, {
+            "DurationPeriod": "False",
+            "ForeverPeriod": "False",
+            "Fragment": "JeffFerguson.Gepsio.XbrlFragment",
+            "Id": "c722",
+            "Identifier": "3678",
+            "IdentifierScheme": "http://www.dcca.dk/cvr",
+            "InstantDate": "01.01.2019 00:00:00",
+            "InstantPeriod": "True",
+            "PeriodEndDate": "01.01.0001 00:00:00",
+            "PeriodStartDate": "01.01.0001 00:00:00"
+        }
+    ]
+}

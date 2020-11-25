@@ -4,6 +4,33 @@
 
 @{ FactModel f, f2; string fName, fName2; string noValue = ": Einki virði"; }
 
+@functions {
+    // Hendan funktiónin virkar ikki sum hon skal. Endamálið við henni er at seta inn fyri allar repitiónirnar, ið eru niðanfyri
+    // har tað sama verður gjørt umaftur og umaftur.
+    public void tableBuilder(string id)
+    {
+        int counter = 0;
+        string noValue = ": Einki virði";
+
+        var list = Model.Facts
+        .Where(x => x.Name == id)
+        .OrderBy(y => y.ContextRefName)
+        .Select(x => x);
+
+        string prev = "";
+
+        foreach (var fact in list)
+        {
+            if (counter < 2 && prev != fact.Value)
+            {
+                <td class="text-left p-1" data-toggle="tooltip" title="@fact?.Label">@(fact?.Value ?? id + noValue)</td>
+            }
+
+            counter++;
+        }
+    }
+}
+
 @{
     fName = "ReportingPeriodStartDate";
     fName2 = "ReportingPeriodEndDate";
@@ -38,20 +65,18 @@
                     .OrderBy(y => y.ContextRefName)
                     .Select(x => x);
 
+                string prev = "";
+
                 foreach (var gpl in gplList)
                 {
-                    foreach (var context in Model.Contexts)
+                    if (counter < 2 && prev != gpl.Value)
                     {
-                        if (gpl.ContextRefName == context.Id && counter < 2)
-                        {
-                            <td class="text-left p-1" data-toggle="tooltip" title="@gpl?.Label">@(gpl?.Value ?? fName + noValue)</td>
-                        }
+                        <td class="text-left p-1" data-toggle="tooltip" title="@gpl?.Label">@(gpl?.Value ?? fName + noValue)</td>
                     }
 
                     counter++;
                 }
             }
-
         </tr>
 
         <tr>
@@ -68,7 +93,7 @@
                     .OrderBy(y => y.ContextRefName)
                     .Select(x => x);
 
-                string prev = "";
+                prev = "";
 
                 foreach (var ebe in ebeList)
                 {
@@ -84,6 +109,7 @@
             }
 
         </tr>
+
         <tr>
             <td>Av- og niðurskrivingar</td>
             <td></td>
@@ -112,8 +138,8 @@
                     }
                 }
             }
-
         </tr>
+
         <tr>
             <td>Aðrir rakstrarkostnaðir</td>
             <td></td>
@@ -142,7 +168,216 @@
                     }
                 }
             }
+        </tr>
 
+        <tr>
+            <td class="font-weight-bold">Úrslit áðrenn fíggjarpostar</td>
+            <td></td>
+
+            @{
+                counter = 0;
+
+                fName = "ProfitLossFromOrdinaryOperatingActivities";
+
+                var resultsBefore = Model.Facts
+                    .Where(x => x.Name == fName)
+                    .OrderBy(y => y.ContextRefName)
+                    .Select(x => x);
+
+                prev = "";
+
+                foreach (var v in otherList)
+                {
+                    if (counter < 2 && prev != v.Value)
+                    {
+                        <td class="text-left p-1" data-toggle="tooltip" title="@v?.Label">@(v?.Value ?? fName + noValue)</td>
+
+                        counter++;
+
+                        prev = v.Value;
+                    }
+                }
+            }
+        </tr>
+
+        <tr>
+            <td>Fíggjarligar inntøkur</td>
+            <td></td>
+
+            @{
+                counter = 0;
+
+                fName = "OtherFinanceIncome";
+
+                var OtherFinanceIncomeList = Model.Facts
+                    .Where(x => x.Name == fName)
+                    .OrderBy(y => y.ContextRefName)
+                    .Select(x => x);
+
+                prev = "";
+
+                foreach (var v in OtherFinanceIncomeList)
+                {
+                    if (counter < 2 && prev != v.Value)
+                    {
+                        <td class="text-left p-1" data-toggle="tooltip" title="@v?.Label">@(v?.Value ?? fName + noValue)</td>
+
+                        counter++;
+
+                        prev = v.Value;
+                    }
+                }
+            }
+        </tr>
+
+        <tr>
+            <td>Fíggjarligir kostnaðir</td>
+            <td></td>
+
+            @{
+                counter = 0;
+
+                fName = "OtherFinanceExpenses";
+
+                var OtherFinanceExpensesList = Model.Facts
+                    .Where(x => x.Name == fName)
+                    .OrderBy(y => y.ContextRefName)
+                    .Select(x => x);
+
+                prev = "";
+
+                foreach (var v in OtherFinanceExpensesList)
+                {
+                    if (counter < 2 && prev != v.Value)
+                    {
+                        <td class="text-left p-1" data-toggle="tooltip" title="@v?.Label">@(v?.Value ?? fName + noValue)</td>
+
+                        counter++;
+
+                        prev = v.Value;
+                    }
+                }
+            }
+        </tr>
+
+        <tr>
+            <td class="font-weight-bold">Úrslit áðrenn skatt</td>
+            <td></td>
+
+            @{
+                counter = 0;
+
+                fName = "ProfitLossFromOrdinaryActivitiesBeforeTax";
+
+                var ProfitLossFromOrdinaryActivitiesBeforeTaxList = Model.Facts
+                    .Where(x => x.Name == fName)
+                    .OrderBy(y => y.ContextRefName)
+                    .Select(x => x);
+
+                prev = "";
+
+                foreach (var v in ProfitLossFromOrdinaryActivitiesBeforeTaxList)
+                {
+                    if (counter < 2 && prev != v.Value)
+                    {
+                        <td class="text-left p-1" data-toggle="tooltip" title="@v?.Label">@(v?.Value ?? fName + noValue)</td>
+
+                        counter++;
+
+                        prev = v.Value;
+                    }
+                }
+            }
+        </tr>
+
+        <tr>
+            <td>Skattur av ársúrslitinum</td>
+            <td></td>
+
+            @{
+                counter = 0;
+
+                fName = "TaxExpense"; // Her er eisini eitt id, sum eitur AdjustmentsOfTaxExpense, ið hevur sama value í 2065_1_2019
+
+                var TaxExpenseList = Model.Facts
+                    .Where(x => x.Name == fName)
+                    .OrderBy(y => y.ContextRefName)
+                    .Select(x => x);
+
+                prev = "";
+
+                foreach (var v in TaxExpenseList)
+                {
+                    if (counter < 2 && prev != v.Value)
+                    {
+                        <td class="text-left p-1" data-toggle="tooltip" title="@v?.Label">@(v?.Value ?? fName + noValue)</td>
+
+                        counter++;
+
+                        prev = v.Value;
+                    }
+                }
+            }
+        </tr>
+
+        <tr>
+            <td class="font-weight-bold">Ársúrslit</td>
+            <td></td>
+
+            @{
+                counter = 0;
+
+                fName = "ProfitLoss"; // Hevur sama ID (tag) og sama contextRef í 2065_1_2019. Tískil má hetta broytast seinni.
+
+                var ProfitLossList = Model.Facts
+                    .Where(x => x.Name == fName)
+                    .OrderBy(y => y.ContextRefName)
+                    .Select(x => x);
+
+                prev = "";
+
+                foreach (var v in ProfitLossList)
+                {
+                    if (counter < 2 && prev != v.Value)
+                    {
+                        <td class="text-left p-1" data-toggle="tooltip" title="@v?.Label">@(v?.Value ?? fName + noValue)</td>
+
+                        counter++;
+
+                        prev = v.Value;
+                    }
+                }
+            }
+        </tr>
+
+        <tr>
+            <td>Flutt úrslit</td>
+            <td></td>
+
+            @{
+                counter = 0;
+
+                fName = "ProfitLoss"; // Hevur sama ID (tag) og sama contextRef í 2065_1_2019. Tískil má hetta broytast seinni.
+
+                var ProfitLossList2 = Model.Facts
+                    .Where(x => x.Name == fName)
+                    .OrderBy(y => y.ContextRefName)
+                    .Select(x => x);
+
+                prev = "";
+
+                foreach (var v in ProfitLossList2)
+                {
+                    if (counter < 2 && prev != v.Value)
+                    {
+                        <td class="text-left p-1" data-toggle="tooltip" title="@v?.Label">@(v?.Value ?? fName + noValue)</td>
+
+                        counter++;
+
+                        prev = v.Value;
+                    }
+                }
+            }
         </tr>
     </tbody>
 </table>
