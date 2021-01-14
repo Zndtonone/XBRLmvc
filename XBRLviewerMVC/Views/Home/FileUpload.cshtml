@@ -18,7 +18,6 @@
     </div>
 
     <form asp-controller="Home" asp-action="UploadFile" enctype="multipart/form-data" method="POST">
-
         <div class="custom-file p-2">
             <label class="custom-file-label" for="customFile">Vel fílu</label>
             <input class="custom-file-input" asp-for="@Model.FormFile" type="file" />
@@ -27,7 +26,5 @@
         <div class="pt-2">
             <button type="submit" class="btn btn-primary"><span class="fa fa-check"></span> Vátta</button>
         </div>
-
-
     </form>
 </div>

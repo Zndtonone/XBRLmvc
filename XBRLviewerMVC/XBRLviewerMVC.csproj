@@ -1213,10 +1213,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\data\json\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="20191101\ALL.xsd">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>

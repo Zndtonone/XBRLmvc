@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrl xmlns="http://www.xbrl.org/2003/instance" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:iso4217="http://www.xbrl.org/2003/iso4217" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xbrldi="http://xbrl.org/2006/xbrldi" xmlns:xl="http://www.xbrl.org/2003/XLink" xmlns:num="http://www.xbrl.org/dtr/type/numeric" xmlns:nonnum="http://www.xbrl.org/dtr/type/non-numeric" xmlns:gen="http://xbrl.org/2008/generic" xmlns:variable="http://xbrl.org/2008/variable" xmlns:ref="http://www.xbrl.org/2006/ref" xmlns:msg="http://xbrl.org/2010/message" xmlns:valm="http://xbrl.org/2010/message/validation" xmlns:label="http://xbrl.org/2008/label" xmlns:fsa="http://xbrl.dcca.dk/fsa" xmlns:cmn="http://xbrl.dcca.dk/cmn" xmlns:dst="http://xbrl.dcca.dk/dst" xmlns:tch="http://xbrl.dcca.dk/tch" xmlns:eogs="http://xbrl.dcca.dk/eogs" xmlns:gsd="http://xbrl.dcca.dk/gsd" xmlns:arr="http://xbrl.dcca.dk/arr" xmlns:sob="http://xbrl.dcca.dk/sob" xmlns:mrv="http://xbrl.dcca.dk/mrv" xmlns:fo-tax="http://www.xbrl.gov.fo/tax">
+  <link:schemaRef xlink:type="simple" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="https://www.vinnugluggin.fo/taxonomy/20180301/entryFODanishGAAPBalanceSheetAccountFormIncomeStatementByNatureIncludingManagementsReview20161001.xsd" />
+  <context id="dnNC0">
+    <entity>
+      <identifier scheme="">574988</identifier>
+    </entity>
+    <period>
+      <startDate>2018-01-01</startDate>
+      <endDate>2019-12-31</endDate>
+    </period>
+  </context>
+  <context id="inNC0">
+    <entity>
+      <identifier scheme="">574988</identifier>
+    </entity>
+    <period>
+      <instant>2019-12-31</instant>
+    </period>
+  </context>
+  <context id="dNC1">
+    <entity>
+      <identifier scheme="">574988</identifier>
+    </entity>
+    <period>
+      <startDate>2018-01-01</startDate>
+      <endDate>2018-12-31</endDate>
+    </period>
+  </context>
+  <context id="iNC1">
+    <entity>
+      <identifier scheme="">574988</identifier>
+    </entity>
+    <period>
+      <instant>2018-12-31</instant>
+    </period>
+  </context>
+  <context id="dNC2">
+    <entity>
+      <identifier scheme="">574988</identifier>
+    </entity>
+    <period>
+      <startDate>2019-01-01</startDate>
+      <endDate>2019-12-31</endDate>
+    </period>
+  </context>
+  <context id="iNC2">
+    <entity>
+      <identifier scheme="">574988</identifier>
+    </entity>
+    <period>
+      <instant>2019-12-31</instant>
+    </period>
+  </context>
+  <unit id="currency">
+    <measure>iso4217:DKK</measure>
+  </unit>
+  <fsa:FixturesFittingsToolsAndEquipment contextRef="iNC1" precision="INF" unitRef="currency">2820606.5</fsa:FixturesFittingsToolsAndEquipment>
+  <fsa:FixturesFittingsToolsAndEquipment contextRef="iNC2" precision="INF" unitRef="currency">3216861.08</fsa:FixturesFittingsToolsAndEquipment>
+  <fsa:PropertyPlantAndEquipment contextRef="iNC1" precision="INF" unitRef="currency">2820606.5</fsa:PropertyPlantAndEquipment>
+  <fsa:PropertyPlantAndEquipment contextRef="iNC2" precision="INF" unitRef="currency">3216861.08</fsa:PropertyPlantAndEquipment>
+  <fsa:NoncurrentAssets contextRef="iNC1" precision="INF" unitRef="currency">2820606.5</fsa:NoncurrentAssets>
+  <fsa:NoncurrentAssets contextRef="iNC2" precision="INF" unitRef="currency">3216861.08</fsa:NoncurrentAssets>
+  <fsa:ShorttermTradeReceivables contextRef="iNC1" precision="INF" unitRef="currency">3765651.81</fsa:ShorttermTradeReceivables>
+  <fsa:ShorttermTradeReceivables contextRef="iNC2" precision="INF" unitRef="currency">3330216.76</fsa:ShorttermTradeReceivables>
+  <fsa:OtherShorttermReceivables contextRef="iNC1" precision="INF" unitRef="currency">250000</fsa:OtherShorttermReceivables>
+  <fsa:OtherShorttermReceivables contextRef="iNC2" precision="INF" unitRef="currency">0</fsa:OtherShorttermReceivables>
+  <fsa:ShorttermReceivables contextRef="iNC1" precision="INF" unitRef="currency">4015651.81</fsa:ShorttermReceivables>
+  <fsa:ShorttermReceivables contextRef="iNC2" precision="INF" unitRef="currency">3330216.76</fsa:ShorttermReceivables>
+  <fsa:CashAndCashEquivalents contextRef="iNC1" precision="INF" unitRef="currency">3277180.83</fsa:CashAndCashEquivalents>
+  <fsa:CashAndCashEquivalents contextRef="iNC2" precision="INF" unitRef="currency">3561341.06</fsa:CashAndCashEquivalents>
+  <fsa:CurrentAssets contextRef="iNC1" precision="INF" unitRef="currency">7292832.64</fsa:CurrentAssets>
+  <fsa:CurrentAssets contextRef="iNC2" precision="INF" unitRef="currency">6891557.82</fsa:CurrentAssets>
+  <fsa:Assets contextRef="iNC1" precision="INF" unitRef="currency">10113439.14</fsa:Assets>
+  <fsa:Assets contextRef="iNC2" precision="INF" unitRef="currency">10108418.9</fsa:Assets>
+  <fsa:GrossResult contextRef="dNC1" precision="INF" unitRef="currency">-1446596.38</fsa:GrossResult>
+  <fsa:GrossResult contextRef="dNC2" precision="INF" unitRef="currency">-1622034.75</fsa:GrossResult>
+  <fsa:EmployeeBenefitsExpense contextRef="dNC1" precision="INF" unitRef="currency">1086622.67</fsa:EmployeeBenefitsExpense>
+  <fsa:EmployeeBenefitsExpense contextRef="dNC2" precision="INF" unitRef="currency">1257340.61</fsa:EmployeeBenefitsExpense>
+  <fsa:DepreciationAmortisationExpenseAndImpairmentLossesOfPropertyPlantAndEquipmentAndIntangibleAssetsRecognisedInProfitOrLoss contextRef="dNC1" precision="INF" unitRef="currency">357977.6</fsa:DepreciationAmortisationExpenseAndImpairmentLossesOfPropertyPlantAndEquipmentAndIntangibleAssetsRecognisedInProfitOrLoss>
+  <fsa:DepreciationAmortisationExpenseAndImpairmentLossesOfPropertyPlantAndEquipmentAndIntangibleAssetsRecognisedInProfitOrLoss contextRef="dNC2" precision="INF" unitRef="currency">448040.62</fsa:DepreciationAmortisationExpenseAndImpairmentLossesOfPropertyPlantAndEquipmentAndIntangibleAssetsRecognisedInProfitOrLoss>
+  <fsa:ProfitLossFromOrdinaryOperatingActivities contextRef="dNC1" precision="INF" unitRef="currency">-1996.11</fsa:ProfitLossFromOrdinaryOperatingActivities>
+  <fsa:ProfitLossFromOrdinaryOperatingActivities contextRef="dNC2" precision="INF" unitRef="currency">83346.48</fsa:ProfitLossFromOrdinaryOperatingActivities>
+  <fsa:OtherInterestIncome contextRef="dNC1" precision="INF" unitRef="currency">161478.12</fsa:OtherInterestIncome>
+  <fsa:OtherInterestIncome contextRef="dNC2" precision="INF" unitRef="currency">138574.15</fsa:OtherInterestIncome>
+  <fsa:OtherFinanceExpenses contextRef="dNC1" precision="INF" unitRef="currency">2275.75</fsa:OtherFinanceExpenses>
+  <fsa:OtherFinanceExpenses contextRef="dNC2" precision="INF" unitRef="currency">9070.89</fsa:OtherFinanceExpenses>
+  <fsa:ProfitLossFromOrdinaryActivitiesBeforeTax contextRef="dNC1" precision="INF" unitRef="currency">-161198.48</fsa:ProfitLossFromOrdinaryActivitiesBeforeTax>
+  <fsa:ProfitLossFromOrdinaryActivitiesBeforeTax contextRef="dNC2" precision="INF" unitRef="currency">-46156.78</fsa:ProfitLossFromOrdinaryActivitiesBeforeTax>
+  <fsa:TaxExpense contextRef="dNC1" precision="INF" unitRef="currency">31434.75</fsa:TaxExpense>
+  <fsa:TaxExpense contextRef="dNC2" precision="INF" unitRef="currency">12088.25</fsa:TaxExpense>
+  <fsa:ProfitLoss contextRef="dNC1" precision="INF" unitRef="currency">-129763.73</fsa:ProfitLoss>
+  <fsa:ProfitLoss contextRef="dNC2" precision="INF" unitRef="currency">-34068.53</fsa:ProfitLoss>
+  <fsa:ContributedCapital contextRef="iNC1" precision="INF" unitRef="currency">125000</fsa:ContributedCapital>
+  <fsa:ContributedCapital contextRef="iNC2" precision="INF" unitRef="currency">125000</fsa:ContributedCapital>
+  <fsa:RetainedEarnings contextRef="iNC1" precision="INF" unitRef="currency">9418769.57</fsa:RetainedEarnings>
+  <fsa:RetainedEarnings contextRef="iNC2" precision="INF" unitRef="currency">9452838.1</fsa:RetainedEarnings>
+  <fsa:Equity contextRef="iNC1" precision="INF" unitRef="currency">9543769.57</fsa:Equity>
+  <fsa:Equity contextRef="iNC2" precision="INF" unitRef="currency">9577838.1</fsa:Equity>
+  <fsa:ProvisionsForDeferredTax contextRef="iNC1" precision="INF" unitRef="currency">196811.75</fsa:ProvisionsForDeferredTax>
+  <fsa:ProvisionsForDeferredTax contextRef="iNC2" precision="INF" unitRef="currency">208900</fsa:ProvisionsForDeferredTax>
+  <fsa:Provisions contextRef="iNC1" precision="INF" unitRef="currency">196811.75</fsa:Provisions>
+  <fsa:Provisions contextRef="iNC2" precision="INF" unitRef="currency">208900</fsa:Provisions>
+  <fsa:ShorttermTradePayables contextRef="iNC1" precision="INF" unitRef="currency">144626.32</fsa:ShorttermTradePayables>
+  <fsa:ShorttermTradePayables contextRef="iNC2" precision="INF" unitRef="currency">0</fsa:ShorttermTradePayables>
+  <fsa:ShorttermTaxPayables contextRef="iNC1" precision="INF" unitRef="currency">40448.77</fsa:ShorttermTaxPayables>
+  <fsa:ShorttermTaxPayables contextRef="iNC2" precision="INF" unitRef="currency">12896.77</fsa:ShorttermTaxPayables>
+  <fsa:OtherShorttermPayables contextRef="iNC1" precision="INF" unitRef="currency">187782.73</fsa:OtherShorttermPayables>
+  <fsa:OtherShorttermPayables contextRef="iNC2" precision="INF" unitRef="currency">308784.03</fsa:OtherShorttermPayables>
+  <fsa:ShorttermLiabilitiesOtherThanProvisions contextRef="iNC1" precision="INF" unitRef="currency">372857.82</fsa:ShorttermLiabilitiesOtherThanProvisions>
+  <fsa:ShorttermLiabilitiesOtherThanProvisions contextRef="iNC2" precision="INF" unitRef="currency">321680.8</fsa:ShorttermLiabilitiesOtherThanProvisions>
+  <fsa:LiabilitiesOtherThanProvisions contextRef="iNC1" precision="INF" unitRef="currency">372857.82</fsa:LiabilitiesOtherThanProvisions>
+  <fsa:LiabilitiesOtherThanProvisions contextRef="iNC2" precision="INF" unitRef="currency">321680.8</fsa:LiabilitiesOtherThanProvisions>
+  <fsa:LiabilitiesAndEquity contextRef="iNC1" precision="INF" unitRef="currency">10113439.14</fsa:LiabilitiesAndEquity>
+  <fsa:LiabilitiesAndEquity contextRef="iNC2" precision="INF" unitRef="currency">10108418.9</fsa:LiabilitiesAndEquity>
+  <fsa:WagesAndSalaries contextRef="dNC1" precision="INF" unitRef="currency">960220.4</fsa:WagesAndSalaries>
+  <fsa:WagesAndSalaries contextRef="dNC2" precision="INF" unitRef="currency">1105298.88</fsa:WagesAndSalaries>
+  <fsa:PostemploymentBenefitExpense contextRef="dNC1" precision="INF" unitRef="currency">83368.27</fsa:PostemploymentBenefitExpense>
+  <fsa:PostemploymentBenefitExpense contextRef="dNC2" precision="INF" unitRef="currency">97001.73</fsa:PostemploymentBenefitExpense>
+  <fsa:SocialSecurityContributions contextRef="dNC1" precision="INF" unitRef="currency">43034</fsa:SocialSecurityContributions>
+  <fsa:SocialSecurityContributions contextRef="dNC2" precision="INF" unitRef="currency">55040</fsa:SocialSecurityContributions>
+  <fsa:ContributedCapital contextRef="iNC1" precision="INF" unitRef="currency">-125000</fsa:ContributedCapital>
+  <fsa:ContributedCapital contextRef="iNC2" precision="INF" unitRef="currency">-125000</fsa:ContributedCapital>
+  <fsa:ContributedCapital contextRef="iNC1" precision="INF" unitRef="currency">-125000</fsa:ContributedCapital>
+  <fsa:ContributedCapital contextRef="iNC2" precision="INF" unitRef="currency">-125000</fsa:ContributedCapital>
+  <fsa:RetainedEarnings contextRef="iNC1" precision="INF" unitRef="currency">-9289005.84</fsa:RetainedEarnings>
+  <fsa:RetainedEarnings contextRef="iNC2" precision="INF" unitRef="currency">-9418769.57</fsa:RetainedEarnings>
+  <fsa:RetainedEarnings contextRef="iNC1" precision="INF" unitRef="currency">-129763.73</fsa:RetainedEarnings>
+  <fsa:RetainedEarnings contextRef="iNC2" precision="INF" unitRef="currency">-34068.53</fsa:RetainedEarnings>
+  <fsa:RetainedEarnings contextRef="iNC1" precision="INF" unitRef="currency">-9418769.57</fsa:RetainedEarnings>
+  <fsa:RetainedEarnings contextRef="iNC2" precision="INF" unitRef="currency">-9452838.1</fsa:RetainedEarnings>
+  <fsa:Equity contextRef="iNC1" precision="INF" unitRef="currency">-9543769.57</fsa:Equity>
+  <fsa:Equity contextRef="iNC2" precision="INF" unitRef="currency">-9577838.1</fsa:Equity>
+  <arr:IndependentAuditorsReportsExtendedReview contextRef="dnNC0">Erklæring om udvidet gennemgang</arr:IndependentAuditorsReportsExtendedReview>
+  <arr:AddresseeOfAuditorsReportOnExtendedReviewOfFinancialStatements contextRef="dnNC0">Til kapitaleigaran í HZ Bussar Sp/f</arr:AddresseeOfAuditorsReportOnExtendedReviewOfFinancialStatements>
+  <arr:OpinionOnFinancialStatementsExtendedReview contextRef="dnNC0">Vit hava útint víðkaða gjøgnumgongd av ársroknskapinum hjá HZ Bussar Sp/f fyri roknskaparárið 1. januar 2019 til 31. desember 2019. Ársroknskapurin, ið fevnir um nýttan roknskaparhátt, rakstrarroknskap, fíggjarstøðu og notur, er gjørdur eftir ársroknskaparlógini.Við støði í útinta arbeiðinum er tað okkara fatan, at ársroknskapurin gevur eina rættvísandi mynd av felagsins ognum, skyldum og fíggjarligu støðu tann 31. desember 2019 eins og av úrslitinum av virksemi felagsins í roknskaparárinum 1. januar 2019 til 31. desember 2019 samsvarandi ársroknskaparlógini.</arr:OpinionOnFinancialStatementsExtendedReview>
+  <arr:IdentificationOfFinancialStatementsAndDescriptionOfFinancialReportingFrameworkAppliedInPreparationOfFinancialStatementsExtendedReview contextRef="dnNC0">Vit hava útint okkara víðkaðu gjøgnumgongd í samsvari við føroyska váttanarstandardin fyri smærri virkir og eftir øðrum ásetingum í føroysku grannskoðaralóggávuni um víðkaða gjøgnumgongd av ársroknskapinum, ið er gjørdur eftir ársroknskaparlógini. Okkara ábyrgd eftir hesum standardum og ásetingum er neyvari útgreinað í brotinum niðanfyri “Ábyrgd grannskoðarans fyri víðkaðu gjøgnumgongdini av ársroknskapinum”. Vit eru óheft av felagnum í samsvari við altjóða etisk krøv fyri grannskoðarar (etisku reglurnar hjá IESBA) og aðrar ásetingar, sum eru galdandi í Føroyum, og hava fylgt etisku skyldunum, sum ásettar eru í hesum standardum og krøvum. Okkara fatan er, at vit hava fingið nøktandi og hóskandi prógv, ið kunnu verða grundarlag undir okkara niðurstøðu.</arr:IdentificationOfFinancialStatementsAndDescriptionOfFinancialReportingFrameworkAppliedInPreparationOfFinancialStatementsExtendedReview>
+  <arr:StatementOfExecutiveAndSupervisoryBoardsResponsibilityForFinancialStatementsExtendedReview contextRef="dnNC0">Leiðslan hevur ábyrgdina av at gera ein ársroknskap, ið gevur eina rættvísandi mynd í samsvari við ársroknskaparlógina. Leiðslan hevur harumframt ábyrgdina av innanhýsis eftirlitinum, ið leiðslan metir skal til fyri at ársroknskapurin kann gerast uttan týðandi skeivleikar, uttan mun til um skeivleikarnir standast av sviki ella mistøkum.Tá ið ársroknskapurin verður gjørdur, er tað ábyrgd leiðslunnar at meta, um felagið megnar at halda fram við rakstrinum, og, har tað hevur týdning, at upplýsa um viðurskifti viðvíkjandi framhaldandi rakstri, at gera ársroknskapin eftir roknskaparásetingunum um framhaldandi rakstur, uttan so at leiðslan hevur í hyggju at avtaka felagið, steðga rakstrinum ella, at leiðslan í roynd og veru ikki hevur annan møguleika.</arr:StatementOfExecutiveAndSupervisoryBoardsResponsibilityForFinancialStatementsExtendedReview>
+  <arr:StatementOfAuditorsResponsibilityExtendedReview contextRef="dnNC0">Okkara ábyrgd er at gera eina niðurstøðu um ársroknskapin. Hetta krevur, at vit leggja til rættis og fremja gerðir við atliti til at fáa avmarkaða vissu fyri okkara niðurstøðu um ársroknskapin og harumframt útinna vit serstøku arbeiðini, ið eru áløgd við atliti til at fáa størri vissu fyri okkara niðurstøðu.Ein víðkað gjøgnumgongd fevnir um gerðir, ið fyrst og fremst eru fyrispurningar til leiðslu, og har tað er gagnligt til onnur í virkinum, greiningar og tey serstøku arbeiðini, ein víðkað gjøgnumgongd áleggur, umframt at mett verður um tey prógv, ið eru fingin til vega.Vavið av tí arbeiði, sum verður gjørt í sambandi við  víðkaða gjøgnumgongd, er minni enn ein grannskoðan, og tí geva vit onga grannskoðaraniðurstøðu um ársroknskapin.</arr:StatementOfAuditorsResponsibilityExtendedReview>
+  <arr:SignatureOfAuditorsDate contextRef="dnNC0">2020-04-14</arr:SignatureOfAuditorsDate>
+  <cmn:NameOfAuditFirm contextRef="dnNC0">GrannskoðaraStovan Sp/f</cmn:NameOfAuditFirm>
+  <cmn:NameAndSurnameOfAuditor contextRef="dnNC0">Mark T. Højgaard</cmn:NameAndSurnameOfAuditor>
+  <cmn:DescriptionOfAuditor contextRef="dnNC0">skrás. grannskoðari</cmn:DescriptionOfAuditor>
+  <gsd:NameOfReportingEntity contextRef="dnNC0">HZ Bussar Sp/f</gsd:NameOfReportingEntity>
+  <gsd:AddressOfReportingEntityDistrictName contextRef="dnNC0">Streymnes</gsd:AddressOfReportingEntityDistrictName>
+  <gsd:IdentificationNumberCvrOfSubmittingEnterprise contextRef="dnNC0">00574988</gsd:IdentificationNumberCvrOfSubmittingEnterprise>
+  <gsd:InformationOnTypeOfSubmittedReport contextRef="dnNC0">Årsrapport</gsd:InformationOnTypeOfSubmittedReport>
+  <gsd:DateOfGeneralMeeting contextRef="dnNC0">2020-04-14</gsd:DateOfGeneralMeeting>
+  <gsd:NameAndSurnameOfChairmanOfGeneralMeeting contextRef="dnNC0">Heðin Súni Zachariasen</gsd:NameAndSurnameOfChairmanOfGeneralMeeting>
+  <sob:StatementByExecutiveAndSupervisoryBoards contextRef="dnNC0">LeiðsluátekningLeiðsla felagsins hevur í dag viðgjørt og endaliga viðtikið ársfrásøgnina fyri 2019 hjá HZ Bussar Sp/f.Ársfrásøgnin er gjørd í samsvari við ásetingarnar í ársroknskaparlóginiÁrsroknskapurin gevur eina rættvísandi mynd av ognum og skyldum, fíggjarstøðu og úrsliti.Ársfrásøgnin verður løgd fyri aðalfundin við tilmæli um góðkenning.</sob:StatementByExecutiveAndSupervisoryBoards>
+  <sob:DateOfApprovalOfAnnualReport contextRef="dnNC0">2020-04-14</sob:DateOfApprovalOfAnnualReport>
+  <cmn:NameAndSurnameOfMemberOfExecutiveBoard contextRef="dnNC0">______________________________
+Heðin Súni Zachariasen</cmn:NameAndSurnameOfMemberOfExecutiveBoard>
+  <fsa:DescriptionOfGeneralMattersRelatedToRecognitionMeasurementAndChangesInAccountingPolicies contextRef="dnNC0">Alment um innrokning og virðisásetingInntøkur verða rakstrarførdar so hvørt, sum tær verða vunnar. Sama er við virðisjavning á fíggjarligum ognum og skyldum. Allur kostnaður, ið hoyrir árinum til, við tíðaravmarkingum svarandi til roknskaparárið, verður rakstrarførdur við av- og niðurskrivingum, avsettum skyldum og afturføringum frá broyttum roknskaparligum metingum, ið áður eru innroknaðar í roknskapin.Ognir og skyldur verða innroknaðar í fíggjarstøðuna, tá ið tað er sannlíkt, at framtíðar fíggjarligir fyrimunir fara at koma felagnum tilgóðar, og virðið á ognunum og skyldunum kann metast álítandi. Ognir og skyldur verða fyrstu ferð tiknar við til útveganarvirðið, og eftir tað verður hvør roknskaparpostur viðgjørdur, sum gjøllari lýst niðanfyri.Ávísar fíggjarligar ognir og skyldur verða virðisásettar til afturgjaldingar (amortiserað) útveganarvirði, tá ið føst effektiv renta verður roknað yvir tíðarskeiðið. Amortiserað útveganarvirði verður uppgjørt sum uppruna útveganarvirði við frádrátti fyri møguligum avdráttum, eins og til-/frágongd fyri samlaðari amortisering av muninum ímillum útveganarvirði og áljóðandi upphædd.Tá ið ognir og skyldur verða innroknaðar og virðisásettar, verður lagt upp fyri væntaðum tapi og váða, ið vísir seg, áðrenn ársroknskapurin er liðugur, og sum avsanna ella sanna viðurskifti, ið komu til greinar við ársfrásagnarframløgu.Roknskaparliga virðið á im- og materiellu støðisognunum verður gjøgnumgingið árliga, fyri at gera av, um ábendingar eru um virðisminking út um vanligu avskrivingina. Um so er, verður støðisognin niðurskrivað til tað lægra av endurútveganarvirðinum.</fsa:DescriptionOfGeneralMattersRelatedToRecognitionMeasurementAndChangesInAccountingPolicies>
+  <fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfIncomeStatementItems contextRef="dnNC0">Rakstrarroknskapurin</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfIncomeStatementItems>
+  <fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfRevenue contextRef="dnNC0">NettosølaNettosøla er øll rakstrarførd søla í árinum av handils-, liðugtvørum og tænastum, tá ið keyparin hevur yvirtikið váðan fyri roknskaparlok. Nettosølan er uttan meirvirðisgjald, avgjøld og við frádrátti fyri avsláttrum. Inntøkur frá tænastuveitingum verða rakstrarførdar so hvørt, sum veitingin fer fram.</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfRevenue>
+  <fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfOtherOperatingIncomeAndExpenses contextRef="dnNC0">RakstrarkostnaðurAllur rakstrarkostnaður til høvuðsrakstur felagsins, ið hoyrir árinum til, við tíðar­avmarkingum, verður rakstrarførdur svarandi til rakstrarárið.</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfOtherOperatingIncomeAndExpenses>
+  <fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfExternalExpenses contextRef="dnNC0">Annar uttanhýsis kostnaðurAnnar uttanhýsis kostnaður er kostnaður í árinum til útbreiðslu, sølu, marknaðarføring, umsiting, fyrisiting, leigu, tap/vinning søla støðisogn og tap áogn.</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfExternalExpenses>
+  <fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfEmployeeBenefitExpense contextRef="dnNC0">Starvsfólkakostnaður	Starvsfólkakostnaður er lønir, samsýningar, frítíðarlønir, eftirlønir og almenn lønargjøld, umframt annan starvsfólkakostnað. Møgulig lønarendurgjøld eru mótroknað.</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfEmployeeBenefitExpense>
+  <fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfFinanceIncomeAndExpenses contextRef="dnNC0">FíggjarpostarFíggjarligar inntøkur og kostnaður, ið hoyrir árinum til, við tíðaravmarkingum, verða rakstrarførd svarandi til rakstrarárið. Fíggjarpostar eru rentuinntøkur og rentukostnaður.Eisini rentur frá fíggjarligari leasing og virðisbrævahandli. Ásannað og óásannað kurstap og kursvinningur frá virðisbrøvum, skuld í fremmandum gjaldoyra og amortisering av realkreditlánum eru íroknað. </fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfFinanceIncomeAndExpenses>
+  <fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfTaxExpenses contextRef="dnNC0">Skattur av ársúrslitiSkattur av ársúrsliti verður rakstrarførdur sum partafelagsskattur fyri árið, frá kapitalvinningi og broyting í útsettum skatti, sum viðvíkur ársúrslitinum. Skattur frá bókingum á eginognini verður beinleiðis innroknaður í eginognina.</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfTaxExpenses>
+  <fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfAssetsAndLiabilities contextRef="dnNC0">Fíggjarstøða</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfAssetsAndLiabilities>
+  <fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfPropertyPlantAndEquipment contextRef="dnNC0">Materiell støðisognMateriell støðisogn verður upptikin til útveganarvirðið við frádrátti fyri samlaðum avskrivingum. Grundøki verða ikki avskrivað.Útveganarvirðið er kostnaður, ið beinleiðis er knýttur at íløguni fram til, tá ið ognin verður tikin í nýtslu. Útveganarvirðið fyri eina samlaða íløguogn verður býtt í ognarlutir, ið verða avskrivaðir hvør sær, um brúkstíðin av hvørjum ognarluti sær er ymisk.Útbúnaður fyri minni enn kr. 20.000 pr. eind verður kostnaðarførdur í útveganarárinum.Avskrivingar eru grundaðar á væntaða brúkstíð (livitíð) og ásett restvirði (scrapvirði) og verða gjørdar við eins upphæddum hvørt ár. Tilgongdir í árinum verða avskrivaðar frá keyps­mánaði. Felagið hevur ásett hesar brúkstíðir og restvirði:Rakstrargøgn og innbúgv	3-10 ár	0-10%Vinningur ella tap við sølu av materiellari støðisogn verða gjørd upp sum munurin millum søluprís, frádrigið sølukostnað og roknskaparliga virðið søludagin og rakstrarførd undir øðrum inntøkum ella øðrum kostnaðum.</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfPropertyPlantAndEquipment>
+  <fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfInventories contextRef="dnNC0">Útveganarvirðið á handilsvørum, rávørum og hjálpitilfari fevnir um útveganarprís og flutningskostnað. Kostprísur fyri vørur og vørur undir framleiðslu fevnir um útveganarprís á rávørum, hjálpitilfar, beinleiðis lønarkostnað og beinleiðis framleiðslukostnað.</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfInventories>
+  <fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfReceivables contextRef="dnNC0">ÁognÁogn verður tikin við til amortiserað útveganarvirði, ið vanliga svarar til áljóðandi virði, við frádrátti og niðurskriving ímóti tapi.</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfReceivables>
+  <fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfCashAndCashEquivalents contextRef="dnNC0">Tøkur peningurTøkur peningur er kassa- og innlánspeningur.</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfCashAndCashEquivalents>
+  <fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfTaxPayablesAndDeferredTax contextRef="dnNC0">Partafelags- og eventualskatturSkyldugur skattur og skattaáogn verða avsett í fíggjarstøðuni sum roknaður skattur av ársins skattskyldugu inntøku, kapitalvinningi og javnað fyri møguligum skatti frá undanfarnum árum.Útsettur og latentur skattur verður avsettur við ávegis muninum millum roknskaparliga og skattliga virðið á ognum og skyldum, uppgjørt eftir væntaðu brúkstíðini á ognum ella afturrindan av skyldum. Avsetingin er gjørd, eftir at 18% av skattliga hallinum og roknskaparligum burturlegginum eru mótroknað.Skattur verður roknaður við 18% og uppgjørdur við støði í teimum skattalógum og ásetingum, ið eru í gildi statusdagin, tá útsetti skatturin fellur. Broytingar í útsettum skatti frá broyttum skattasatsum verða rakstrarførdar.</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfTaxPayablesAndDeferredTax>
+  <fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfLiabilitiesOtherThanProvisions contextRef="dnNC0">Fremmand skuldØll stuttfreistað skuld verður tikin við til niðurgoldið (amortiserað) útveganarvirði, ið vanliga er áljóðandi virðið roknskapardagin.</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfLiabilitiesOtherThanProvisions>
+  <fsa:DisclosureOfAccountingPolicies contextRef="dnNC0">Nýttur roknskaparháttur</fsa:DisclosureOfAccountingPolicies>
+  <fsa:InformationOnReportingClassOfEntity contextRef="dnNC0">Ársfrásøgnin er gjørd eftir ásetingunum í ársroknskaparlógini fyri feløg í flokki B. Roknskaparhátturin er óbroyttur frá í fjør.</fsa:InformationOnReportingClassOfEntity>
+  <gsd:NameOfReportingEntity contextRef="dnNC0">FelagiðHZ Bussar Sp/f</gsd:NameOfReportingEntity>
+  <gsd:AddressOfReportingEntityStreetName contextRef="dnNC0">Streymnesvegur 88</gsd:AddressOfReportingEntityStreetName>
+  <gsd:AddressOfReportingEntityPostCodeIdentifier contextRef="dnNC0">435 Streymnes</gsd:AddressOfReportingEntityPostCodeIdentifier>
+  <gsd:IdentificationNumberCvrOfReportingEntity contextRef="dnNC0">00574988</gsd:IdentificationNumberCvrOfReportingEntity>
+  <gsd:RegisteredOfficeOfReportingEntity contextRef="dnNC0">Skattakommuna:Sunda kommuna</gsd:RegisteredOfficeOfReportingEntity>
+  <cmn:NameAndSurnameOfMemberOfExecutiveBoard contextRef="dnNC0">StjórnHeðin Súni Zachariasen
+</cmn:NameAndSurnameOfMemberOfExecutiveBoard>
+  <cmn:NameOfAuditFirm contextRef="dnNC0">GrannskoðariGrannskoðaraStovan Sp/fskrásett grannskoðanarvirki</cmn:NameOfAuditFirm>
+  <gsd:AddressOfAuditorStreetName contextRef="dnNC0">Heiðavegur 31</gsd:AddressOfAuditorStreetName>
+  <gsd:AddressOfAuditorPostCodeIdentifier contextRef="dnNC0">600 Saltangará</gsd:AddressOfAuditorPostCodeIdentifier>
+  <gsd:TelephoneNumberOfAuditor contextRef="dnNC0">Telefon:+298 59 16 16</gsd:TelephoneNumberOfAuditor>
+  <gsd:EmailOfAuditor contextRef="dnNC0">T-postur:gs@gs.fo</gsd:EmailOfAuditor>
+  <mrv:DescriptionOfPrimaryActivitiesOfEntity contextRef="dnNC0">TekningarreglurFelagið verður teknað av stjóranum.</mrv:DescriptionOfPrimaryActivitiesOfEntity>
+</xbrl>

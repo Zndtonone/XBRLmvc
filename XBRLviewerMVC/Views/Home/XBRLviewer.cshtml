@@ -2,40 +2,16 @@
     @model XBRLviewerMVC.ViewModels.XBRLViewerViewModel
     ViewData["Title"] = "XBRLviewer";
 }
-<head>
-    <style>
-        #overlay {
-            position: fixed; /* Sit on top of the page content */
-            display: none; /* Hidden by default */
-            width: 100%; /* Full width (cover the whole page) */
-            height: 100%; /* Full height (cover the whole page) */
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-            z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-            cursor: pointer; /* Add a pointer on hover */
-        }
 
-        #text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            font-size: 50px;
-            color: white;
-            transform: translate(-50%,-50%);
-            -ms-transform: translate(-50%,-50%);
-        }
-    </style>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/overlays.css" />
     <link rel="stylesheet" type="text/css" href="~/css/sidebar.css" />
 </head>
 
 <div id="wrapper" class="toggled">
-
     <div id="sidebar-wrapper">
         <div class="list-group list-group-flush">
-            <button class="list-group-item list-group-item-action bg-light border" onclick="on()">Opna XBRL fílu</button>
+            <button class="list-group-item list-group-item-action bg-light border" onclick="onOpenXBRL()">Opna XBRL fílu</button>
             <button class="list-group-item list-group-item-action bg-light border" asp-area="" asp-controller="Home" asp-action="">Filtra roknskap</button>
         </div>
     </div>
@@ -44,17 +20,17 @@
         <a href="#menu-toggle" id="menu-toggle" class="navbar-brand">Stillingar <span class="navbar-toggler-icon"></span></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span></button>
     </nav>
 
-    <div id="overlay">
+    <div id="overlayOpenXBRL">
         <div class="container h-100">
             <div class="row h-100 justify-content-center align-items-center">
-                <form asp-controller="Home" asp-action="UploadFile" enctype="multipart/form-data" method="POST">
+                <form asp-controller="Home" asp-action="OpenXBRL" enctype="multipart/form-data" method="POST">
                     <div class="custom-file p-2">
                         <label class="custom-file-label" for="customFile">Vel fílu</label>
                         <input class="custom-file-input" asp-for="@Model.FormFile" type="file" />
                     </div>
 
                     <div class="pt-2">
-                        <button type="submit" class="btn btn-primary" onclick="off()"><span class="fa fa-check"></span> Vátta</button>
+                        <button type="submit" class="btn btn-primary" onclick="offOpenXBRL()"><span class="fa fa-check"></span> Vátta</button>
                     </div>
                 </form>
             </div>

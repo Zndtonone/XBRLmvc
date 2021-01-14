@@ -62,9 +62,27 @@ namespace XBRLviewerMVC.Controllers
             return Redirect(" / ");
         }
 
+        public IActionResult OpenXBRL(XBRLViewerViewModel xBRLViewerViewModel)
+        {
+            string filePath = $"{_env.WebRootPath}\\data\\json\\" + $"{xBRLViewerViewModel.FormFile.FileName}";
+
+            string json = XBRLservices.JSONServices.Read2(filePath);
+
+            JObject jObject = JObject.Parse(json);
+
+            JArray factsJson = (JArray)jObject["facts"];
+            JArray contextsJson = (JArray)jObject["contexts"];
+
+            XBRLViewerViewModel palavm = new XBRLViewerViewModel();
+            palavm.Facts = factsJson.ToObject<List<FactModel>>();
+            palavm.Contexts = contextsJson.ToObject<List<ContextModel>>();
+
+            return View("XBRLviewer", palavm);
+        }
+
         public IActionResult XBRLviewer()
         {
-            string json = XBRLservices.JSONServices.Read("facts.json", "data");
+            string json = XBRLservices.JSONServices.Read("2065_1_2019.json", "data\\json");
 
             JObject jObject = JObject.Parse(json);
 

@@ -1,11 +1,11 @@
 ﻿// Custom JS XBRLviewer
 
-function on() {
-    document.getElementById("overlay").style.display = "block";
+function onOpenXBRL() {
+    document.getElementById("overlayOpenXBRL").style.display = "block";
 }
 
-function off() {
-    document.getElementById("overlay").style.display = "none";
+function offOpenXBRL() {
+    document.getElementById("overlayOpenXBRL").style.display = "none";
 }
 
 // Script that shows the tooltip when you hover over a text

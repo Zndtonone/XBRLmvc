@@ -21,7 +21,19 @@ namespace XBRLservices
 
             string jsonResult;
 
-            using (StreamReader streamReader = new StreamReader(path, Encoding.GetEncoding("iso-8859-1"), true))
+            using (StreamReader streamReader = new StreamReader(path, Encoding.GetEncoding("utf-8"), true))
+            {
+                jsonResult = streamReader.ReadToEnd();
+            }
+
+            return jsonResult;
+        }
+
+        public static string Read2(string path)
+        {
+            string jsonResult;
+
+            using (StreamReader streamReader = new StreamReader(path, Encoding.GetEncoding("utf-8"), true)) // "iso-8859-1"
             {
                 jsonResult = streamReader.ReadToEnd();
             }
