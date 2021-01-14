@@ -14,6 +14,7 @@ using System.Web;
 using Microsoft.AspNetCore.Hosting;
 using XBRLviewerMVC.ViewModels;
 using Newtonsoft.Json.Linq;
+using System.Text;
 
 namespace XBRLviewerMVC.Controllers
 {

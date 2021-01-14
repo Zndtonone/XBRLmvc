@@ -9,5 +9,5 @@
 @{
     fName = "ManagementsReview";
     f = Model.Facts.FirstOrDefault(x => x.Name == fName);
-    <p class="text-left p-1 font-italic" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
+    <p class="text-left p-1" data-toggle="tooltip" title="@f?.Label">@(f?.Value ?? fName + noValue)</p>
 }

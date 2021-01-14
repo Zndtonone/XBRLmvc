@@ -2,163 +2,69 @@
     @model XBRLviewerMVC.ViewModels.XBRLViewerViewModel
     ViewData["Title"] = "XBRLviewer";
 }
+<head>
+    <style>
+        #overlay {
+            position: fixed; /* Sit on top of the page content */
+            display: none; /* Hidden by default */
+            width: 100%; /* Full width (cover the whole page) */
+            height: 100%; /* Full height (cover the whole page) */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+            z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+            cursor: pointer; /* Add a pointer on hover */
+        }
 
-<h1 class="bg-primary text-white text-center p-2">XBRL vísari</h1>
+        #text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 50px;
+            color: white;
+            transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="~/css/sidebar.css" />
+</head>
 
-<div id="accordion">
-    <div class="card">
-        <div class="card-header" id="heading1">
-            <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                    S1 - Forsíða
-                </button>
-            </h5>
-        </div>
+<div id="wrapper" class="toggled">
 
-        <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#accordion">
-            <div class="card-body">
-                <partial name="_Page1" />
+    <div id="sidebar-wrapper">
+        <div class="list-group list-group-flush">
+            <button class="list-group-item list-group-item-action bg-light border" onclick="on()">Opna XBRL fílu</button>
+            <button class="list-group-item list-group-item-action bg-light border" asp-area="" asp-controller="Home" asp-action="">Filtra roknskap</button>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+        <a href="#menu-toggle" id="menu-toggle" class="navbar-brand">Stillingar <span class="navbar-toggler-icon"></span></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span></button>
+    </nav>
+
+    <div id="overlay">
+        <div class="container h-100">
+            <div class="row h-100 justify-content-center align-items-center">
+                <form asp-controller="Home" asp-action="UploadFile" enctype="multipart/form-data" method="POST">
+                    <div class="custom-file p-2">
+                        <label class="custom-file-label" for="customFile">Vel fílu</label>
+                        <input class="custom-file-input" asp-for="@Model.FormFile" type="file" />
+                    </div>
+
+                    <div class="pt-2">
+                        <button type="submit" class="btn btn-primary" onclick="off()"><span class="fa fa-check"></span> Vátta</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-    <div class="card">
-        <div class="card-header" id="heading2">
-            <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                    S2 - Upplýsingar um felagið
-                </button>
-            </h5>
-        </div>
-        <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordion">
-            <div class="card-body">
-                <partial name="_Page3" />
-            </div>
+
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <partial name="_AllPagesAccordion" />
         </div>
     </div>
-    <div class="card">
-        <div class="card-header" id="heading3">
-            <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                    S3 - Leiðsluátekning
-                </button>
-            </h5>
-        </div>
-        <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordion">
-            <div class="card-body">
-                <partial name="_Page2" />
-            </div>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-header" id="heading4">
-            <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                    S4 - Grannskoðanarátekning frá óheftum grannskoðara
-                </button>
-            </h5>
-        </div>
-        <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordion">
-            <div class="card-body">
-                <partial name="_GrannskodaraatekningOheftum" />
-            </div>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-header" id="heading5">
-            <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                    S5 - Høvuðs- og lyklatøl
-                </button>
-            </h5>
-        </div>
-        <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordion">
-            <div class="card-body">
-                More to come...
-            </div>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-header" id="heading6">
-            <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
-                    S6 - Leiðslufrágreiðing
-                </button>
-            </h5>
-        </div>
-        <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordion">
-            <div class="card-body">
-                <partial name="_Leidslufragreiding" />
-            </div>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-header" id="heading7">
-            <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
-                    S7 - Nýttur roknskaparháttur
-                </button>
-            </h5>
-        </div>
-        <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordion">
-            <div class="card-body">
-                <partial name="_NytturRoknskaparhattur" />
-            </div>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-header" id="heading8">
-            <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
-                    S8 - Rakstrarroknskapur
-                </button>
-            </h5>
-        </div>
-        <div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#accordion">
-            <div class="card-body">
-                <partial name="_ProfitAndLossAccount" />
-            </div>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-header" id="heading9">
-            <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
-                    S9 - Fíggjarstøða
-                </button>
-            </h5>
-        </div>
-        <div id="collapse9" class="collapse" aria-labelledby="heading9" data-parent="#accordion">
-            <div class="card-body">
-                More to come...
-            </div>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-header" id="heading10">
-            <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
-                    S10 - Peningarstreymsuppgerð
-                </button>
-            </h5>
-        </div>
-        <div id="collapse10" class="collapse" aria-labelledby="heading10" data-parent="#accordion">
-            <div class="card-body">
-                More to come...
-            </div>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-header" id="heading11">
-            <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
-                    S11 - Notur
-                </button>
-            </h5>
-        </div>
-        <div id="collapse11" class="collapse" aria-labelledby="heading11" data-parent="#accordion">
-            <div class="card-body">
-                More to come...
-            </div>
-        </div>
-    </div>
+
 </div>

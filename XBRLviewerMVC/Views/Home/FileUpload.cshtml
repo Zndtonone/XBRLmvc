@@ -1,5 +1,16 @@
 ﻿@model XBRLviewerMVC.Models.FileUpload
 
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            // Add the following code if you want the name of the file appear on select
+            $(".custom-file-input").on("change", function () {
+                var fileName = $(this).val().split("\\").pop();
+                $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+            });
+        </script>
+    </head>
+
 <div class="container">
     <h1 class="bg-primary text-white text-center p-2">Vel fílu</h1>
     <div class="container p-3 my-3 border">
@@ -9,15 +20,14 @@
     <form asp-controller="Home" asp-action="UploadFile" enctype="multipart/form-data" method="POST">
 
         <div class="custom-file p-2">
-
             <label class="custom-file-label" for="customFile">Vel fílu</label>
-
             <input class="custom-file-input" asp-for="@Model.FormFile" type="file" />
         </div>
 
         <div class="pt-2">
             <button type="submit" class="btn btn-primary"><span class="fa fa-check"></span> Vátta</button>
         </div>
+
 
     </form>
 </div>
