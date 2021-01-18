@@ -22,13 +22,13 @@ $(function () {
     $("#menu-toggle").click(function (e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
-    });
 
-    $(window).resize(function (e) {
-        if ($(window).width() <= 768) {
-            $("#wrapper").removeClass("toggled");
+        if ($("#wrapper").hasClass("toggled")) {
+            $("#menu-icon").removeClass("fa-plus");
+            $("#menu-icon").addClass("fa-minus");
         } else {
-            $("#wrapper").addClass("toggled");
+            $("#menu-icon").removeClass("fa-minus");
+            $("#menu-icon").addClass("fa-plus");
         }
     });
 });

@@ -9,7 +9,7 @@
     bottom: 0;
     background-color: rgba(0,0,0,0.5); /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer; /* Add a pointer on hover */
+    /*cursor: pointer;*/
 }
 
 #text {
@@ -20,4 +20,19 @@
     color: white;
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
+}
+
+#closebtn {
+    position: absolute;
+    top: 20px;
+    left: 45px;
+    font-size: 100px;
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-height: 450px) {
+    #closebtn {
+        /* Write code here for the overlay close button for mobile screens */
+    }
 }
