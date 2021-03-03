@@ -80,9 +80,9 @@ namespace JeffFerguson.Gepsio
         /// </returns>
         public LabelArc GetLabelArc(string fromAttributeValue)
         {
-            foreach(var currentLabelArc in LabelArcs)
+            foreach(var currentLabelArc in LabelArcs) // RTH - Kanna ClassOfReportingEntity
             {
-                if (currentLabelArc.FromId.Equals(fromAttributeValue) == true) // RTH GetLabelArc
+                if (currentLabelArc.FromId.Equals(fromAttributeValue) == true) // RTH - Kanna ClassOfReportingEntity - Finnur tað eitt match her?
                     return currentLabelArc;
             }
             return null;
@@ -126,36 +126,51 @@ namespace JeffFerguson.Gepsio
         }
 
         //------------------------------------------------------------------------------------
+        // RTH - Broytingar eru gjørdar í hesari metoduni.
         //------------------------------------------------------------------------------------
-        private void ReadChildLabelArcs(INode LabelLinkNode)
+        public void ReadChildLabelArcs(INode LabelLinkNode)
         {
+            var lLabelArcs = new List<LabelArc>();
+
             foreach (INode CurrentChildNode in LabelLinkNode.ChildNodes)
             {
-                if (CurrentChildNode.LocalName.Equals("labelArc") == true) // RTH labelArc
-                    this.LabelArcs.Add(new LabelArc(CurrentChildNode));
+                if (CurrentChildNode.LocalName.Equals("labelArc") == true)
+                    lLabelArcs.Add(new LabelArc(CurrentChildNode));
             }
+
+            LabelArcs.AddRange(lLabelArcs);
         }
 
         //------------------------------------------------------------------------------------
+        // RTH - Broytingar eru gjørdar í hesari metoduni.
         //------------------------------------------------------------------------------------
-        private void ReadChildLocators(INode LabelLinkNode)
+        public void ReadChildLocators(INode LabelLinkNode)
         {
+            var lLocators = new List<Locator>();
+
             foreach (INode CurrentChildNode in LabelLinkNode.ChildNodes)
             {
                 if (CurrentChildNode.LocalName.Equals("loc") == true)
-                    this.Locators.Add(new Locator(CurrentChildNode));
+                    lLocators.Add(new Locator(CurrentChildNode));
             }
+
+            Locators.AddRange(lLocators);
         }
 
         //------------------------------------------------------------------------------------
+        // RTH - Broytingar eru gjørdar í hesari metoduni.
         //------------------------------------------------------------------------------------
-        private void ReadChildLabels(INode LabelLinkNode)
+        public void ReadChildLabels(INode LabelLinkNode)
         {
+            var lLabels = new List<Label>();
+
             foreach (INode CurrentChildNode in LabelLinkNode.ChildNodes)
             {
                 if (CurrentChildNode.LocalName.Equals("label") == true)
-                    this.Labels.Add(new Label(CurrentChildNode));
+                    lLabels.Add(new Label(CurrentChildNode));
             }
+
+            Labels.AddRange(lLabels);
         }
     }
 }

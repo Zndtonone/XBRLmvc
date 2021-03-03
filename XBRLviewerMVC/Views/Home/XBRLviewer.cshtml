@@ -13,10 +13,12 @@
         <div class="list-group list-group-flush">
             <button class="list-group-item list-group-item-action bg-light border" onclick="onOpenXBRL()">Opna XBRL fílu</button>
             <button class="list-group-item list-group-item-action bg-light border" asp-area="" asp-controller="Home" asp-action="">Filtra roknskap</button>
+            <button class="list-group-item list-group-item-action bg-light border" asp-area="" asp-controller="Home" asp-action="">Broyt mál</button>
         </div>
     </div>
 
     <nav class="navbar navbar-expand navbar-dark bg-primary">
+        <p class="text-white">Fílunavn: @ViewBag.filename</p>
         <a href="#menu-toggle" id="menu-toggle" class="navbar-brand ml-auto">Stillingar <span class="fa fa-minus" id="menu-icon"></span></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span></button>
     </nav>
 

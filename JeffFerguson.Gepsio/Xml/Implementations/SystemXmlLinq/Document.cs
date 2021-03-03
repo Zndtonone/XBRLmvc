@@ -18,7 +18,6 @@ namespace JeffFerguson.Gepsio.Xml.Implementation.SystemXmlLinq
 
         public void Load(string path)
         {
-            
             doc = XDocument.Load(path, LoadOptions.SetBaseUri);
         }
 

@@ -17,10 +17,23 @@ namespace JeffFerguson.Gepsio
             : base(ContainingDocumentUri, DocumentPath, containingFragment)
         {
             PresentationLinks = new List<PresentationLink>();
+        }
+
+        private PresentationLink lPresentationLink = null;
+
+        public void addPresentationDocuments(string ContainingDocumentUri, string DocumentPath, XbrlFragment containingFragment)
+        {
             foreach (INode CurrentChild in thisLinkbaseNode.ChildNodes)
             {
                 if (CurrentChild.LocalName.Equals("presentationLink") == true)
-                    this.PresentationLinks.Add(new PresentationLink(CurrentChild));
+                {
+                    if(lPresentationLink == null)
+                    {
+                        lPresentationLink = new PresentationLink(CurrentChild);
+                        this.PresentationLinks.Add(lPresentationLink);
+                    }
+                    lPresentationLink.addPresentationLinks(CurrentChild);
+                }
             }
         }
     }

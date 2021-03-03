@@ -64,9 +64,9 @@ namespace XBRLviewerMVC.Controllers
 
         public IActionResult OpenXBRL(XBRLViewerViewModel xBRLViewerViewModel)
         {
-            string filePath = $"{_env.WebRootPath}\\data\\json\\" + $"{xBRLViewerViewModel.FormFile.FileName}";
+            string filepath = $"{_env.WebRootPath}\\data\\json\\" + $"{xBRLViewerViewModel.FormFile.FileName}";
 
-            string json = XBRLservices.JSONServices.Read2(filePath);
+            string json = XBRLservices.JSONServices.Read2(filepath);
 
             JObject jObject = JObject.Parse(json);
 
@@ -76,13 +76,19 @@ namespace XBRLviewerMVC.Controllers
             XBRLViewerViewModel palavm = new XBRLViewerViewModel();
             palavm.Facts = factsJson.ToObject<List<FactModel>>();
             palavm.Contexts = contextsJson.ToObject<List<ContextModel>>();
+
+            filepath = Path.GetFileName(filepath);
+
+            ViewBag.filename = filepath;
 
             return View("XBRLviewer", palavm);
         }
 
         public IActionResult XBRLviewer()
         {
-            string json = XBRLservices.JSONServices.Read("2065_1_2019.json", "data\\json");
+            string filename = "2065_1_2019.json";
+
+            string json = XBRLservices.JSONServices.Read(filename, "data\\json");
 
             JObject jObject = JObject.Parse(json);
 
@@ -92,6 +98,8 @@ namespace XBRLviewerMVC.Controllers
             XBRLViewerViewModel palavm = new XBRLViewerViewModel();
             palavm.Facts = factsJson.ToObject<List<FactModel>>();
             palavm.Contexts = contextsJson.ToObject<List<ContextModel>>();
+
+            ViewBag.filename = filename;
 
             return View(palavm);
         }

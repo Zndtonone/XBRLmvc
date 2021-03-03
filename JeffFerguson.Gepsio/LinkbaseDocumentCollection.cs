@@ -16,6 +16,10 @@ namespace JeffFerguson.Gepsio
     {
         private readonly List<LinkbaseDocument> thisLinkbaseDocuments;
 
+        // RTH - Creating local Linkbase Documents
+        public PresentationLinkbaseDocument lPresentationLinkbaseDocument = null;
+        public LabelLinkbaseDocument lLabelLinkbaseDocument = null;
+
         /// <summary>
         /// A reference to the schema's calculation linkbase. Null is returned if no such linkbase is available.
         /// </summary>
@@ -131,6 +135,7 @@ namespace JeffFerguson.Gepsio
         {
             foreach (INode CurrentChild in parentNode.ChildNodes)
             {
+                // Í hesum loopinum, lesur skipanin allar linkbaseRefs inn, tvs Pre, Def, Cal og Label.
                 if ((CurrentChild.NamespaceURI.Equals(XbrlDocument.XbrlLinkbaseNamespaceUri) == true) && (CurrentChild.LocalName.Equals("linkbaseRef") == true))
                     ReadLinkbaseReference(ContainingDocumentUri, CurrentChild, containingFragment);
             }
@@ -138,6 +143,7 @@ namespace JeffFerguson.Gepsio
 
         private void ReadLinkbaseReference(string ContainingDocumentUri, INode LinkbaseReferenceNode, XbrlFragment containingFragment)
         {
+            
             var xlinkNode = new XlinkNode(LinkbaseReferenceNode);
             if (xlinkNode.IsInRole(XbrlDocument.XbrlCalculationLinkbaseReferenceRoleNamespaceUri) == true)
             {
@@ -149,11 +155,21 @@ namespace JeffFerguson.Gepsio
             }
             else if (xlinkNode.IsInRole(XbrlDocument.XbrlLabelLinkbaseReferenceRoleNamespaceUri) == true)
             {
-                this.thisLinkbaseDocuments.Add(new LabelLinkbaseDocument(ContainingDocumentUri, xlinkNode.Href, containingFragment));
+                if (lLabelLinkbaseDocument == null)
+                {
+                    lLabelLinkbaseDocument = new LabelLinkbaseDocument(ContainingDocumentUri, xlinkNode.Href, containingFragment);
+                    this.thisLinkbaseDocuments.Add(lLabelLinkbaseDocument);
+                }
+                lLabelLinkbaseDocument.addLabelDocuments(ContainingDocumentUri, xlinkNode.Href, containingFragment);
             }
             else if (xlinkNode.IsInRole(XbrlDocument.XbrlPresentationLinkbaseReferenceRoleNamespaceUri) == true)
             {
-                this.thisLinkbaseDocuments.Add(new PresentationLinkbaseDocument(ContainingDocumentUri, xlinkNode.Href, containingFragment));
+                if(lPresentationLinkbaseDocument==null)
+                {
+                    lPresentationLinkbaseDocument = new PresentationLinkbaseDocument(ContainingDocumentUri, xlinkNode.Href, containingFragment);
+                    this.thisLinkbaseDocuments.Add(lPresentationLinkbaseDocument);
+                }
+                lPresentationLinkbaseDocument.addPresentationDocuments(ContainingDocumentUri, xlinkNode.Href, containingFragment);
             }
             else if (xlinkNode.IsInRole(XbrlDocument.XbrlReferenceLinkbaseReferenceRoleNamespaceUri) == true)
             {

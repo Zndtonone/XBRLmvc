@@ -20,7 +20,7 @@ namespace XBRLservices
                 foreach (var currentFact in currentFragment.Facts)
                 {
                     var matchingLabel = FindLabelForFact(currentFact, currentFragment);
-
+                    // Kanna ClassOfReportingEntity
                     if (string.IsNullOrEmpty(matchingLabel) == false)
                     {
                         Console.WriteLine($"The label for fact {currentFact.Name} is '{matchingLabel}'.");
@@ -101,10 +101,10 @@ namespace XBRLservices
             foreach (var currentLink in labelLinkbase.LabelLinks)
             {
                 string strMatchingArcId = factAsItem.SchemaElement.Id.Substring(factAsItem.SchemaElement.Id.IndexOf('_') + 1);
-
+                // RTH - kanna ClassOfReportingEntity nærri
                 var matchingArc = currentLink.GetLabelArc(strMatchingArcId);
 
-                // var matchingArc = currentLink.GetLabelArc(factAsItem.SchemaElement.Id);
+                //var matchingArc = currentLink.GetLabelArc(factAsItem.SchemaElement.Id);
 
                 if (matchingArc != null)
                 {

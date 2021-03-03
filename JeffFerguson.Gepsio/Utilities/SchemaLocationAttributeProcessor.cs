@@ -74,7 +74,7 @@ namespace JeffFerguson.Gepsio
 
         private static void ProcessSchemaNamespaceAndLocation(string schemaNamespace, string schemaLocation, XbrlFragment containingFragment)
         {
-            foreach(var currentSchema in containingFragment.Schemas) // RTH
+            foreach(var currentSchema in containingFragment.Schemas)
             {
                 if(currentSchema.TargetNamespace.Equals(schemaNamespace) == true)
                 {
@@ -85,7 +85,7 @@ namespace JeffFerguson.Gepsio
                     return;
                 }
             }
-            var newSchema = new XbrlSchema(containingFragment, schemaLocation, string.Empty);
+            var newSchema = new XbrlSchema(containingFragment, schemaLocation, string.Empty); // RTH ER TAÐ HER VERÐUR NULL?
             if (newSchema.SchemaRootNode != null)
             {
                 containingFragment.Schemas.Add(newSchema);

@@ -166,7 +166,7 @@ namespace JeffFerguson.Gepsio
         {
             foreach(var candidateElement in schema.Elements)
             {
-                if (string.IsNullOrEmpty(candidateElement.Id) == false) // RTH PresentableFactTree
+                if (string.IsNullOrEmpty(candidateElement.Id) == false) // RTH PresentableFactTree - finnur aldrin eitt ID match her.
                 {
                     if (candidateElement.Id.Equals(id) == true)
                         return candidateElement;

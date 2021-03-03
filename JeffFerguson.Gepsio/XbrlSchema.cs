@@ -132,8 +132,6 @@ namespace JeffFerguson.Gepsio
             this.Fragment = ContainingXbrlFragment;
             this.SchemaReferencePath = GetFullSchemaPath(SchemaFilename, BaseDirectory);
 
-            // RTH Leggja skema lokalt
-
             this.LoadPath = this.SchemaReferencePath;
             try
             {
@@ -198,7 +196,6 @@ namespace JeffFerguson.Gepsio
             ReadComplexTypes();
             ReadElements();
             LookForAnnotations();
-            // RTH annotation
         }
 
         /// <summary>
@@ -215,17 +212,69 @@ namespace JeffFerguson.Gepsio
         /// </returns>
         private bool ReadAndCompile(string schemaPath)
         {
-            thisXmlSchema = Container.Resolve<ISchema>();
+            // Lesa schema inn í thisXmlScema, fyri síðani at fáa fatur á Elements.
+            // thisXmlSchema = Container.Resolve<ISchema>();
             thisXmlSchemaSet = Container.Resolve<ISchemaSet>();
-            if (thisXmlSchema.Read(schemaPath) == false)
+
+            // RTH - List of schema paths
+            List<string> schemaPathList = new List<string>();
+
+            string fsaFullSchemapath = Environment.CurrentDirectory + @"\20191101\XBRL20171001\20171001\fsa\fsa.xsd";
+            string taxFullSchemapath = Environment.CurrentDirectory + @"\20191101\XBRL20171001\20171001\tax\tax.xsd";
+            string mrvFullSchemapath = Environment.CurrentDirectory + @"\20191101\XBRL20171001\20171001\mrv\mrv.xsd";
+            string arrFullSchemaPath = Environment.CurrentDirectory + @"\20191101\XBRL20171001\20171001\arr\arr.xsd";
+            string sobFullSchemaPath = Environment.CurrentDirectory + @"\20191101\XBRL20171001\20171001\sob\sob.xsd";
+            string cmnFullSchemaPath = Environment.CurrentDirectory + @"\20191101\XBRL20171001\20171001\cmn.xsd";
+            string tchFullSchemaPath = Environment.CurrentDirectory + @"\20191101\XBRL20171001\20171001\tch.xsd";
+            string dstFullSchemaPath = Environment.CurrentDirectory + @"\20191101\XBRL20171001\20171001\dst\dst.xsd";
+            string gsdFullSchemapath = Environment.CurrentDirectory + @"\20191101\XBRL20171001\20171001\gsd\gsd.xsd";
+            string focroFullSchemapath = Environment.CurrentDirectory + @"\20191101\XBRLFO20191101\fo-cro.xsd";
+            string fohagFullSchemapath = Environment.CurrentDirectory + @"\20191101\XBRLFO20191101\fo-hag.xsd";
+            string fotaxFullSchemapath = Environment.CurrentDirectory + @"\20191101\XBRLFO20191101\fo-tax.xsd";
+
+            // Compileringsfeilur tá man tað rakar sama schema (namespace)
+
+            schemaPathList.Add(fsaFullSchemapath); // Nøgd av elementum: 1797
+            schemaPathList.Add(taxFullSchemapath); // Nøgd av elementum: 1872
+            schemaPathList.Add(mrvFullSchemapath); // Nøgd av elementum: 211
+            schemaPathList.Add(arrFullSchemaPath); // Nøgd av elementum: 245
+            schemaPathList.Add(sobFullSchemaPath); // Nøgd av elementum: 169
+            //schemaPathList.Add(cmnFullSchemaPath); // Nøgd av elementum: 134
+            //schemaPathList.Add(tchFullSchemaPath); // Nøgd av elementum: 70
+            //schemaPathList.Add(gsdFullSchemapath); // Nøgd av elementum: 1797
+            //schemaPathList.Add(dstFullSchemaPath); // Nøgd av elementum: 1797
+            //schemaPathList.Add(focroFullSchemapath); // Nøgd av elementum: 1807
+            //schemaPathList.Add(fohagFullSchemapath); // Nøgd av elementum: 1920
+            schemaPathList.Add(fotaxFullSchemapath); // Nøgd av elementum: 2188
+
+            //thisXmlSchema.Read(fsaFullSchemapath);
+
+            foreach (var schema in schemaPathList)
             {
-                StringBuilder MessageBuilder = new StringBuilder();
-                string StringFormat = AssemblyResources.GetName("SchemaFileCandidateDoesNotContainSchemaRootNode");
-                MessageBuilder.AppendFormat(StringFormat, schemaPath);
-                this.Fragment.AddValidationError(new SchemaValidationError(this, MessageBuilder.ToString()));
-                return false;
+                thisXmlSchema = Container.Resolve<ISchema>();
+
+                if (thisXmlSchema.Read(schema) == false)
+                {
+                    StringBuilder MessageBuilder = new StringBuilder();
+                    string StringFormat = AssemblyResources.GetName("SchemaFileCandidateDoesNotContainSchemaRootNode");
+                    MessageBuilder.AppendFormat(StringFormat, schema);
+                    this.Fragment.AddValidationError(new SchemaValidationError(this, MessageBuilder.ToString()));
+                    return false;
+                }
+
+                thisXmlSchemaSet.Add(thisXmlSchema);
             }
-            thisXmlSchemaSet.Add(thisXmlSchema);
+
+            //if (thisXmlSchema.Read(fsaFullSchemapath) == false)
+            //{
+            //    StringBuilder MessageBuilder = new StringBuilder();
+            //    string StringFormat = AssemblyResources.GetName("SchemaFileCandidateDoesNotContainSchemaRootNode");
+            //    MessageBuilder.AppendFormat(StringFormat, schemaPath);
+            //    this.Fragment.AddValidationError(new SchemaValidationError(this, MessageBuilder.ToString()));
+            //    return false;
+            //}
+
+            //thisXmlSchemaSet.Add(thisXmlSchema);
             thisXmlSchemaSet.Compile();
             return true;
         }
@@ -347,50 +396,6 @@ namespace JeffFerguson.Gepsio
             return FullPath;
         }
 
-        ////-------------------------------------------------------------------------------
-        ////-------------------------------------------------------------------------------
-        //private string GetFullSchemaPath(string SchemaFilename, string BaseDirectory)
-        //{
-
-        //    // The first check is to see whether or not the "filename" is actually an HTTP-based
-        //    // reference. If it is, then it will be returned without modification.
-
-        //    var lowerCaseSchemaFilename = SchemaFilename.ToLower();
-        //    if (lowerCaseSchemaFilename.StartsWith("http://") == true)
-        //        return SchemaFilename;
-        //    if (lowerCaseSchemaFilename.StartsWith("https://") == true)
-        //    {
-        //        return SchemaFilename;
-        //    }
-
-        //    // At this point, we're confident that we have an actual filename.
-
-        //    string FullPath;
-        //    int FirstPathSeparator = SchemaFilename.IndexOf(System.IO.Path.DirectorySeparatorChar);
-        //    if (FirstPathSeparator == -1)
-        //    {
-        //        string DocumentUri = this.Fragment.XbrlRootNode.BaseURI;
-        //        if(string.IsNullOrEmpty(DocumentUri) == true)
-        //        {
-        //            DocumentUri = this.Fragment.Document.Filename;
-        //        }
-        //        int LastPathSeparator = DocumentUri.LastIndexOf(System.IO.Path.DirectorySeparatorChar);
-        //        if (LastPathSeparator == -1)
-        //            LastPathSeparator = DocumentUri.LastIndexOf('/');
-        //        string DocumentPath = DocumentUri.Substring(0, LastPathSeparator + 1);
-        //        if (BaseDirectory.Length > 0)
-        //            DocumentPath = DocumentPath + BaseDirectory;
-        //        FullPath = DocumentPath + SchemaFilename;
-        //    }
-        //    else
-        //    {
-        //        throw new NotImplementedException("XbrlSchema.GetFullSchemaPath() code path not implemented.");
-        //    }
-        //    return FullPath;
-        //}
-
-
-
         /// <summary>
         /// Reads the schema's root node and collects namespace data from the namespace attributes.
         /// </summary>
@@ -437,6 +442,7 @@ namespace JeffFerguson.Gepsio
         //-------------------------------------------------------------------------------
         private void ReadElements()
         {
+            // Royna at fáa lisið øll relevantu schemaðini inn í thisXmlSchemaSet
             foreach (var CurrentEntry in thisXmlSchemaSet.GlobalElements)
             {
                 ISchemaElement CurrentElement = CurrentEntry.Value as ISchemaElement;
@@ -477,16 +483,19 @@ namespace JeffFerguson.Gepsio
         {
             foreach (INode CurrentChild in AnnotationNode.ChildNodes)
             {
+                // Her verða allir Linkbases lisnir rætt inn fyrstu fer. Hetta samsvarar við tað, sum er í EntryPointinum.
                 if (CurrentChild.LocalName.Equals("appinfo") == true)
                     ReadAppInfo(CurrentChild);
             }
         }
 
         //-------------------------------------------------------------------------------
+        // Her skal umskrivast, so at skipanin leggur teir PresentationLinks, sum hon finnur, í tað fyrsta (og eigur at verða einasta) PresentationLinkbaseDocument. Sama er galdandi fyri hini LinkbaseDocuments, altso
+        // Definition, Calculation og Label.
         //-------------------------------------------------------------------------------
         private void ReadAppInfo(INode AppInfoNode)
         {
-            thisLinkbaseDocuments.ReadLinkbaseReferences(this.SchemaRootNode.BaseURI, AppInfoNode, this.Fragment);
+            thisLinkbaseDocuments.ReadLinkbaseReferences(this.SchemaRootNode.BaseURI, AppInfoNode, this.Fragment); // Akkra her verða LinkbaseDocuments løgd í thisLinkbaseDocuments listan. Gera hetta í einum loop?
             foreach (INode CurrentChild in AppInfoNode.ChildNodes)
             {
                 if ((CurrentChild.NamespaceURI.Equals(XbrlDocument.XbrlLinkbaseNamespaceUri) == true) && (CurrentChild.LocalName.Equals("roleType") == true))

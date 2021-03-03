@@ -18,6 +18,15 @@ $(document).ready(function () {
     $("p").css("white-space", "pre-wrap");
 });
 
+// Changes the file chooser text to the filename
+$(function () {
+    $("input:file").change(function () {
+        var fileName = $(this).val().split("\\").pop();
+        $(".custom-file-label").html(fileName);
+    });
+});
+
+// Changes between + and - depending on if the sidebar is toggled or not
 $(function () {
     $("#menu-toggle").click(function (e) {
         e.preventDefault();

@@ -58,7 +58,7 @@ namespace JeffFerguson.Gepsio
 
         static XbrlSchemaCollection()
         {
-            BuildStandardNamespaceSchemaLocationDictionary();
+            BuildStandardNamespaceSchemaLocationDictionary(); // RTH útkommentera?
         }
 
         internal XbrlSchemaCollection()

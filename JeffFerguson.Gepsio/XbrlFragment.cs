@@ -155,16 +155,14 @@ namespace JeffFerguson.Gepsio
             this.XbrlRootNode = XbrlRootNode;
             this.Schemas = new XbrlSchemaCollection();
             this.ValidationErrors = new List<ValidationError>();
-            // RTH lesa skema inn?
             CreateNamespaceManager();
             //---------------------------------------------------------------------------
             // Load.
             //---------------------------------------------------------------------------
             ReadSchemaLocationAttributes();
-            // AddSubSchemas(Base, newSchema); SDS
             ReadLinkbaseReferences();
-            ReadTaxonomySchemaReferences();
-            ReadRoleReferences(); // XBRLviewer - this method reads role references from an xml file
+            ReadTaxonomySchemaReferences(); // Skal lesa tað fyrsta schemaði inn her. Tað ger tað í tí upprunaligu Gepsio við amerikanskari instansu.
+            ReadRoleReferences();
             ReadArcroleReferences();
             ReadContexts();
             ReadUnits();
@@ -329,7 +327,7 @@ namespace JeffFerguson.Gepsio
         /// </returns>
         public PresentableFactTree GetPresentableFactTree()
         {
-            foreach (var currentSchema in Schemas.SchemaList)
+            foreach (var currentSchema in Schemas.SchemaList) // RTH - A collection of XBRLschema objects found in the fragment.
             {
                 if (currentSchema.PresentationLinkbase != null)
                     return new PresentableFactTree(currentSchema, this.Facts);
@@ -354,7 +352,7 @@ namespace JeffFerguson.Gepsio
         /// </remarks>
         private void ReadLinkbaseReferences()
         {
-            thisLinkbaseDocuments = new LinkbaseDocumentCollection(); // RTH new LinkbaseDocumentCollection
+            thisLinkbaseDocuments = new LinkbaseDocumentCollection();
             thisLinkbaseDocuments.ReadLinkbaseReferences(this.XbrlRootNode.BaseURI, this.XbrlRootNode, this);
         }
 
@@ -423,20 +421,14 @@ namespace JeffFerguson.Gepsio
         {
             string HrefAttributeValue = SchemaRefNode.GetAttributeValue(Xlink.XlinkNode.xlinkNamespace, "href");
             string Base = SchemaRefNode.GetAttributeValue(XbrlDocument.XmlNamespaceUri1998, "base");
-
             var newSchema = new XbrlSchema(this, HrefAttributeValue, Base);
 
-            try
+            if (newSchema.SchemaRootNode != null)
             {
-                if (newSchema.SchemaRootNode != null)
-                {
-                    AddSubSchemas(Base, newSchema);  // SDS royna at flyta hetta longur fram.
-                    // AddSchemaToSchemaList(newSchema);
-                }
+                AddSchemaToSchemaList(newSchema); // Her skal eitt skema koma inn, sum inniheldur 4 LinkbaseDocuments í LinkbaseDocumentCollection, harav eitt er Presentation, eitt Definition, eitt Calculation og eitt Label
+                //AddSubSchemas(Base, newSchema);  // SDS royna at flyta hetta longur fram.
             }
-            catch
-            {
-            }
+
         }
 
         private string GetDirectoryName(string hreflink)
@@ -505,11 +497,11 @@ namespace JeffFerguson.Gepsio
             allSubSchemas.Add(@"XBRL20171001/value-assertion.xsd");
             allSubSchemas.Add(@"XBRL20171001/value-filter.xsd");
             allSubSchemas.Add(@"XBRL20171001/variable.xsd");
-            //allSubSchemas.Add(@"XBRL20171001/20171001/entryAll.xsd");
-            //allSubSchemas.Add(@"XBRL20171001/20171001/entryDanishGAAPBalanceSheetAccountByCurrentAndLongTermFormIncomeStatementByFunctionIncludingManagementsReviewStatisticsAndTax20171001.xsd");
-            //allSubSchemas.Add(@"XBRL20171001/20171001/entryDanishGAAPBalanceSheetAccountByCurrentAndLongTermFormIncomeStatementByNatureIncludingManagementsReviewStatisticsAndTax20171001.xsd");
-            //allSubSchemas.Add(@"XBRL20171001/20171001/entryDanishGAAPBalanceSheetAccountFormIncomeStatementByFunctionIncludingManagementsReviewStatisticsAndTax20171001.xsd");
-            //allSubSchemas.Add(@"XBRL20171001/20171001/entryDanishGAAPBalanceSheetAccountFormIncomeStatementByNatureIncludingManagementsReviewStatisticsAndTax20171001.xsd");
+            allSubSchemas.Add(@"XBRL20171001/20171001/entryAll.xsd");
+            allSubSchemas.Add(@"XBRL20171001/20171001/entryDanishGAAPBalanceSheetAccountByCurrentAndLongTermFormIncomeStatementByFunctionIncludingManagementsReviewStatisticsAndTax20171001.xsd");
+            allSubSchemas.Add(@"XBRL20171001/20171001/entryDanishGAAPBalanceSheetAccountByCurrentAndLongTermFormIncomeStatementByNatureIncludingManagementsReviewStatisticsAndTax20171001.xsd");
+            allSubSchemas.Add(@"XBRL20171001/20171001/entryDanishGAAPBalanceSheetAccountFormIncomeStatementByFunctionIncludingManagementsReviewStatisticsAndTax20171001.xsd");
+            allSubSchemas.Add(@"XBRL20171001/20171001/entryDanishGAAPBalanceSheetAccountFormIncomeStatementByNatureIncludingManagementsReviewStatisticsAndTax20171001.xsd");
             allSubSchemas.Add(@"XBRLFO20191101/fo-cro.xsd");
             allSubSchemas.Add(@"XBRLFO20191101/fo-hag.xsd");
             allSubSchemas.Add(@"XBRLFO20191101/fo-tax.xsd");
@@ -586,7 +578,7 @@ namespace JeffFerguson.Gepsio
                 {
                     var newSubSchema = new XbrlSchema(this, schema, Base);
 
-                    AddSchemaToSchemaList(newSubSchema);
+                    AddSchemaToSchemaList(newSubSchema); // Null pointer til Calc, Def og Pre
                 }
                 catch { };
         }

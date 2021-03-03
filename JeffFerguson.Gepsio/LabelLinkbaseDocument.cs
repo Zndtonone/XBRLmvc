@@ -17,10 +17,26 @@ namespace JeffFerguson.Gepsio
             : base(ContainingDocumentUri, DocumentPath, containingFragment)
         {
             LabelLinks = new List<LabelLink>();
+        }
+
+        private LabelLink lLabelLink = null;
+
+        public void addLabelDocuments(string ContainingDocumentUri, string DocumentPath, XbrlFragment containingFragment)
+        {
             foreach (INode CurrentChild in thisLinkbaseNode.ChildNodes)
             {
                 if (CurrentChild.LocalName.Equals("labelLink") == true)
-                    this.LabelLinks.Add(new LabelLink(CurrentChild));
+                {
+                    if (lLabelLink == null)
+                    {
+                        lLabelLink = new LabelLink(CurrentChild);
+                        this.LabelLinks.Add(lLabelLink);
+                    }
+
+                    lLabelLink.ReadChildLabels(CurrentChild);
+                    lLabelLink.ReadChildLabelArcs(CurrentChild);
+                    lLabelLink.ReadChildLocators(CurrentChild);
+                }
             }
         }
     }

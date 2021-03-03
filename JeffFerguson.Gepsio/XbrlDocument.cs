@@ -1,5 +1,6 @@
 using JeffFerguson.Gepsio.IoC;
 using JeffFerguson.Gepsio.Xml.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -383,10 +384,12 @@ namespace JeffFerguson.Gepsio
             NewNamespaceManager.AddNamespace("instance", XbrlNamespaceUri);
             INodeList XbrlNodes = doc.SelectNodes("//instance:xbrl", NewNamespaceManager);
 
-            // Fara gjøgnum xmlar og leggja elementir afturat til XBRL node
-
             foreach (INode XbrlNode in XbrlNodes)
+            {
                 this.XbrlFragments.Add(new XbrlFragment(this, NewNamespaceManager, XbrlNode));
+            }
+
+
         }
 
         /// <summary>

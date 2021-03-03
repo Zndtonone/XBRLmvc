@@ -26,22 +26,42 @@ namespace JeffFerguson.Gepsio
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
-        internal PresentationLink(INode PresentationLinkNode) : base(PresentationLinkNode)
+
+        public void addPresentationLinks(INode PresentationLinkNode)
         {
-            Locators = new List<Locator>();
-            Locators.Capacity = PresentationLinkNode.ChildNodes.Count;
-            PresentationArcs = new List<PresentationArc>();
-            PresentationArcs.Capacity = PresentationLinkNode.ChildNodes.Count;
+            var lLocators = new List<Locator>();
+            lLocators.Capacity = PresentationLinkNode.ChildNodes.Count;
+            var lPresentationArcs = new List<PresentationArc>();
+            lPresentationArcs.Capacity = PresentationLinkNode.ChildNodes.Count;
             foreach (INode CurrentChild in PresentationLinkNode.ChildNodes)
             {
                 if (CurrentChild.LocalName.Equals("loc") == true)
-                    Locators.Add(new Locator(CurrentChild));
+                    lLocators.Add(new Locator(CurrentChild));
                 else if (CurrentChild.LocalName.Equals("presentationArc") == true)
-                    PresentationArcs.Add(new PresentationArc(CurrentChild));
+                    lPresentationArcs.Add(new PresentationArc(CurrentChild));
             }
+            lLocators.TrimExcess();
+            lPresentationArcs.TrimExcess();
+            Locators.AddRange(lLocators);
+            PresentationArcs.AddRange(lPresentationArcs);
             SortPresentationArcsInAscendingOrder();
-            Locators.TrimExcess();
-            PresentationArcs.TrimExcess();
+        }
+        internal PresentationLink(INode PresentationLinkNode) : base(PresentationLinkNode)
+        {
+            Locators = new List<Locator>();
+            //Locators.Capacity = PresentationLinkNode.ChildNodes.Count;
+            PresentationArcs = new List<PresentationArc>();
+            //PresentationArcs.Capacity = PresentationLinkNode.ChildNodes.Count;
+            //foreach (INode CurrentChild in PresentationLinkNode.ChildNodes)
+            // {
+            //    if (CurrentChild.LocalName.Equals("loc") == true)
+            //        Locators.Add(new Locator(CurrentChild));
+             //   else if (CurrentChild.LocalName.Equals("presentationArc") == true)
+             //       PresentationArcs.Add(new PresentationArc(CurrentChild));
+            //}
+            //SortPresentationArcsInAscendingOrder();
+            //Locators.TrimExcess();
+            //PresentationArcs.TrimExcess();
         }
 
         //------------------------------------------------------------------------------------
